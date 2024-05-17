@@ -15,13 +15,15 @@ add_action( version_compare('5.8', get_bloginfo('version'), '<=' ) ? 'block_cate
 function custom_acf_init() {
 
     $blocksArray = array(
-        'Hero',
-        'Idea',
-        'Agenda',
-        'Speakers',
-        'Art',
-        'Partners'
-
+        'Main hero',
+        'Main WWA',
+        'Main reports',
+        'Main impact',
+        'Main goals',
+        'Main programs',
+        'Main projects',
+        'Main partners',
+        'Main news'
     );
     // check function exists
     if( function_exists('acf_register_block') ) {
