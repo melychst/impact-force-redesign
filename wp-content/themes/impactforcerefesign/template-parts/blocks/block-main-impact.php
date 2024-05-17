@@ -2,55 +2,42 @@
     <div class="container">
         <div class="columns display-flex">
             <div class="column left-column">
-                <div class="section-title">THREE PILLARS OF IMPACT</div>
+                <div class="section-title"><?php echo get_field('title'); ?></div>
                 <div class="content">
-                    <p>We address the acute needs to ukrainian society during the war to accelerate post-war recovery, reduce negative societal impacts and secure inclusive, sustainable rebuilding of post-war Ukraine.</p>
+                    <p><?php echo get_field('content'); ?></p>
                 </div>
             </div>
             <div class="column right-column">
-                <div class="sub-title">OUR focus areas:</div>
+                <div class="sub-title"><?php echo get_field('subtitle'); ?></div>
                 <div class="areas-wrap">
-                    <div class="area-item blue-area">
-                        <span class="number">/01</span>
-                        <div class="name"><span>ADVOCACY</span></div>
-                        <div class="content">Fueling policy innovation and advocating for social long-lasting impact in Ukraine through strategic research and impactful events</div>
+                    <?php
+                        $focuses = get_field('focuses');
+                        if(!empty($focuses)):
+                            foreach ($focuses  as $key => $focus_item):
+                    ?>
+                    <div class="area-item <?php echo $focus_item['color']; ?>-area">
+                        <span class="number">/0<?php echo $key + 1; ?></span>
+                        <div class="name"><span><?php echo $focus_item['name']; ?></span></div>
+                        <div class="content"><?php echo $focus_item['content']; ?></div>
                     </div>
-                    <div class="area-item green-area">
-                        <span class="number">/02</span>
-                        <div class="name"><span>CAPACITY BUILDING</span></div>
-                        <div class="content">Empowering Ukrainian SMEs and supporting vulnerabl groups with practica programs aimed at enhancin capabilities and fostering growth</div>
-                    </div>
-                    <div class="area-item purple-area">
-                        <span class="number">/03</span>
-                        <div class="name"><span>COMMUNITY EMPOWERMENT</span></div>
-                        <div class="content">Creating dynamic ecosystems by uniting stakeholders, fostering collaborative networks, and nurturing community-led initiatives</div>
-                    </div>
+                    <?php
+                            endforeach;
+                        endif;
+                    ?>
                 </div>
                 <div class="projects-wrap">
-                    <div class="project-name blue-project">
-                        <a href="#">#projeсt name</a>
-                    </div>
-                    <div class="project-name blue-project">
-                        <a href="#">#projeсt name</a>
-                    </div>
-                    <div class="project-name green-project">
-                        <a href="#">#projeсt name</a>
-                    </div>
-                    <div class="project-name purple-project">
-                        <a href="#">#projeсt name</a>
-                    </div>
-                    <div class="project-name blue-project">
-                        <a href="#">#projeсt name</a>
-                    </div>
-                    <div class="project-name blue-project">
-                        <a href="#">#projeсt name</a>
-                    </div>
-                    <div class="project-name green-project">
-                        <a href="#">#projeсt name</a>
-                    </div>
-                    <div class="project-name purple-project">
-                        <a href="#">#projeсt name</a>
-                    </div>
+                    <?php
+                        $projects = get_field('projects');
+                        if( !empty($projects) ):
+                            foreach( $projects as $key => $project ):
+                    ?>
+                            <div class="project-name <?php echo $project['color']; ?>-project">
+                                <a href="#"><?php echo $project['project']; ?></a>
+                            </div>                    
+                    <?php
+                            endforeach;
+                        endif;
+                    ?>
                 </div>
             </div>
         </div>

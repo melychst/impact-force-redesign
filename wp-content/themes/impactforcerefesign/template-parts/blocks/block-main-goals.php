@@ -2,44 +2,42 @@
     <div class="container">
         <div class="columns display-flex">
             <div class="column left-column">
-                <div class="section-title">WE SUPPORT THE FOLLOWING UN SUSTAINABLE DEVELOPMENT GOALS:</div>
+                <div class="section-title"><?php echo get_field('title'); ?></div>
                 <div class="goals-wrap">
-                    <div class="goal-item">
-                        <img src="images/goals-education.svg" alt="">
-                    </div>
-                    <div class="goal-item">
-                        <img src="images/goals-gender.svg" alt="">
-                    </div>
-                    <div class="goal-item">
-                        <img src="images/goals-growth.svg" alt="">
-                    </div>
-                    <div class="goal-item">
-                        <img src="images/goals-industry.svg" alt="">
-                    </div>
-                    <div class="goal-item">
-                        <img src="images/goals-responsible.svg" alt="">
-                    </div>
-                    <div class="goal-item">
-                        <img src="images/goals-peace.svg" alt="">
-                    </div>
-                    <div class="goal-item">
-                        <img src="images/goals-climate.svg" alt="">
-                    </div>
-                    <div class="goal-item">
-                        <img src="images/goals-health.svg" alt="">
-                    </div>
-                    <div class="goal-item">
-                        <img src="images/goals-sustainable.svg" alt="">
-                    </div>
+                    <?php 
+                        $icons = get_field('icons');
+                        if( !empty($icons) ):
+                            foreach( $icons as $key => $icon):
+                    ?>
+                            <div class="goal-item">
+                                <img src="<?php echo $icon['icon']['url']; ?>" alt="">
+                            </div>
+                    <?php
+                            endforeach;
+                        endif;
+                    ?>
                 </div>
             </div>
             <div class="column right-column">
                 <div class="our-goals">
-                    <div class="title-list">OUR GOALS:</div>
+                    <?php
+                        $goals = get_field('goals_list');
+                        if( !empty($goals) ):
+                    ?>
+                            <div class="title-list"><?php echo $goals['title']; ?></div>
+                    <?php
+                        endif;
+                    ?>
                     <div class="list-wrap">
-                        <div class="list-item">Healthy & purpose-driven society</div>
-                        <div class="list-item">Sustainable and impact economy</div>
-                        <div class="list-item">Strong governance and collaboration between private </div>
+                        <?php 
+                            if( is_array($goals['goals']) ): 
+                                foreach( $goals['goals'] as $key => $goal):
+                        ?>
+                                    <div class="list-item"><?php echo $goal['goal']; ?></div>
+                        <?php
+                                endforeach;
+                            endif; 
+                        ?>
                     </div>
                 </div>
             </div>

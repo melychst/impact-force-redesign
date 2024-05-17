@@ -1,70 +1,64 @@
     <section class="reports">
         <div class="container">
             <div class="columns display-flex top-row">
-                <div class="column left-column">
-                    <span class="number">/01</span>
-                    <div class="column-title">OUR
-                        VISION</div>
-                    <div class="content">A thriving Ukraine, leading the way in the modern world, empowered by its people and its commitment to the UN Sustainable Development Goals.
+                <?php
+                    $top_row = get_field('top_row');
+                    if( is_array($top_row) ):
+                ?>
+                    <div class="column left-column">
+                        <span class="number">/01</span>
+                        <div class="column-title"><?php echo $top_row['left_title']; ?></div>
+                        <div class="content"><?php echo $top_row['left_content']; ?></div>
                     </div>
-                </div>
-                <div class="column right-column">
-                    <span class="number">/02</span>
-                    <div class="column-title">OUR MISSION</div>
-                    <div class="content">To drive transformative social behaviour change and generate economic opportunities to advance Ukraine's journey towards a sustainable and equitable recovery. 
+                    <div class="column right-column">
+                        <span class="number">/02</span>
+                        <div class="column-title"><?php echo $top_row['right_title']; ?></div>
+                        <div class="content"><?php echo $top_row['right_content']; ?></div>
+                    </div>                
+                <?php
+                    endif;
+                ?>
+            </div>
+            <?php
+                $key_facts = get_field('key_facts');
+                if( is_array($key_facts) ):
+            ?>
+                    <div class="columns display-flex bottom-row">
+                        <div class="column left-column">
+                            <h3><?php echo $key_facts['sub_title']; ?></h3>
+                            <div class="content">
+                                <p><?php echo $key_facts['content']; ?></p>                            
+                            </div>
                         </div>
-                </div>
-            </div>
-            <div class="columns display-flex bottom-row">
-                <div class="column left-column">
-                    <h3>lorem ipsum</h3>
-                    <div class="content">
-                        <p><strong>Lorem</strong> ipsum dolor sit amet,
-                            consectetur adipiscing elit,
-                            sed do eiusmod tempor incididunt
-                            ut labore et dolore magna aliqua.</p>                            
+                        <div class="column right-column">
+                            <div class="section-title"><?php echo $key_facts['main_title']; ?></div>
+                        </div>
                     </div>
-                </div>
-                <div class="column right-column">
-                    <div class="section-title">key facts
-                        and figures</div>
-                </div>
-            </div>
-            <div class="facts-wrap">
-                <div class="fact-item">
-                    <div class="title">6,740$</div>
-                    <div class="content">of funding goes to female
-                        entrepreneurs</div>
-                </div>
-                <div class="fact-item">
-                    <div class="title">81%</div>
-                    <div class="content">of the program’s mentorship
-                        team are female experts.</div>
-                </div>
-                <div class="fact-item">
-                    <div class="title">78,430€</div>
-                    <div class="content">of funding goes to female
-                        entrepreneurs</div>
-                </div>
-                <div class="fact-item">
-                    <div class="title">47%</div>
-                    <div class="content">of participating business are
-                        female-led, with 39% having
-                        female founders</div>
-                </div>
-                <div class="fact-item">
-                    <div class="title">69%</div>
-                    <div class="content">of
-                        participating businesses
-                        have female representation
-                        in at least 50% of their
-                        management positions</div>
-                </div>
-            </div>
+                    <div class="facts-wrap">
+                        <?php
+                            if( !empty($key_facts['facts_list']) ):
+                                foreach ($key_facts['facts_list'] as $key => $fact):                            
+                        ?>
+                                    <div class="fact-item">
+                                        <div class="title"><?php echo $fact['value']; ?></div>
+                                        <div class="content"><?php echo $fact['description']; ?></div>
+                                    </div>                        
+                        <?php
+                                endforeach;
+                            endif;
+                        ?>
+                    </div>            
+            <?php
+                endif; 
+            ?>
+            <?php 
+                $reports = get_field('reports'); 
+                if( !empty($reports) ):
+            ?>
             <div class="report-wrap">
                 <div class="columns display-flex">
                     <div class="column left-column">
-                        <div class="title">Annual report:</div>
+                        <div class="title"><?php echo $reports['title']; ?></div>
                         <div class="slider-navigation">
                             <div class="prev-slide nav-slide">
                                 <span>PREVIOUS</span>
@@ -82,42 +76,33 @@
                     </div>
                     <div class="right-column">
                         <div class="report-slider">
-                            <div class="report-item">
-                                <div class="columns-wrap">
-                                    <div class="icon-wrap">
-                                        <img src="images/icon-download.svg" alt="">
-                                    </div>
-                                    <div class="content">
-                                        <div class="name">2022 years</div>
-                                        <div class="meta">pdf, 11.5 MB</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="report-item">
-                                <div class="columns-wrap">
-                                    <div class="icon-wrap">
-                                        <img src="images/icon-download.svg" alt="">
-                                    </div>
-                                    <div class="content">
-                                        <div class="name">2021 years</div>
-                                        <div class="meta">pdf, 11.5 MB</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- <div class="report-item">
-                                <div class="columns-wrap">
-                                    <div class="icon-wrap">
-                                        <img src="images/icon-download.svg" alt="">
-                                    </div>
-                                    <div class="content">
-                                        <div class="name">2020 years</div>
-                                        <div class="meta">pdf, 11.5 MB</div>
-                                    </div>
-                                </div>
-                            </div> -->
+                            <?php 
+                                if(!empty($reports['slider'])):
+                                    foreach( $reports['slider'] as $key => $slide ):
+                            ?>
+                                        <div class="report-item">
+                                            <a href="<?php echo $slide['link']; ?>">
+                                                <div class="columns-wrap">
+                                                    <div class="icon-wrap">
+                                                        <img src="<?php echo TEMPLATE_DIRECTORY_URI .'/assets/images/icon-download.svg'; ?>" alt="">
+                                                    </div>
+                                                    <div class="content">
+                                                        <div class="name"><?php echo $slide['name']; ?></div>
+                                                        <div class="meta"><?php echo $slide['size']; ?></div>
+                                                    </div>                                                    
+                                                </div>
+                                            </a>
+                                        </div>                           
+                           <?php
+                                    endforeach;
+                                endif;
+                            ?>
                         </div>                        
                     </div>
                 </div>
             </div>
+            <?php
+                endif;
+            ?>
         </div>
     </section>
