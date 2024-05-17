@@ -3,6 +3,7 @@
 *{
     margin: 0;
     padding: 0;
+	box-sizing: border-box;
 }
 
 html, body, div, span, applet, object, iframe,
@@ -43,21 +44,27 @@ body {
 	box-sizing: border-box;
 	padding-left: 15px;
 	padding-right: 15px;
+	position: relative;
 	@include media($xxl){
-		max-width: 1022px;
+		max-width: 1199px;
 	}
 	@include media($xl){
+		max-width: 991px;
+		padding-left: 18px;
+		padding-right: 18px;
+	}
+	@include media($lg){
 		max-width: 768px;
 		padding-left: 18px;
 		padding-right: 18px;
 	}
 	@include media($md){
-		width: 428px;
+		max-width: 480px;
+		padding-left: 15px;
+		padding-right: 15px;
 	}
 	@include media($sm){
-		width: 320px;
-		padding-left: 14px;
-		padding-right: 14px;
+		max-width: 320px;
 	}
 }
 .display-flex {
@@ -81,10 +88,5 @@ body {
 		letter-spacing: 1.84px;
 		text-transform: uppercase;
 		box-sizing: border-box;
-	}
-}
-.mobile-none {
-	@include media($md){
-		display: none;
 	}
 }
