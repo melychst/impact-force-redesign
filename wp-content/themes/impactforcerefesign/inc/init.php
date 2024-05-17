@@ -23,7 +23,22 @@ function custom_acf_init() {
         'Main programs',
         'Main projects',
         'Main partners',
-        'Main news'
+        'Main news',
+        'WWA hero',
+        'WWA founded',
+        'WWA organisational',
+        'WWA focus on',
+        'WWA impact',
+        'WWA targets',
+        'WWA team board',
+        'OW hero',
+        'OW pillars',
+        'OW pillar advocacy',
+        'OW pillar capacity bildings',
+        'OW pillar community empowerment',
+        'News hero',
+        'News grid',
+        'News subscription',
     );
     // check function exists
     if( function_exists('acf_register_block') ) {

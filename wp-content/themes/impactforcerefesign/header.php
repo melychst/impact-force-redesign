@@ -18,7 +18,7 @@
             <div class="columns display-flex">
                 <div class="column column-left">
                     <div class="logo-wrap">
-                        <img src="assets/images/logo-header.svg" alt="">
+                        <img src="<?php echo TEMPLATE_DIRECTORY_URI .'/assets/images/logo-header.svg' ?>" alt="">
                     </div>
                 </div>
                 <div class="column column-right">
