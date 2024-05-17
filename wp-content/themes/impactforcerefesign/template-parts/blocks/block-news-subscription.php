@@ -1,6 +1,6 @@
 <section class="subscription">
     <div class="image-background">
-        <img src="images/subcription-bg.png" alt="">
+        <img src="<?php echo TEMPLATE_DIRECTORY_URI .'/assets/images/subcription-bg.png'; ?>" alt="">
     </div>
     <div class="container">
         <div class="title">Subscription form to Newsletter</div>

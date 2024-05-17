@@ -13,9 +13,11 @@
                                 <img src="<?php echo get_the_post_thumbnail_url($post_id); ?>" alt="">
                             </div>
                             <div class="content">
+                                <?php if( $i == 0 ): ?>
                                 <div class="icon-wrap">
                                     <img src="<?php echo TEMPLATE_DIRECTORY_URI .'/assets/images/project-icon-work.svg'; ?>" alt="">
                                 </div>
+                                <?php endif; ?>
                                 <div class="title"><?php echo get_the_title($post_id); ?></div>
                                 <div class="meta">
                                     <div class="read-more">

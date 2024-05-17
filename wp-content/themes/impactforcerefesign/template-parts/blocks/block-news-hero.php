@@ -19,29 +19,37 @@
             </div>
         </div>
         <div class="slider-wrap">
-            <div class="slide-item blue-theme">
-                <div class="container">
-                    <div class="title">leadership communication</div>
-                    <div class="slide-content">
-                        <div class="sub-title">WHAT WILL BE THE ROLE OF WOMEN IN THE RESTORATION OF UKRAINE?</div>
-                        <div class="content">Women will have to save the economy and solve acute
-                            social problems. But for this, it is necessary to overcome
-                            the gender gap in wages, employment, education and
-                            create an ecosystem that will promote the development
-                            of women’s entrepreneurship and strengthen the role of social business.
-                        </div>                                
-                    </div>
-                    <div class="read-more">
-                        <a href="#">Read the full article</a>
-                    </div>
-                    <div class="image-wrap">
-                        <img src="images/news-slide-image-1.png" alt="">
-                    </div>
-                    <div class="image-wrap mobile-mage-wrap">
-                        <img src="images/news-slide-image-1-mobile.png" alt="">
+            <?php
+                $slider = get_field('slider');
+                if( !empty($slider) ):
+                    foreach ($slider as $key => $slide):
+            ?>            
+                <div class="slide-item blue-theme">
+                    <div class="container">
+                        <div class="title"><?php echo $slide['title']; ?></div>
+                        <div class="slide-content">
+                            <div class="sub-title"><?php echo $slide['subtitle']; ?></div>
+                            <div class="content"><?php echo $slide['content']; ?></div>                                
+                        </div>
+                        <?php if($slide['link_title'] != ''): ?>
+                            <div class="read-more">
+                                <a href="<?php echo $slide['link_url']; ?>"><?php echo $slide['link_title']; ?></a>
+                            </div>
+                        <?php endif; ?>
+                        <?php if( !empty($slide['image']) ): ?>
+                            <div class="image-wrap">
+                                <img src="<?php echo $slide['image']['url']; ?>" alt="<?php echo $slide['image']['alt']; ?>">
+                            </div>
+                        <?php endif; ?>
+                        <div class="image-wrap mobile-mage-wrap">
+                            <img src="images/news-slide-image-1-mobile.png" alt="">
+                        </div>
                     </div>
                 </div>
-            </div>
+            <?php
+                    endforeach;
+                endif;
+            ?>            
         </div>
     </div>
 </section>
