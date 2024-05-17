@@ -26,10 +26,10 @@
                 <div class="column column-right">
                     <div class="top-row display-flex">
                         <div class="sub-column lenguage-column">
-                            <ul class="lenguage-wrap">
+                            <!-- <ul class="lenguage-wrap">
                                 <li><a class="active" href="#">ENG</a></li>
                                 <li><a href="#">Ukr</a></li>
-                            </ul>
+                            </ul> -->
                         </div>
                         <div class="sub-column social-column">
                             <div class="social-wrap">
@@ -69,13 +69,19 @@
                     </div>
                     <div class="bottom-row">
                         <div class="main-navigation">
-                            <ul class="navigaion">
+                                <?php
+                                    wp_nav_menu(array(
+                                        "theme_location"  => "primary",
+                                        "menu"              => "primary",
+                                    ));
+                                ?>
+                            <!-- <ul class="navigaion">
                                 <li><a href="#">Impact Force</a></li>
                                 <li><a href="#">About us</a></li>
                                 <li><a href="#">Our work</a></li>
                                 <li><a href="#">News</a></li>
                                 <li><a class="purpure-link icon-link" href="#">Contact us</a></li>
-                            </ul>
+                            </ul> -->
                         </div>
                     </div>
                 </div>
