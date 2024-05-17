@@ -1,0 +1,90 @@
+@import "global_wars";
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	border: 0;
+	font-family: inherit;
+	font-size: 100%;
+	font-style: inherit;
+	font-weight: inherit;
+	margin: 0;
+	outline: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+a {
+	text-decoration: none;
+}
+a img {
+	border: 0;
+}
+:focus {/* remember to define focus styles! */
+	outline: 0;
+}
+body {
+	background: #fff;
+	line-height: 1;
+}
+.container {
+	max-width: 1270px;
+    width: 100%;
+    margin: 0 auto;
+	box-sizing: border-box;
+	padding-left: 15px;
+	padding-right: 15px;
+	@include media($xxl){
+		max-width: 1022px;
+	}
+	@include media($xl){
+		max-width: 768px;
+		padding-left: 18px;
+		padding-right: 18px;
+	}
+	@include media($md){
+		width: 428px;
+	}
+	@include media($sm){
+		width: 320px;
+		padding-left: 14px;
+		padding-right: 14px;
+	}
+}
+.display-flex {
+    display: flex;
+}
+.btn {
+	a {
+		height: 40px;
+		width: 100%;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 80.64px;
+		background: #2B51A0;
+		color: #FFF;
+		font-family: "Dela Gothic One";
+		font-size: 23px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: normal;
+		letter-spacing: 1.84px;
+		text-transform: uppercase;
+		box-sizing: border-box;
+	}
+}
+.mobile-none {
+	@include media($md){
+		display: none;
+	}
+}
