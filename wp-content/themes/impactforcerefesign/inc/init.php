@@ -84,3 +84,19 @@ function custom_acf_block_render_callback($block) {
 
 
 
+add_action( 'init', 'register_projects' );
+ 
+function register_projects() {
+ 
+	$args = array(
+		'labels' => array(
+			'menu_name' => 'Projects',
+      'singular_name' => 'Project',
+
+		),
+		'public' => true,
+    'supports' => array('title', 'editor', 'excerpt', 'thumbnail'),
+	);
+
+	register_post_type( 'project', $args );
+}

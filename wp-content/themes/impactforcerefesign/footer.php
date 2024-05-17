@@ -5,13 +5,12 @@
                     <div class="columns-wrap">
                         <div class="column left-column">
                             <div class="navigation">
-                                <ul>
-                                    <li><a href="#">Impact Force</a></li>
-                                    <li><a href="#">About us</a></li>
-                                    <li><a href="#">Who we are</a></li>
-                                    <li><a href="#">Our work</a></li>
-                                    <li><a href="#">News</a></li>
-                                </ul>
+                                <?php
+                                    wp_nav_menu(array(
+                                    "theme_location"  => "footer",
+                                    "menu"              => "footer",
+                                    ));
+                                ?>
                             </div>
                         </div>
                         <div class="column center-column">
@@ -55,7 +54,7 @@
                     <div class="column right-column">
                         <div class="logo-wrap">
                             <a href="/">
-                                <img src="images/logo-footer.svg" alt="">
+                                <img src="<?php echo TEMPLATE_DIRECTORY_URI .'/assets/images/logo-footer.svg' ?>" alt="">
                             </a>
                         </div>
                     </div>

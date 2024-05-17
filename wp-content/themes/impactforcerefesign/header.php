@@ -18,7 +18,9 @@
             <div class="columns display-flex">
                 <div class="column column-left">
                     <div class="logo-wrap">
-                        <img src="<?php echo TEMPLATE_DIRECTORY_URI .'/assets/images/logo-header.svg' ?>" alt="">
+                        <a href="/">
+                            <img src="<?php echo TEMPLATE_DIRECTORY_URI .'/assets/images/logo-header.svg' ?>" alt="">
+                        </a>
                     </div>
                 </div>
                 <div class="column column-right">

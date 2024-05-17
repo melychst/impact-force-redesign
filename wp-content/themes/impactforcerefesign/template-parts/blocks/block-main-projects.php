@@ -1,57 +1,35 @@
 <section class="projects">
     <div class="container">
         <div class="projects-slider">
-            <div class="slide-item active">
-                <div class="image-wrap">
-                    <img src="images/project-1.png" alt="">
-                </div>
-                <div class="content">
-                    <div class="icon-wrap">
-                        <img src="images/project-icon-work.svg" alt="">
-                    </div>
-                    <div class="title">Impact business accelerator</div>
-                    <div class="meta">
-                        <div class="read-more">
-                            <a href="#">More about the project</a>
+            <?php
+                $projects = get_field('projects');
+                if( !empty($projects) ):
+                    $i = 0;
+                    foreach( $projects as $key => $project ):
+                        $post_id = $project['project']->ID;
+            ?>
+                        <div class="slide-item <?php echo $i == 0 ? 'active' : ''; ?>">
+                            <div class="image-wrap">
+                                <img src="<?php echo get_the_post_thumbnail_url($post_id); ?>" alt="">
+                            </div>
+                            <div class="content">
+                                <div class="icon-wrap">
+                                    <img src="<?php echo TEMPLATE_DIRECTORY_URI .'/assets/images/project-icon-work.svg'; ?>" alt="">
+                                </div>
+                                <div class="title"><?php echo get_the_title($post_id); ?></div>
+                                <div class="meta">
+                                    <div class="read-more">
+                                        <a href="<?php echo get_the_permalink($post_id); ?>">More about the project</a>
+                                    </div>
+                                </div>
+                                <div class="description"><?php echo get_the_excerpt($post_id);?></div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="description">A path to make economic recovery of ukraine more equitable, inclusive and aligned with the goals of eu integration.</div>
-                </div>
-            </div>
-            <div class="slide-item">
-                <!-- <div class="icon-wrap">
-                    <img src="images/project-icon-work.svg" alt="">
-                </div> -->
-                <div class="image-wrap">
-                    <img src="images/project-2.png" alt="">
-                </div>
-                <div class="content">
-                    <div class="title">innovators in energy efficiency for ukraine</div>
-                    <div class="meta">
-                        <div class="read-more">
-                            <a href="#">More about the project</a>
-                        </div>
-                    </div>
-                    <div class="description">Acceleration program for catalyzing sustainable energy solutions.</div>
-                </div>
-            </div>
-            <div class="slide-item">
-                <!-- <div class="icon-wrap">
-                    <img src="images/project-icon-work.svg" alt="">
-                </div> -->
-                <div class="image-wrap">
-                    <img src="images/project-2.png" alt="">
-                </div>
-                <div class="content">
-                    <div class="title">ReSTART <br> MINDSET</div>
-                    <div class="meta">
-                        <div class="read-more">
-                            <a href="#">More about the project</a>
-                        </div>
-                    </div>
-                    <div class="description">INTERVENTION PROGRAM TO ADDRESS MENTAL HEALTH CRISIS IN UKRAINE.</div>
-                </div>
-            </div>
+            <?php
+                        $i++;
+                    endforeach;
+                endif; 
+            ?>
         </div>
         <div class="slider-navigation">
             <div class="prev-slide nav-slide">

@@ -2,58 +2,51 @@
     <div class="container">
         <div class="columns display-flex">
             <div class="column left-column">
-                <div class="section-title">partners & donors</div>
+                <div class="section-title"><?php echo get_field('title'); ?></div>
             </div>
             <div class="column column-right">
-                <div class="image-wrap">
-                    <img src="images/main-partners-section-image.svg" alt="">
-                </div>
+                <?php
+                    $image = get_field('image');
+                    if($image):
+                ?>
+                    <div class="image-wrap">
+                        <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
+                    </div>                
+                <?php
+                    endif;
+                ?>
             </div>
         </div>
         <div class="logos-wrap">
-            <div class="display-flex" id="top-row">
-                <div class="logo-item">
-                    <img src="images/logo1.png" alt="">
+            <?php
+                $top_row_gallary = get_field('partners_row_top');
+                if( !empty($top_row_gallary) ):
+            ?>
+                <div class="display-flex" id="top-row">
+                    <?php foreach($top_row_gallary as $key => $logo_top): ?>
+                        <div class="logo-item">
+                            <img src="<?php echo $logo_top['url']; ?>" alt="<?php echo $logo_top['alt']; ?>">
+                        </div>
+                    <?php endforeach; ?>
                 </div>
-                <div class="logo-item">
-                    <img src="images/logo2.png" alt="">
+            <?php
+                endif;
+            ?>
+
+            <?php
+                $bottom_row_gallary = get_field('partners_row_bottom');
+                if( !empty($bottom_row_gallary) ):
+            ?>
+                <div class="display-flex" id="bottom-row">
+                    <?php foreach($bottom_row_gallary as $key => $logo_top): ?>
+                        <div class="logo-item">
+                            <img src="<?php echo $logo_top['url']; ?>" alt="<?php echo $logo_top['alt']; ?>">
+                        </div>
+                    <?php endforeach; ?>
                 </div>
-                <div class="logo-item">
-                    <img src="images/logo3.png" alt="">
-                </div>
-                <div class="logo-item">
-                    <img src="images/logo4.png" alt="">
-                </div>
-                <div class="logo-item">
-                    <img src="images/logo5.png" alt="">
-                </div>
-                <div class="logo-item">
-                    <img src="images/logo6.png" alt="">
-                </div>
-                <div class="logo-item">
-                    <img src="images/logo7.png" alt="">
-                </div>
-            </div>
-            <div class="display-flex" id="bottom-row">
-                <div class="logo-item">
-                    <img src="images/logo8.png" alt="">
-                </div>
-                <div class="logo-item">
-                    <img src="images/logo9.png" alt="">
-                </div>
-                <div class="logo-item">
-                    <img src="images/logo10.png" alt="">
-                </div>
-                <div class="logo-item">
-                    <img src="images/logo11.png" alt="">
-                </div>
-                <div class="logo-item">
-                    <img src="images/logo12.png" alt="">
-                </div>
-                <div class="logo-item">
-                    <img src="images/logo13.png" alt="">
-                </div>
-            </div>
+            <?php
+                endif;
+            ?>
         </div>
     </div>
 </section>   
