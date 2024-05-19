@@ -76,13 +76,12 @@
                         if( $the_query->have_posts() ): 
                             while( $the_query->have_posts() ):
                                 $post = $the_query->the_post();
-                                $post_id = $post->ID;
                     ?>
                                 <div class="news-item">
                                     <div class="date"><?php echo get_the_date(); ?></div>
                                     <div class="title">
-                                        <a href="<?php echo get_the_permalink($post_id);?>">
-                                            <?php echo get_the_title($post_id); ?>
+                                        <a href="<?php echo get_the_permalink();?>">
+                                            <?php echo get_the_title(); ?>
                                         </a>
                                     </div>
                                 </div>

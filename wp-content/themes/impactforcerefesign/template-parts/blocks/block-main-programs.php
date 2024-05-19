@@ -13,12 +13,12 @@
             endif;
         ?>
     </div>
-    <?
+    <?php
         $img = get_field('image'); 
-        if( $img ):
+        if( !empty($img) ):
     ?>
             <div class="background-image">
-                <img src="<?php echo $img['url']; ?>" alt="<?php echo  $img['alt']; ?>">
+                <img src="<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>">
             </div>
     <?php
         endif;

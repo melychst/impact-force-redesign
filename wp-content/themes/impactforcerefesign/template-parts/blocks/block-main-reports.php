@@ -59,7 +59,7 @@
                 <div class="columns display-flex">
                     <div class="column left-column">
                         <div class="title"><?php echo $reports['title']; ?></div>
-                        <div class="slider-navigation">
+                        <div id="report-slider-navigation" class="slider-navigation">
                             <div class="prev-slide nav-slide">
                                 <span>PREVIOUS</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="37" height="9" viewBox="0 0 37 9" fill="none">
@@ -75,13 +75,13 @@
                         </div>
                     </div>
                     <div class="right-column">
-                        <div class="report-slider">
+                        <div id="report-slider" class="report-slider owl-carousel">
                             <?php 
                                 if(!empty($reports['slider'])):
                                     foreach( $reports['slider'] as $key => $slide ):
                             ?>
                                         <div class="report-item">
-                                            <a href="<?php echo $slide['link']; ?>">
+                                            <a href="<?php echo $slide['link']; ?>" target=_blank>
                                                 <div class="columns-wrap">
                                                     <div class="icon-wrap">
                                                         <img src="<?php echo TEMPLATE_DIRECTORY_URI .'/assets/images/icon-download.svg'; ?>" alt="">
