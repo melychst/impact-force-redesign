@@ -3,6 +3,7 @@
   mobileNavigation();
   reportSlider();
   projectsSlider();
+  pilarsSlider();
 
   function documentReady() {
     jQuery(document).ready(function () {
@@ -193,6 +194,29 @@
         }
        
     }, 50);
+  }
+
+  function pilarsSlider() {
+    var slider = $('#pillars-slider');
+    if (slider.length > 0) {
+      slider.owlCarousel({
+        items: 1,
+        loop: true,
+        nav: false,
+        dots: false,
+      });
+
+      var sliderNavigation = jQuery('#pillars-slider-navigtion');
+      jQuery('.next-slide', sliderNavigation).click(function () {
+        slider.trigger('next.owl.carousel');
+      });
+      // Go to the previous item
+      jQuery('.prev-slide', sliderNavigation).click(function () {
+        // With optional speed parameter
+        // Parameters has to be in square bracket '[]'
+        slider.trigger('prev.owl.carousel');
+      });
+    }
   }
 
 

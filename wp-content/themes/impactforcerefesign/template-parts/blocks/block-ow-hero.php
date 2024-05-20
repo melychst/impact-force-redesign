@@ -1,11 +1,16 @@
 <section class="OW-hero">
     <div class="container">
         <div class="hero-content">
-            <p><span>IMPACT FORCE</span> is a Ukrainian NGO focusing on social behavior change, lasting social impact, creating economic opportunities and taking action for the common good.</p>
+            <p><?php echo get_field('content'); ?></p>
+            <?php 
+                $button_title = get_field('button_title');
+                if( $button_title != '' ):
+            ?>
             <div class="read-more">
-                <a href="#">Read more</a>
+                <a href="<?php echo get_field('button_link'); ?>"><?php echo $button_title; ?></a>
             </div>
+            <?php endif; ?>
         </div>
-        <h1 class="hero-title">our work</h1>
+        <h1 class="hero-title"><?php echo get_field('title'); ?></h1>
     </div>
 </section>
