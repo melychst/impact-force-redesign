@@ -991,13 +991,16 @@ body {
                         padding: 32px 30px 14px 56px;
                     }
                     @include media($md){
-                        padding: 25px 25px 15px 25px;
+                        padding: 13px 10px 10px 7px;
                         border: 1px solid $purple-color;
                         border-radius: 4.882px;
                     }
                     .columns {
                         @include media($md){
-                            flex-direction: column;
+                            justify-content: space-between;
+                        }
+                        @include media($sm){
+                            justify-content: start;
                         }
                     }
                     .left-column {
@@ -1012,9 +1015,10 @@ body {
                             margin-right: 72px;
                         }
                         @include media($md){
-                            width: 100%;
+                            width: 145px;
                             margin-right: 0px;
-                            text-align: center;
+                            display: flex;
+                            flex-direction: column;
                         }
                     }
                     .right-column {
@@ -1023,7 +1027,10 @@ body {
                             width: 350px;
                         }
                         @include media($md){
-                            width: 100%;
+                            width: 200px;
+                        }
+                        @include media($sm){
+                            width: 120px;
                         }
                     }
                     .title {
@@ -1036,6 +1043,10 @@ body {
                         @include media($lg) {
                             font-size: 22px;
                         }
+                        @include media($md) {
+                            font-size: 16.148px;
+                            text-align: left;
+                        }
                     }
                     .report-slider {
                         display: flex;
@@ -1045,6 +1056,7 @@ body {
                         }
                         @include media($md){
                             margin-top: 18px;
+                            display: none;
                         }
                         .report-item {
                             width: 225px;
@@ -1121,8 +1133,8 @@ body {
                             margin-top: 28px;
                         }
                         @include media($md){
-                            justify-content: center;
-                            margin-top: 18px;
+                            // justify-content: center;
+                            margin-top: auto;
                         }
                         .nav-slide {
                             width: 148px;
@@ -1146,9 +1158,22 @@ body {
                                 font-size: 5px;
                                 height: 14px;
                             }
+                            @include media($md) {
+                                width: 55px;
+                                font-size: 3.755px;
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: normal;
+                                letter-spacing: 0.376px;
+                                height: 9px;
+                                border: 0.376px solid $purple-color;
+                            }
                             svg {
                                 @include media($lg) {
                                     width: 20px;
+                                }
+                                @include media($md) {
+                                    width: 13px;
                                 }
                             }
                             &:hover {
@@ -1165,33 +1190,102 @@ body {
                             &.prev-slide {
                                 margin-right: 63px;
                                 padding: 9px 25px 7px 68px;
-                                @include media($xl) {
+                                @include media($xl){
                                     margin-right: 20px;
-                                    padding: 9px 25px 7px 50px;
+                                    padding: 9px 25px 7px 50px; 
                                 }
-                                @include media($lg) {
+                                @include media($lg){
                                     margin-right: 34px;
                                     padding: 7px 25px 5px 36px;
                                 }
+                                @include media($md){
+                                    margin-right: 24px;
+                                    padding: 3px 5px 2px 25px;                                    
+                                }
                                 svg {
                                     left: 8px;
+                                    @include media($md){
+                                        left: 3px;
+                                    }
+                                    
                                 }
                             }    
                             &.next-slide {
                                 padding: 9px 8px 7px 42px;
-                                @include media($xl) {
+                                @include media($xl){
                                     padding: 9px 8px 7px 30px;
                                 }
-                                @include media($lg) {
-                                    padding: 7px 8px 5px 22px;
+                                @include media($xl){
+                                    padding: 7px 8px 5px 30px;
+                                }
+                                @include media($md){
+                                    padding: 3px 8px 2px 15px;
                                 }
                                 svg {
-                                    right: 8px;
+                                    right: 8px; 
+                                    @include media($md){
+                                        right: 3px;    
+                                    }
+                                    
                                 }
                             }   
                             svg {
                                 position: absolute;
+                                @include media($md){
+                                    top: -1px;
+                                }
                             }             
+                        }
+                    }
+                    .report-slider-mobile {
+                        display: flex;
+                        display: none;
+                        margin-left: 50px;
+                        @include media($md){
+                            display: block;
+                        }
+                        @include media($sm){
+                            margin-left: 9px;
+                        }
+                        .report-item {
+                            width: 150px;
+                            margin-bottom: 16px;
+                            &:last-child {
+                                margin-bottom: 0px;
+                            }
+                            a {
+                                color: $main-color;
+                            }
+                            .columns-wrap {
+                                display: flex;
+                                .icon-wrap {
+                                    width: 18px;
+                                    height: 18px;
+                                    img {
+                                        object-fit: cover;
+                                        object-position: center;
+                                        width: 100%;
+                                        height: auto;
+                                    }
+                                }
+                                .content {
+                                    padding-left: 9px;
+                                    padding-top: 2px;
+                                    .name {
+                                        font-family: "Akkurat LL Cyrillic Bold";
+                                        font-size: 10.077px;
+                                        font-weight: 700;
+                                        line-height: 6.298px; /* 62.5% */
+                                        letter-spacing: 0.504px;
+                                        margin-bottom: 4px;
+                                    }
+                                    .meta {
+                                        font-size: 6.298px;
+                                        line-height: 6.298px; /* 100% */
+                                        letter-spacing: 0.315px;
+                                    }
+                                }
+                            }
                         }
                     }
                 }       
