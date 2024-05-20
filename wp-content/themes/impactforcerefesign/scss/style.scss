@@ -18,6 +18,10 @@ body {
         padding-top: 65px;
         padding-bottom: 25px;
         border-bottom: #CDDC39 solid 2px;
+        position: relative;
+        .container {
+            position: relative;
+        }
         @include media($lg){
             padding-top: 48px;
             padding-bottom: 10px;
@@ -105,6 +109,7 @@ body {
                         @include media($lg){
                             width: 21px;
                             height: 21px;
+                            border: $blue-color solid 1px;
                         }
                         svg {
                              @include media($lg){
@@ -242,12 +247,27 @@ body {
         }
         .mobile-burger {
             position: absolute;
-            top: 45px;
-            right: 11px;
+            top: 46px;
+            right: 14px;
             cursor: pointer;
             display: none;
             @include media($md){
                 display: block;
+            }
+        }
+        .mobile-header-icon {
+            width: 16px;
+            height: 16px;
+            position: absolute;
+            bottom: -40px;
+            left: 15px;
+            display: none;
+            @include media($md){
+                display: block;
+            }
+            svg {
+                width: 100%;
+                height: 16px;
             }
         }
     }
@@ -288,8 +308,8 @@ body {
         }
         .burger-close {
             position: absolute;
-            right: 21px;
-            top: 50px;
+            right: 15px;
+            top: 56px;
         }
     }
     .main-wrap {
@@ -377,6 +397,8 @@ body {
                         @include media($md){
                            width: 100%;
                            margin-left: 0px;
+                           padding-left: 38px;
+                           padding-right: 80px;
                         }
                         &::before {
                            @include before-content(73px, 17px);
@@ -390,6 +412,11 @@ body {
                                 background-size: 100%;
                                 top: 0px;
                            }
+                           @include media($sm){
+                                @include before-content(27px, 6px);
+                                background-size: 100%;
+                                top: 4px;
+                            }
                         }
                         .sub-title {
                             font-family: "Akkurat Mono LL";
@@ -445,6 +472,10 @@ body {
                     @include media($lg){
                         padding-left: 56px;
                     }
+                    @include media($md){
+                        padding-left: 38px;
+                        padding-right: 50px;
+                    }
                     &::before {
                         @include before-content(73px, 17px);
                         background-image: url(../images/icon-arrow.svg);
@@ -454,6 +485,11 @@ body {
                         left: 0px; 
                         @include media($lg){
                             @include before-content(41px, 10px);
+                            background-size: 100%;
+                            top: 7px;
+                        }
+                        @include media($sm){
+                            @include before-content(27px, 6px);
                             background-size: 100%;
                             top: 7px;
                         }
@@ -482,6 +518,7 @@ body {
                         @include media($md){
                             font-size: 13px;
                             line-height: 17px;
+                            width: 100%;
                         }
                         &.decorate-title {
                             &::before {
@@ -498,6 +535,10 @@ body {
                                 @include media($lg){
                                     @include before-content(245px, 10px);
                                     bottom: -3px;
+                                }
+                                @include media($sm){
+                                    @include before-content(172px, 8px);
+                                    bottom: 49px;
                                 }
                             }
                         }
@@ -604,7 +645,8 @@ body {
                             height: 16px;
                             padding-top: 2px;
                             padding-left: 8px;
-                            padding-right: 25px;
+                            padding-right: 20px;
+                            letter-spacing: 0.2px;
                         }
                         &::after {
                             @include after-content(48px, 48px);
@@ -1921,6 +1963,11 @@ body {
                         left: -8px;
                         width: 500px;
                     }
+                    @include media($md){
+                        position: relative;
+                        left: -8px;
+                        width: 500px;
+                    }
                     .slide-item {
                         width: 320px;
                         margin-top: auto;
@@ -1978,6 +2025,7 @@ body {
                                 top: -19px;
                                 padding: 32px 10px 2px 5px;
                                 border-radius: 3.235px;
+                                height: 67px;
                             }
                             .title {
                                 font-family: "Akkurat LL Cyrillic Bold";
@@ -2199,7 +2247,7 @@ body {
                                                 transform: rotate(45deg);
                                                 @include media($lg){
                                                     @include before-content(10px, 10px);
-                                                    right: 4px;
+                                                    right: 2px;
                                                     top: 1px;
                                                     background-size: 5px 5px;
                                                 }
@@ -2543,6 +2591,7 @@ body {
                         }
                         @include media($md){
                             width: 100%;
+                            position: relative;
                         }
                    }
                    .right-column {
@@ -2771,13 +2820,22 @@ body {
                         margin-top: 53px;
                         position: absolute;
                         bottom: 0px;
-                        right: 0px;
+                        left: 578px;
+                        z-index: 5;
+                        @include media($xxl){
+                            left: 480px;
+                        }
+                        @include media($xl){
+                            left: 410px;
+                        }
                         @include media($lg){
-                            margin-top: 0px;
+                            left: 338px;
+                        }
+                        @include media($md){
+                            left: 304px;
                         }
                         @include media($sm){
-                            position: static;
-                            margin-top: 15px;
+                            left: 182px;
                         }
                         .nav-slide {
                             width: 148px;
@@ -2797,6 +2855,13 @@ body {
                                 height: 14px; 
                                 width: 80px;
                                 font-size: 5.329px;
+                            }
+                            @include media($md){
+                                width: 50px;
+                                height: 9px;
+                                font-size: 5px;
+                                letter-spacing: 0.3px;
+                                border: 0.314px solid $blue-color;
                             }
                             &:hover {
                                 background: $purple-color;
@@ -2819,8 +2884,15 @@ body {
                                 @include media($lg){
                                     margin-right: 15px;
                                 }
+                                @include media($md){
+                                    padding: 1px 2px 0px 19px;
+                                    margin-right: 8px;
+                                }
                                 svg {
                                     left: 8px;
+                                    @include media($md){
+                                        left: 3px;
+                                    }
                                 }
                             }    
                             &.next-slide {
@@ -2828,8 +2900,14 @@ body {
                                 @include media($lg){
                                     padding: 1px 8px 0px 20px;
                                 }
+                                @include media($md){
+                                    padding: 1px 2px 0px 9px;
+                                }
                                 svg {
                                     right: 8px;
+                                    @include media($md){
+                                        right: 3px;
+                                    }
                                 }
                             }   
                             svg {
@@ -2837,6 +2915,10 @@ body {
                                 @include media($lg){
                                     width: 20px;
                                     top: 1px;
+                                }
+                                @include media($md){
+                                    width: 13px;
+                                    top: -1px;
                                 }
                             }             
                         }
@@ -6196,31 +6278,38 @@ body {
                         @include media($lg){
                             width: 216px;
                         }
-                        &.alignleft {
-                            float: left;
-                            margin: 32px 32px 32px 0px;
-                            @include media($lg){
-                                margin: 14px 76px 20px 0px;
-                            }
-                            @include media($md){
-                                float: none;
-                            }
+                        @include media($md){
+                            width: 100%;
                         }
-                        &.alignright {
-                            float: right;
-                            margin: 32px 0px 32px 32px;
-                            @include media($lg){
-                                margin: 14px 0px 20px 32px;
-                            }
-                            @include media($md){
-                                float: none;
-                            }
+                    }  
+                    .alignleft {
+                        float: left;
+                        margin: 32px 32px 32px 0px;
+                        @include media($lg){
+                            margin: 14px 76px 20px 0px;
                         }
-                        &.aligncenter {
-                            display: block;
-                            text-align: center;
+                        @include media($md){
+                            float: none;
+                            margin-bottom: 30px;
+                            margin-right: 0px;
                         }
-                    }                 
+                    }
+                    .alignright {
+                        float: right;
+                        margin: 32px 0px 32px 32px;
+                        @include media($lg){
+                            margin: 14px 0px 20px 32px;
+                        }
+                        @include media($md){
+                            float: none;
+                            margin-bottom: 30px;
+                            margin-left: 0px;
+                        }
+                    }
+                    .aligncenter {
+                        display: block;
+                        text-align: center;
+                    }               
                     .quote {
                         line-height: 26px;
                         padding-top: 45px;

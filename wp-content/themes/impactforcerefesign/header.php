@@ -80,19 +80,12 @@
                     </div>
                     <div class="bottom-row">
                         <div class="main-navigation">
-                                <?php
-                                    wp_nav_menu(array(
-                                        "theme_location"  => "primary",
-                                        "menu"              => "primary",
-                                    ));
-                                ?>
-                            <!-- <ul class="navigaion">
-                                <li><a href="#">Impact Force</a></li>
-                                <li><a href="#">About us</a></li>
-                                <li><a href="#">Our work</a></li>
-                                <li><a href="#">News</a></li>
-                                <li><a class="purpure-link icon-link" href="#">Contact us</a></li>
-                            </ul> -->
+                            <?php
+                                wp_nav_menu(array(
+                                    "theme_location"  => "primary",
+                                    "menu"              => "primary",
+                                ));
+                            ?>
                         </div>
                     </div>
                 </div>
@@ -101,6 +94,12 @@
                 <div class="image-wrap">
                     <img src="<?php echo TEMPLATE_DIRECTORY_URI .'/assets/images/burger.svg'?>" alt="">
                 </div>
+            </div>
+            <div class="mobile-header-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M-7.97909e-06 8C-8.17221e-06 12.4183 3.58171 16 7.99999 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 -1.56562e-07 8 -3.49691e-07C3.58172 -5.4282e-07 -7.78596e-06 3.58172 -7.97909e-06 8Z" fill="#00B0EB"/>
+                    <path d="M4.80655 10.041L9.21808 10.041L4.80655 5.6295L5.6296 4.80646L10.0411 9.21799L10.0411 4.80646L11.1934 4.80646L11.1934 10.041L11.1934 11.1933L10.0411 11.1933L4.80655 11.1933L4.80655 10.041Z" fill="white"/>
+                </svg>
             </div>
         </div>
     </header>

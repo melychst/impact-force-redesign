@@ -4,6 +4,7 @@
   reportSlider();
   projectsSlider();
   pilarsSlider();
+  newsSlider();
 
   function documentReady() {
     jQuery(document).ready(function () {
@@ -117,8 +118,15 @@
         loop: true,
         nav: false,
         dots: false,
-        margin: 40,
+        margin: 10,
         autoWidth:true,
+        mouseDrag: false,
+        touchDrag: false,
+        responsive : {
+          768 : {
+            margin: 40,
+          }
+      }
       });
 
       var sliderNavigation = jQuery('#projects-slider-navigation');
@@ -207,6 +215,29 @@
       });
 
       var sliderNavigation = jQuery('#pillars-slider-navigtion');
+      jQuery('.next-slide', sliderNavigation).click(function () {
+        slider.trigger('next.owl.carousel');
+      });
+      // Go to the previous item
+      jQuery('.prev-slide', sliderNavigation).click(function () {
+        // With optional speed parameter
+        // Parameters has to be in square bracket '[]'
+        slider.trigger('prev.owl.carousel');
+      });
+    }
+  }
+
+  function newsSlider() {
+    var slider = $('#news-slider');
+    if (slider.length > 0) {
+      slider.owlCarousel({
+        items: 1,
+        loop: true,
+        nav: false,
+        dots: false,
+      });
+
+      var sliderNavigation = jQuery('#news-slider-navigation');
       jQuery('.next-slide', sliderNavigation).click(function () {
         slider.trigger('next.owl.carousel');
       });
