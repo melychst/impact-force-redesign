@@ -2,7 +2,7 @@
     <div class="hero-news-slider">
         <div class="slider-navigation-wrap">
             <div class="container">
-                <div class="slider-navigation">
+                <div id="blog-hero-slider-navigation" class="slider-navigation">
                     <div class="prev-slide nav-slide">
                         <span>PREVIOUS</span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="37" height="9" viewBox="0 0 37 9" fill="none">
@@ -18,13 +18,13 @@
                 </div>                         
             </div>
         </div>
-        <div class="slider-wrap">
+        <div id="blog-hero-slider" class="slider-wrap owl-carousel">
             <?php
                 $slider = get_field('slider');
                 if( !empty($slider) ):
                     foreach ($slider as $key => $slide):
             ?>            
-                <div class="slide-item blue-theme">
+                <div class="slide-item <?php echo $slide['theme_color']; ?>-theme">
                     <div class="container">
                         <div class="title"><?php echo $slide['title']; ?></div>
                         <div class="slide-content">

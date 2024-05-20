@@ -361,6 +361,26 @@
                     ]
                 }
             ]
+        },
+        {
+            "key": "field_664b7c14d7a0a",
+            "label": "Link",
+            "name": "link",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         }
     ],
     "location": [
@@ -381,5 +401,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1715970180
+    "modified": 1716223011
 }

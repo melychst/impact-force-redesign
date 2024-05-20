@@ -6,6 +6,7 @@
   projectsSlider();
   pilarsSlider();
   newsSlider();
+  blogHeroSlider();
 
   function documentReady() {
     jQuery(document).ready(function () {
@@ -143,39 +144,37 @@
         nav: false,
         dots: false,
         margin: 10,
-        autoWidth:true,
+        autoWidth: true,
         mouseDrag: false,
         touchDrag: false,
-        responsive : {
-          768 : {
+        responsive: {
+          768: {
             margin: 40,
-          }
-      }
+          },
+        },
       });
 
       var sliderNavigation = jQuery('#projects-slider-navigation');
       jQuery('.next-slide', sliderNavigation).click(function () {
         slider.trigger('next.owl.carousel');
-        var dataCurrentSlide = parseInt(slider.attr('data-current-slide'));      
+        var dataCurrentSlide = parseInt(slider.attr('data-current-slide'));
         setNextSlide(dataCurrentSlide, 'next');
-        changeSliderItems();     
+        changeSliderItems();
       });
 
       jQuery('.prev-slide', sliderNavigation).click(function () {
         slider.trigger('prev.owl.carousel');
-        var dataCurrentSlide = parseInt(slider.attr('data-current-slide'));      
+        var dataCurrentSlide = parseInt(slider.attr('data-current-slide'));
         setNextSlide(dataCurrentSlide, 'prev');
         changeSliderItems();
       });
     }
   }
 
-
-  function setNextSlide(currenSlide, direction){
-
-    if(direction == 'next'){
+  function setNextSlide(currenSlide, direction) {
+    if (direction == 'next') {
       nextSlideNumber = currenSlide + 1;
-      if(nextSlideNumber == 4){
+      if (nextSlideNumber == 4) {
         nextSlideNumber = 1;
         jQuery('#projects-slider').attr('data-slide-count', 1);
       } else {
@@ -183,48 +182,45 @@
       }
     }
 
-    if(direction == 'prev'){
+    if (direction == 'prev') {
       nextSlideNumber = currenSlide - 1;
-      if(nextSlideNumber == 0){
+      if (nextSlideNumber == 0) {
         nextSlideNumber = 3;
-      } 
+      }
 
-      if(nextSlideNumber == 2){
+      if (nextSlideNumber == 2) {
         jQuery('#projects-slider').attr('data-slide-count', 2);
       } else {
         jQuery('#projects-slider').attr('data-slide-count', 1);
       }
     }
 
-    var current = '0'+ nextSlideNumber;
-    if(nextSlideNumber > 9){
+    var current = '0' + nextSlideNumber;
+    if (nextSlideNumber > 9) {
       current = nextSlideNumber;
     }
 
-    jQuery('#projects-slider').attr('data-current-slide', nextSlideNumber);   
-    jQuery('#projects-slider-navigation span.current').text(current);  
-
+    jQuery('#projects-slider').attr('data-current-slide', nextSlideNumber);
+    jQuery('#projects-slider-navigation span.current').text(current);
   }
 
-  function changeSliderItems(){
+  function changeSliderItems() {
     var slider = jQuery('#projects-slider');
-    setTimeout(function(){
-      
+    setTimeout(function () {
       jQuery('.slide-item', slider).removeClass('active');
-      
+
       var dataSlideCount = parseInt(slider.attr('data-slide-count'));
 
-      var allActiveItems = jQuery('.owl-item.active', slider);          
+      var allActiveItems = jQuery('.owl-item.active', slider);
       var firsItemActive = allActiveItems.first();
       jQuery('.slide-item', firsItemActive).addClass('active');
 
-        var allItems = jQuery('.owl-item', slider);
+      var allItems = jQuery('.owl-item', slider);
 
-        for (let index = 0; index < dataSlideCount; index++) {
-          var currentElem = jQuery(allItems[index]);
-          jQuery('.slide-item', currentElem).addClass('active');
-        }
-       
+      for (let index = 0; index < dataSlideCount; index++) {
+        var currentElem = jQuery(allItems[index]);
+        jQuery('.slide-item', currentElem).addClass('active');
+      }
     }, 50);
   }
 
@@ -274,5 +270,27 @@
     }
   }
 
+  function blogHeroSlider() {
+    var slider = $('#blog-hero-slider');
+    if (slider.length > 0) {
+      slider.owlCarousel({
+        items: 1,
+        loop: true,
+        nav: false,
+        dots: false,
+      });
+
+      var sliderNavigation = jQuery('#blog-hero-slider-navigation');
+      jQuery('.next-slide', sliderNavigation).click(function () {
+        slider.trigger('next.owl.carousel');
+      });
+      // Go to the previous item
+      jQuery('.prev-slide', sliderNavigation).click(function () {
+        // With optional speed parameter
+        // Parameters has to be in square bracket '[]'
+        slider.trigger('prev.owl.carousel');
+      });
+    }
+  }
 
 })(jQuery)
