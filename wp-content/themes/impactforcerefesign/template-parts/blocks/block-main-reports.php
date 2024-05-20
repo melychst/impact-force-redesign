@@ -99,7 +99,7 @@
                             ?>
                         </div> 
                         
-                        <div id="report-slider-mobile" class="report-slider-mobile">
+                        <div id="report-slider-mobile" class="report-slider-mobile owl-carousel">
                             <?php 
                                 if(!empty($reports['slider'])):
                                     $count = 0;
@@ -109,9 +109,7 @@
                                             echo '<div class="slide-wrap">';
                                         endif;
                             ?>
-
-                            <div class="slide-wrap">
-                                <div class="report-item">
+                                <div class="report-item" data-count="<?php echo $count; ?>">
                                     <a href="<?php echo $slide['link']; ?>" target=_blank>
                                         <div class="columns-wrap">
                                             <div class="icon-wrap">
@@ -123,26 +121,12 @@
                                             </div>                                                    
                                         </div>
                                     </a>
-                                </div> 
-                                <div class="report-item">
-                                    <a href="<?php echo $slide['link']; ?>" target=_blank>
-                                        <div class="columns-wrap">
-                                            <div class="icon-wrap">
-                                                <img src="<?php echo TEMPLATE_DIRECTORY_URI .'/assets/images/icon-download.svg'; ?>" alt="">
-                                            </div>
-                                            <div class="content">
-                                                <div class="name"><?php echo $slide['name']; ?></div>
-                                                <div class="meta"><?php echo $slide['size']; ?></div>
-                                            </div>                                                    
-                                        </div>
-                                    </a>
-                                </div>   
-                            </div>
+                                </div>    
                            <?php
                                         $count++;
                                         if( ($count == 2) || ($key == ($lenght - 1)) ):
                                             echo '</div>';
-                                            $count == 0;
+                                            $count = 0;
                                         endif;
                                     endforeach;
                                 endif;
