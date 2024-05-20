@@ -2683,6 +2683,7 @@ body {
                                 position: absolute;
                                 top: 92px;
                                 right: 0px;
+                                overflow: hidden;
                                 @include media($xl){
                                     width: 400px;
                                     max-height: initial;
