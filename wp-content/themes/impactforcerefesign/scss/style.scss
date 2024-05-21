@@ -3398,18 +3398,18 @@ body {
                             z-index: -1;
                         }                 
                     }
-                    .slider-support {
-                        .title {
-                            font-family: "Akkurat Mono LL";
-                            font-size: 32px;
-                            font-style: normal;
-                            font-weight: 400;
-                            line-height: 32px;
-                            letter-spacing: 1.72px;
-                            text-transform: uppercase;
-                            margin-bottom:55px;
-                        }
-                        .slider-wrap {
+                    .title {
+                        font-family: "Akkurat Mono LL";
+                        font-size: 32px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 32px;
+                        letter-spacing: 1.72px;
+                        text-transform: uppercase;
+                        margin-bottom:55px;
+                    }
+                    .slider-wrap {
+                        .slider-support{
                             display: flex;
                             justify-content: space-between;
                             .slide-item {
@@ -3426,18 +3426,21 @@ body {
                             }
                             
                         }
-                        .slider-navigation {
-                            display: flex;
-                            justify-content: space-between;
-                            width: 100%;
-                            margin-top: 40px;
-                            .pages {
-                                font-family: "Akkurat Mono LL";
-                                font-size: 16px;
-                                font-style: normal;
-                                font-weight: 400;
-                                color: $green-color
-                            }
+                    }
+                    .slider-navigation {
+                        display: flex;
+                        justify-content: space-between;
+                        width: 100%;
+                        margin-top: 40px;
+                        .nav-slide {
+                            cursor: pointer;
+                        }
+                        .pages {
+                            font-family: "Akkurat Mono LL";
+                            font-size: 16px;
+                            font-style: normal;
+                            font-weight: 400;
+                            color: $green-color
                         }
                     }
                     .content {

@@ -7,6 +7,9 @@
   pilarsSlider();
   newsSlider();
   blogHeroSlider();
+  impactSlider();
+  advisorSlider();
+  volunteersSlider();
 
   function documentReady() {
     jQuery(document).ready(function () {
@@ -102,10 +105,7 @@
       jQuery('.next-slide', sliderNavigation).click(function () {
         slider.trigger('next.owl.carousel');
       });
-      // Go to the previous item
       jQuery('.prev-slide', sliderNavigation).click(function () {
-        // With optional speed parameter
-        // Parameters has to be in square bracket '[]'
         slider.trigger('prev.owl.carousel');
       });
     }
@@ -288,6 +288,69 @@
       jQuery('.prev-slide', sliderNavigation).click(function () {
         // With optional speed parameter
         // Parameters has to be in square bracket '[]'
+        slider.trigger('prev.owl.carousel');
+      });
+    }
+  }
+
+  function impactSlider() {
+    var slider = $('#impact-slider');
+    if (slider.length > 0) {
+      slider.owlCarousel({
+        items: 3,
+        loop: true,
+        nav: false,
+        dots: false,
+        margin: 38,
+      });
+
+      var sliderNavigation = jQuery('#impact-slider-navigation');
+      jQuery('.next-slide', sliderNavigation).click(function () {
+        slider.trigger('next.owl.carousel');
+      });
+      jQuery('.prev-slide', sliderNavigation).click(function () {
+        slider.trigger('prev.owl.carousel');
+      });
+    }
+  }
+
+  function advisorSlider() {
+    var slider = $('#advisor-slider');
+    if (slider.length > 0) {
+      slider.owlCarousel({
+        items: 4,
+        loop: true,
+        nav: false,
+        dots: false,
+        margin: 32,
+      });
+
+      var sliderNavigation = jQuery('#advisor-slider-navigation');
+      jQuery('.next-slide', sliderNavigation).click(function () {
+        slider.trigger('next.owl.carousel');
+      });
+      jQuery('.prev-slide', sliderNavigation).click(function () {
+        slider.trigger('prev.owl.carousel');
+      });
+    }
+  }
+
+  function volunteersSlider() {
+    var slider = $('#volunteers-slider');
+    if (slider.length > 0) {
+      slider.owlCarousel({
+        items: 3,
+        loop: true,
+        nav: false,
+        dots: false,
+        margin: 135,
+      });
+
+      var sliderNavigation = jQuery('#volunteers-slider-navigation');
+      jQuery('.next-slide', sliderNavigation).click(function () {
+        slider.trigger('next.owl.carousel');
+      });
+      jQuery('.prev-slide', sliderNavigation).click(function () {
         slider.trigger('prev.owl.carousel');
       });
     }

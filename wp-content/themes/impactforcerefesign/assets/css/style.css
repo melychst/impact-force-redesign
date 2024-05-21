@@ -3595,7 +3595,7 @@ body {
             top: 78px;
             left: -10px;
             z-index: -1; }
-        body main section.WWA-impact .columns .slider-support .title {
+        body main section.WWA-impact .columns .title {
           font-family: "Akkurat Mono LL";
           font-size: 32px;
           font-style: normal;
@@ -3604,14 +3604,14 @@ body {
           letter-spacing: 1.72px;
           text-transform: uppercase;
           margin-bottom: 55px; }
-        body main section.WWA-impact .columns .slider-support .slider-wrap {
+        body main section.WWA-impact .columns .slider-wrap .slider-support {
           display: -webkit-box;
           display: -ms-flexbox;
           display: flex;
           -webkit-box-pack: justify;
               -ms-flex-pack: justify;
                   justify-content: space-between; }
-          body main section.WWA-impact .columns .slider-support .slider-wrap .slide-item {
+          body main section.WWA-impact .columns .slider-wrap .slider-support .slide-item {
             width: 212px;
             height: 137px;
             background-color: #43E0D5;
@@ -3624,10 +3624,10 @@ body {
             -webkit-box-pack: center;
                 -ms-flex-pack: center;
                     justify-content: center; }
-            body main section.WWA-impact .columns .slider-support .slider-wrap .slide-item img {
+            body main section.WWA-impact .columns .slider-wrap .slider-support .slide-item img {
               max-width: 100%;
               max-height: 100%; }
-        body main section.WWA-impact .columns .slider-support .slider-navigation {
+        body main section.WWA-impact .columns .slider-navigation {
           display: -webkit-box;
           display: -ms-flexbox;
           display: flex;
@@ -3636,7 +3636,9 @@ body {
                   justify-content: space-between;
           width: 100%;
           margin-top: 40px; }
-          body main section.WWA-impact .columns .slider-support .slider-navigation .pages {
+          body main section.WWA-impact .columns .slider-navigation .nav-slide {
+            cursor: pointer; }
+          body main section.WWA-impact .columns .slider-navigation .pages {
             font-family: "Akkurat Mono LL";
             font-size: 16px;
             font-style: normal;
