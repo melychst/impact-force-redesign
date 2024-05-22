@@ -121,9 +121,9 @@
             <div class="title-row right-align">
                 <div class="container">
                     <div class="title"><?php echo $bottom_row['title']; ?></div>
-                    <div class="background-image">
-                        <img src="<?php echo TEMPLATE_DIRECTORY_URI .'/assets/images/article-title-row-2-bg.svg'?>" alt="">
-                    </div>
+                </div>
+                <div class="background-image">
+                    <img src="<?php echo TEMPLATE_DIRECTORY_URI .'/assets/images/article-title-row-2-bg.svg'?>" alt="">
                 </div>
             </div>
             <div class="container">
@@ -144,19 +144,6 @@
                             endforeach;
                         endif;
                     ?>
-
-                    <!-- <div class="offer-wrap">
-                        <div class="image-wrap">
-                            <img src="images/article-content-offer-2.svg" alt="">
-                        </div>
-                        <div class="description">Flexible working<br>hours</div>
-                    </div>
-                    <div class="offer-wrap">
-                        <div class="image-wrap">
-                            <img src="images/article-content-offer-3.svg" alt="">
-                        </div>
-                        <div class="description">An inclusive and equal<br> working environment</div>
-                    </div> -->
                 </div>                
             </div>
         </div> 

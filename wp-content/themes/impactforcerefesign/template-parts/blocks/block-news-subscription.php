@@ -5,7 +5,7 @@
     <div class="container">
         <div class="title">Subscription form to Newsletter</div>
         <div class="form-wrap">
-            <?php echo do_shortcode('[contact-form-7 id="a8df819" title="Contact form 1"]'); ?>
+            <?php echo do_shortcode('[contact-form-7 id="a996097" title="Contact form 1"]'); ?>
         </div>
     </div>
 </section>

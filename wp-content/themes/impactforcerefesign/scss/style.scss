@@ -7615,9 +7615,15 @@ body {
                 }
                 &.article-template-2 {
                     padding-bottom: 93px;
+                    @include media($lg){
+                        padding-bottom: 40px;
+                    }
                     .header-article {
                         .title {
                             margin-bottom: 7px;
+                            @include media($lg){
+                                margin-bottom: 0px;
+                            }
                         }
                         svg {
                             path {
@@ -7642,10 +7648,22 @@ body {
                         text-transform: uppercase;
                         color: #fff;
                         background-color: $purple-color;
+                        @include media($lg){
+                            min-height: auto;
+                            font-size: 37.273px;
+                            line-height: 42px;
+                            letter-spacing: 5.591px;
+                            -webkit-text-stroke: 1.5px;
+                            padding-top: 20px;
+                            padding-bottom: 13px;
+                        }                                
                         &.right-align {
                             text-align: right;
                             .title {
                                 padding-right: 18px;
+                                @include media($lg){
+                                    padding-right: 0px;
+                                }
                             }
                             .background-image {
                                 width: 190px;
@@ -7653,6 +7671,12 @@ body {
                                 position: absolute;
                                 top: 16px;
                                 left: -1px;
+                                @include media($lg){
+                                    width: 100px;
+                                    height: auto;
+                                    top: 7px;
+                                    left: 0px;
+                                }
                                 img {
                                     width: 100%;
                                     height: auto;
@@ -7687,6 +7711,9 @@ body {
                             .content {
                                 position: relative;
                                 padding-top: 38px;
+                                @include media($lg){
+                                    padding-top: 20px;
+                                }
                                 &::before {
                                     @include before-content(21px, 21px);
                                     background-image: url(../images/icon-square-arrow-purple.svg);
@@ -7694,20 +7721,37 @@ body {
                                     left: 0px;
                                     background-repeat: no-repeat;
                                     background-position: center;
-                                    background-size: 21px 21px;
+                                    background-size: cover;
                                     transform: rotate(90deg);
+                                    @include media($lg){
+                                        @include before-content(13px, 13px);
+                                    }
                                 }
-                            }
+                                @include media($lg){
+                                    font-size: 9.585px;
+                                    line-height: 14px;
+                                    letter-spacing: 0.096px;
+                                }
+                            }                           
                             strong {
                                 font-family: "Akkurat LL Cyrillic Bold";
                                 font-weight: 700;
                             }
                             p {
                                 margin-bottom: 28px;
+                                @include media($lg){
+                                    margin-bottom: 14px;
+                                    &:last-child {
+                                        margin-bottom: 6px;
+                                    }
+                                }
                             }
                             .link-email {
                                 margin-top: auto;
                                 margin-bottom: 28px;
+                                @include media($lg){
+                                    margin-bottom: 12px;
+                                }
                                 a {
                                     display: inline-flex;
                                     height: 32px;
@@ -7717,23 +7761,43 @@ body {
                                     background: $main-color;
                                     position: relative;
                                     color: #fff;
+                                    @include media($lg){
+                                        height: 17px;
+                                        padding: 1px 23px 3px 13px;
+                                        font-size: 7.987px;
+                                        letter-spacing: 0.559px;
+                                    }
                                     &::before {
                                         @include before-content(26px, 26px);
                                         right: 3px;
                                         top: 3px;
                                         background-image: url(../images/icon-mail-main-color-purple.svg);
                                         background-position: center;
-                                        background-repeat: no-repeat;                       
+                                        background-repeat: no-repeat; 
+                                        @include media($lg){
+                                            @include before-content(13px, 13px);
+                                            background-size: cover;
+                                            top: 2px;
+                                            right: 2px;
+                                        }                      
                                     }
                                 }
                             }
                         }
+                        .column {
+                            @include media($xl){
+                                width: 45%;
+                            }                                
+                        } 
                     }
                     .midle-section {
                         font-size: 18px;
                         line-height: 22px; /* 122.222% */
                         letter-spacing: 0.36px; 
                         padding-bottom: 47px; 
+                        @include media($lg){
+                            padding-bottom: 15px;
+                        }
                         strong {
                             font-family: "Akkurat LL Cyrillic Bold";
                             font-size: 18px;
@@ -7745,6 +7809,12 @@ body {
                         .content {
                             padding-top: 51px;
                             padding-bottom: 22px;
+                            @include media($lg){
+                                font-size: 10px;
+                                line-height: 12px; /* 120% */
+                                letter-spacing: 0.2px;
+                                padding-top: 25px;
+                            }
                             h3 {
                                 font-family: "Akkurat Mono LL";
                                 font-size: 35px;
@@ -7754,19 +7824,35 @@ body {
                                 letter-spacing: -0.7px;
                                 text-transform: uppercase;
                                 margin-bottom: 17px;
+                                @include media($lg){
+                                    font-size: 18.637px;
+                                    line-height: 24px;
+                                    letter-spacing: -0.373px;   
+                                    margin-bottom: 6px;                                 
+                                }
                             }
                             p {
                                 margin-bottom: 28px;
+                                @include media($lg){
+                                    margin-bottom: 0px;
+                                }
                             }
                         }
                         .columns {
                             justify-content: space-between;
-
                             .column-left {
                                 width: 545px;
                             }
                             .column-right {
                                 width: 498px;
+                            }
+                            .column {
+                                @include media($xl){
+                                    width: 46%;
+                                }     
+                                @include media($lg){
+                                    width: 40%;
+                                }                              
                             }
                         }
                         .column-title {
@@ -7780,6 +7866,13 @@ body {
                             position: relative;
                             padding-left: 107px;
                             margin-bottom: 37px;
+                            @include media($lg){
+                                font-size: 18.637px;
+                                line-height: 24px;
+                                letter-spacing: -0.373px;
+                                padding-left: 57px;
+                                margin-bottom: 16px;
+                            }
                             &::before {
                                 @include before-content(26px, 26px);
                                 left: -2px;
@@ -7788,7 +7881,13 @@ body {
                                 background-size: 21px 21px;
                                 background-position: center;
                                 background-repeat: no-repeat;
-                                transform: rotate(90deg);                       
+                                transform: rotate(90deg);    
+                                @include media($lg){
+                                    @include before-content(12px, 12px);
+                                    background-size: cover;
+                                    left: 1px;
+                                    top: 6px;
+                                }                   
                             }
                         }
                         .list-wrap {
@@ -7798,6 +7897,13 @@ body {
                                 margin-bottom: 17px;
                                 line-height: 18px;
                                 letter-spacing: -0.36px;
+                                @include media($lg){
+                                    font-size: 9.585px;
+                                    letter-spacing: -0.192px;
+                                    line-height: 10px;
+                                    padding-left: 12px;
+                                    margin-bottom: 11px;
+                                }
                                 &:last-child {
                                     margin-bottom: 0px;
                                 }
@@ -7811,6 +7917,12 @@ body {
                                     position: absolute;
                                     left: 0px;
                                     top: 3px;
+                                    @include media($lg){
+                                        width: 3px;
+                                        height: 3px;
+                                        left: 2px;
+                                        top: 3px;
+                                    }
                                 }
                             }
                         }
@@ -7820,12 +7932,23 @@ body {
                             padding-top: 74px;
                             display: flex;
                             justify-content: space-between;
+                            @include media($lg){
+                                padding-top: 40px;
+                            }
                             .offer-wrap {
                                 width: 300px;
+                                @include media($lg){
+                                    width: 217px;   
+                                }
                                 .image-wrap {
                                     width: 62px;
                                     height: 62px;
                                     margin-bottom: 13px;
+                                    @include media($lg){
+                                        width: 36px;
+                                        height: 36px;
+                                        margin-bottom: 9px;
+                                    }
                                     img {
                                         max-width: 100%;
                                     }
@@ -7838,6 +7961,11 @@ body {
                                     line-height: 26px;
                                     letter-spacing: 2px;
                                     text-transform: uppercase;
+                                    @include media($lg){
+                                        font-size: 12.083px;
+                                        letter-spacing: 1.208px;
+                                        line-height: 16px;
+                                    }
                                 }
                             }
                         }
