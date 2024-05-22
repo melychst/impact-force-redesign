@@ -141,7 +141,7 @@
                                         </div>
                                 <?php endif; ?>
                                 <div class="name"><?php echo $team_item['name']; ?></div>
-                                <div class="position"><?php echo $team_item['position']; ?></div>
+                                <div class="mobile-position"><?php echo $team_item['position']; ?></div>
                                 <div class="description">
                                     <p><?php echo $team_item['description']; ?></p>
                                 </div>

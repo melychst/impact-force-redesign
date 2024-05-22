@@ -4834,14 +4834,14 @@ body {
                                     }
                                 }
                             }
-                            .position {
+                            .mobile-position {
                                 display: none;
                                 font-family: "Akkurat LL Cyrillic Bold";
                                 font-size: 8.243px;
                                 font-style: normal;
                                 font-weight: 700;
                                 line-height: 11px;
-                                padding-right: 50px;
+                                padding-right: 51px;
                                 @include media($md){
                                     display: block;
                                 }

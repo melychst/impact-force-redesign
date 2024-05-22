@@ -5036,16 +5036,16 @@ body {
               @media only screen and (max-width: 767px) {
                 body main section.WWA-team-board .team .team-wrap .team-item .name::before {
                   bottom: 0px; } }
-          body main section.WWA-team-board .team .team-wrap .team-item .position {
+          body main section.WWA-team-board .team .team-wrap .team-item .mobile-position {
             display: none;
             font-family: "Akkurat LL Cyrillic Bold";
             font-size: 8.243px;
             font-style: normal;
             font-weight: 700;
             line-height: 11px;
-            padding-right: 50px; }
+            padding-right: 51px; }
             @media only screen and (max-width: 767px) {
-              body main section.WWA-team-board .team .team-wrap .team-item .position {
+              body main section.WWA-team-board .team .team-wrap .team-item .mobile-position {
                 display: block; } }
           body main section.WWA-team-board .team .team-wrap .team-item .description {
             font-size: 18px;
@@ -8135,4 +8135,5 @@ body {
         body main footer .footer-wrap .logo-wrap {
           width: 77px;
           padding-top: 36px; } }
+
 /*# sourceMappingURL=style.css.map */
