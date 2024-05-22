@@ -10,6 +10,7 @@
   impactSlider();
   advisorSlider();
   volunteersSlider();
+  teamSlider();
 
   function documentReady() {
     jQuery(document).ready(function () {
@@ -301,7 +302,15 @@
         loop: true,
         nav: false,
         dots: false,
-        margin: 38,
+        margin: 15,
+        responsive: {
+          768: {
+            margin: 20,
+          },
+          1200: {
+            margin: 32,
+          },
+        },
       });
 
       var sliderNavigation = jQuery('#impact-slider-navigation');
@@ -318,14 +327,44 @@
     var slider = $('#advisor-slider');
     if (slider.length > 0) {
       slider.owlCarousel({
-        items: 4,
+        items: 2,
         loop: true,
         nav: false,
         dots: false,
-        margin: 32,
+        margin: 23,
+        responsive: {
+          768: {
+            items: 4,
+            margin: 17,
+          },
+          991: {
+            margin: 32,
+          },
+        },
       });
 
       var sliderNavigation = jQuery('#advisor-slider-navigation');
+      jQuery('.next-slide', sliderNavigation).click(function () {
+        slider.trigger('next.owl.carousel');
+      });
+      jQuery('.prev-slide', sliderNavigation).click(function () {
+        slider.trigger('prev.owl.carousel');
+      });
+    }
+  }
+
+  function teamSlider() {
+    var slider = $('#team-slider');
+    if (slider.length > 0 && jQuery(window).width() < 768) {
+      slider.owlCarousel({
+        items: 2,
+        loop: true,
+        nav: false,
+        dots: false,
+        margin: 28,
+      });
+
+      var sliderNavigation = jQuery('#team-slider-navigation');
       jQuery('.next-slide', sliderNavigation).click(function () {
         slider.trigger('next.owl.carousel');
       });
@@ -339,11 +378,20 @@
     var slider = $('#volunteers-slider');
     if (slider.length > 0) {
       slider.owlCarousel({
-        items: 3,
+        items: 2,
         loop: true,
         nav: false,
         dots: false,
-        margin: 135,
+        margin: 26,
+        responsive: {
+          768: {
+            items: 3,
+            margin: 80,
+          },
+          991: {
+            margin: 135,
+          },
+        },
       });
 
       var sliderNavigation = jQuery('#volunteers-slider-navigation');

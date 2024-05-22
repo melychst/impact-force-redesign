@@ -3081,12 +3081,29 @@ body {
                     }
                 }
             }
-            &.WMA-hero {
+            &.WWA-hero {
                 min-height: 597px;
                 background-color: #003951;
                 padding-top: 115px;
                 padding-bottom: 90px;
+                @include media($xl){
+                    min-height: auto;
+                }
+                @include media($lg){
+                    padding-top: 61px;
+                    padding-bottom: 48px;
+                }
+                @include media($md){
+                    min-height: 433px;
+                    padding-top: 22px;
+                }
                 .hero-content-wrap {
+                    @include media($lg){
+                        width: 438px;
+                    }
+                    @include media($md){
+                        width: 100%;
+                    }
                     .hero-title {
                         -webkit-text-stroke: 5px;
                         font-family: "Akkurat LL Cyrillic Bold";
@@ -3098,6 +3115,22 @@ body {
                         text-transform: uppercase;
                         color: #ffffff;
                         margin-bottom: 203px;
+                        @include media($xl){
+                            font-size: 59.456px;
+                             -webkit-text-stroke: 3px;
+                             margin-bottom: 120px;
+                             letter-spacing: 7px;
+                             padding-left: 5px;
+                            margin-bottom: 110px;
+                        }
+                        @include media($md){
+                            padding-left: 0px;
+                            font-size: 55.994px;
+                            letter-spacing: 5.599px;
+                            -webkit-text-stroke: 2px;
+                            margin-bottom: 17px;
+                            line-height: 59px;
+                        }
                     }
                     .sub-title {
                         font-family: "Akkurat Mono LL";
@@ -3108,12 +3141,40 @@ body {
                         color: $blue-color;
                         width: 645px;
                         padding-left: 122px;
+                        @include media($xl){
+                            font-size: 28px;
+                        }
+                        @include media($lg){
+                            font-size: 18px;
+                            padding-left: 67px;
+                            letter-spacing: 0px;
+                            width: 100%;
+                            line-height: 20px;
+                        }
+                        @include media($md){
+                            font-size: 13px;
+                            line-height: 16px;
+                            letter-spacing: -0.26px;
+                            padding-left: 0px;
+                            width: 176px;
+                        }
+
                         span {
                             position: absolute;
                             top: 15px;
                             left: 0px;
                             line-height: 19px;
+                            @include media($lg){
+                                width: 40px;
+                                top: 3px;
+                            }
+                            @include media($md){
+                                display: none;
+                            }
                             svg {
+                                @include media($lg){
+                                    width: 100%;
+                                }
                                 path {
                                     fill: $blue-color;
                                 }
@@ -3126,6 +3187,20 @@ body {
                             background-repeat: no-repeat;
                             bottom: -13px;
                             right: -50px;
+                            @include media($xl){
+                                right: 30px;
+                            }
+                            @include media($lg){
+                                width: 210px;
+                                height: 10px;
+                                right: 66px;
+                                bottom: -6px;
+                                background-size: cover;
+                            }
+                            @include media($md){
+                                width: 152px;
+                                height: 7px;
+                            }
                         }
                         &::after {
                             // @include after-content(73px, 13px);
@@ -3143,6 +3218,22 @@ body {
                     height: 580px;
                     bottom: 0px;
                     right: 0px;
+                    @include media($xxl){
+                        width: 450px;
+                        height: 422px;
+                    }
+                    @include media($lg){
+                        width: 325px;
+                        height: 311px;
+                        bottom: 0px;
+                        right: 13px;
+                    }
+                    @include media($lg) {
+                        width: 243px;
+                        height: 260px;
+                        bottom: 0px;
+                        right: 13px;
+                    }
                     img {
                         @include image-fit;
                     }
@@ -3152,12 +3243,31 @@ body {
                 padding: 53px 0px 25px;
                 min-height: 560px;
                 background-color: $blue-color;
+                @include media($xxl){
+                    padding: 28px 0px 25px;
+                    min-height: auto;
+                }
+                @include media($md){
+                    padding: 34px 0px 32px;
+                    min-height: auto;
+                }
                 .background-image {
                     width: 273px;
                     height: 282px;
                     position: absolute;
                     top: 46px;
                     right: 8px;
+                    @include media($xl){
+                        width: 145px;
+                        height: 150px;
+                    }
+                    @include media($lg){
+                        top: 24px;
+                        right: 82px;
+                    }
+                    @include media($md){
+                        display: none;
+                    }
                     img {
                         @include image-fit;
                     }
@@ -3175,11 +3285,45 @@ body {
                     letter-spacing: 11.2px;
                     text-transform: uppercase;
                     margin-bottom: 60px;
+                     @include media($xxl){
+                        font-size: 60px;
+                        padding-right: 50px;
+                     }
+                     @include media($xl){
+                        -webkit-text-stroke: 1px;
+                        font-size: 36px;
+                        letter-spacing: 7px;
+                        line-height: 41px;
+                        padding-right: 400px;
+                        margin-bottom: 30px;
+
+                     }
+                    @include media($md){
+                        -webkit-text-stroke: 1px;
+                        font-size: 20px;
+                        letter-spacing: 3px;
+                        margin-bottom: 23px;
+                        width: 100%;
+                        padding-right: 0px;
+                        line-height: 28px;
+                    }
                 }
                 .columns {
                     justify-content: space-between;
+                     @include media($md){
+                        flex-wrap: wrap;
+                     }
                     .column {
                         width: 610px;
+                        @include media($lg){
+                            width: 48.5%;
+                        }
+                         @include media($md){
+                            width: 100%;
+                            &:first-child {
+                                margin-bottom: 38px;
+                            }
+                         }
                     }
                     .meta {
                         color: #FFF;
@@ -3190,11 +3334,30 @@ body {
                         position: relative;
                         padding-left: 212px;
                         margin-bottom: 26px;
+                        @include media($lg){
+                            font-size: 12px;
+                            line-height: 14px;
+                            letter-spacing: 1.831px;
+                            padding-left: 116px;
+                            margin-bottom: 15px;
+                        }
+                        @include media($md){
+                            font-size: 14.578px;
+                            letter-spacing: 2.187px;
+                            padding-left: 136px;
+                        }
                         &::before {
                             @include before-content(180px, 1px);
                             background-color: #fff;
                             left: 0px;
                             top: 8px;
+                            @include media($lg){
+                                width: 98px;
+                            }
+                            @include media($lg){
+                                width: 114px;
+                                top: 5px;
+                            }
                         }
                     }
                     .column-title {
@@ -3215,10 +3378,44 @@ body {
                         color: $blue-color;
                         padding-top: 13px;
                         margin-bottom: 43px;
+                        @include media($xl){
+                            width: 210px;
+                            height: 34px;
+                            font-size: 20px;
+                            padding-top: 0px;
+                            line-height: 26px;
+                            padding-top: 6px;
+                            margin-bottom: 22px;
+                        }
+                        @include media($md){
+                            font-size: 22.948px;
+                            letter-spacing: 0.688px;
+                            height: 39px;
+                            width: 250px; 
+                            padding-top: 11px;
+                            padding-left: 36px;
+                            justify-content: left;
+                            margin-bottom: 31px;
+                        }
                     }
                     .content {
                         padding-left: 106px;
                         line-height: 28px;
+                        @include media($xl){
+                            padding-left: 60px;
+                        }
+                        @include media($lg){
+                            font-size: 10.678px;
+                            line-height: 10.678px;
+                            line-height: 16px;
+                            padding-right: 25px;
+                        }
+                        @include media($md){
+                            padding-left: 38px;
+                            padding-right: 0px;
+                            font-size: 12px;
+                            line-height: 17.749px;
+                        }
                     }
                 }
             }
@@ -3226,16 +3423,46 @@ body {
                 padding-top: 95px;
                 padding-bottom: 80px;
                 min-height: 709px;
+                @include media($lg){
+                    padding-top: 50px;
+                    padding-bottom: 54px;
+                    min-height: auto;
+                }
+                @include media($md){
+                    padding-top: 26px;
+                    padding-bottom: 14px;
+                }
                 .top-row {
                     margin-bottom: 38px;
                     color: $blue-color;
+                    @include media($lg){
+                        margin-bottom: 18px;
+                    }
+                    @include media($md){
+                        margin-bottom: 13px;
+                    }
                     .columns {
                         justify-content: space-between;
+                        @include media($md){
+                            flex-wrap: wrap;
+                        }
                         .left-column {
                             width: 553px;
+                            @include media($lg){
+                                width: 295px;
+                            }
+                            @include media($md){
+                                width: 100%;
+                            }
                         }
                         .right-column {
                             width: 498px;
+                            @include media($lg){
+                                width: 282px;
+                            }
+                            @include media($md){
+                                width: 100%;
+                            }
                         }                    
                     }  
                     .section-title {
@@ -3247,6 +3474,18 @@ body {
                         line-height: 65px;
                         letter-spacing: 9.5px;
                         text-transform: uppercase;
+                        @include media($lg){
+                            -webkit-text-stroke: 1px;
+                            font-size: 26.694px;
+                            letter-spacing: 5.072px;
+                            line-height: 36px;
+                        }
+                        @include media($md){
+                            font-size: 20px;
+                            line-height: 28px;
+                            letter-spacing: 3.8px;
+                            margin-bottom: 7px;
+                        }
                     }
                     .description {
                         font-size: 23px;
@@ -3254,23 +3493,61 @@ body {
                         font-weight: 700;
                         line-height: 30px;
                         letter-spacing: 0.6px;
+                        @include media($lg){
+                            font-size: 12.279px;
+                            line-height: 16px;
+                            letter-spacing: 0.368px;
+                        }
+                        @include media($md){
+                            font-size: 10px;
+                            line-height: 16px;
+                            letter-spacing: 0.5px;
+                        }
                     }                  
                 }   
                 .bottom-row {
                     .columns {
                         justify-content: space-between;
+                        @include media($md){
+                                flex-wrap: wrap;
+                        }
                         .column {
                             width: 392px;
                             min-height: 343px;
                             background-color: #E4E5EA;
                             border-radius: 12px;
+                            @include media($xxl){
+                                width: 350px;
+                            }
+                            @include media($xl){
+                                width: 300px;
+                            }
+                            @include media($lg){
+                                width: 210px;
+                                border-radius: 6px;
+                                min-height: auto;
+                            }
+                            @include media($md){
+                                width: 100%;
+                                margin-bottom: 8px;
+                            }
                             .header {
                                 display: flex;
                                 justify-content: space-between;
                                 padding: 18px 30px 38px 17px;
+                                @include media($lg){
+                                    padding: 9px 17px 21px 9px;
+                                }
+                                @include media($md){
+                                    padding: 9px 7px 15px 9px;
+                                }
                                 .icon-wrap {
                                     width: 65px;
                                     height: 65px;
+                                    @include media($lg){
+                                        width: 34px;
+                                        height: 34px;
+                                    }
                                     img {
                                         @include image-fit;
                                     }
@@ -3284,12 +3561,27 @@ body {
                                     margin-top: auto;
                                     position: relative;
                                     top: 5px;
-                                    left: 2px;                                
+                                    left: 2px; 
+                                    @include media($lg){
+                                        font-size: 12.21px;
+                                        letter-spacing: 1.831px;
+                                        line-height: 14px;
+                                    }                          
                                 }                               
                             }
                             .content {
                                 line-height: 25px;
                                 padding: 0px 14px 22px 14px;
+                                @include media($lg){
+                                    font-size: 10px;
+                                    line-height: 14px;
+                                    padding: 0px 10px 8px 8px;
+                                }
+                                @include media($md){
+                                    font-size: 10px;
+                                    line-height: 16px;
+                                    padding: 0px 10px 10px 8px;
+                                }
                                 strong {
                                     font-family: "Akkurat LL Cyrillic Bold";
                                     font-weight: 700;  
@@ -3306,12 +3598,38 @@ body {
                 min-height: 273px;
                 padding-top: 57px;
                 padding-bottom: 38px;
+                @include media($lg){
+                    min-height: auto;
+                    padding-top: 30px;
+                    padding-bottom: 22px;
+                }
+                @include media($md){
+                    padding-top: 22px;
+                    padding-bottom: 13px;
+                }
+                .container {
+                    position: relative;
+                    z-index: 5;
+                }
                 .background-image {
                     width: 348px;
                     height: 184px;
                     position: absolute;
                     right: 0px;
                     bottom: -6px;
+                    z-index: 1;
+                    @include media($lg){
+                        width: 193px;
+                        height: 106px;
+                        right: 76px;
+                        bottom: -9px;
+                    }
+                    @include media($md){
+                        width: 114px;
+                        height: 105px;
+                        right: 31px;
+                        bottom: -47px;
+                    }
                     img {
                         width: 100%;
                         height: auto;
@@ -3328,8 +3646,22 @@ body {
                      -webkit-text-stroke: 3px;
                      color: #fff;
                      margin-bottom: 42px;
+                    @include media($lg){
+                        font-size: 37.372px;
+                        line-height: 42px;
+                        letter-spacing: 5.606px;
+                        margin-bottom: 18px;
+                        -webkit-text-stroke: 1px;
+                    }
+                    @include media($md){
+                        font-size: 20px;
+                        letter-spacing: 3px;
+                        line-height: 22px;
+                        margin-bottom: 11px;
+                    }
                 }
                 .content-link {
+                    display: inline-block;
                     a {
                         display: inline-flex;
                         align-items: center;
@@ -3348,6 +3680,22 @@ body {
                         color: #ffffff;
                         padding-top: 6px;
                         letter-spacing: -0.7px;
+                        @include media($lg){
+                            height: 35px;
+                            padding-left: 34px;
+                            padding-right: 60px;
+                            font-size: 12px;
+                            padding-top: 6px;
+                            line-height: 14px;
+                            letter-spacing: 0px;
+                        }
+                        @include media($md){
+                            font-size: 7px;
+                            padding-left: 8px;
+                            padding-right: 20px;
+                            height: 20px;
+
+                        }
                         &::after {
                             @include after-content(48px, 48px);
                             background-color: #ffffff;
@@ -3359,6 +3707,18 @@ body {
                             right: 11px;
                             background-size: 20px 20px;
                             transform: rotate(180deg);
+                            @include media($lg){
+                                @include after-content(25px, 25px);
+                                background-size: 11px 11px;
+                                top: 6px;
+                                right: 4px;
+                            }
+                            @include media($md){
+                                @include after-content(16px, 16px);
+                                background-size: 6px 6px;
+                                top: 2px;
+                                right: 2px;
+                            }
                         }
                     }
                 }
@@ -3366,14 +3726,43 @@ body {
             &.WWA-impact {
                 padding-top: 82px;
                 padding-bottom: 62px;
+                @include media($lg){
+                    padding-top: 43px;
+                    padding-bottom: 30px;
+                }
+                @include media($md){
+                    padding-top: 19px;
+                    padding-bottom: 10px;
+                }
                 .columns {
                     justify-content: space-between;
+                    @include media($md){
+                        flex-wrap: wrap;
+                    }
                     .column-left {
                         width: 712px;
+                        @include media($xl){
+                            width: 580px;
+                        }
+                        @include media($lg){
+                            width: 390px;
+                        }
+                        @include media($md){
+                            width: 100%;
+                        }
                     }
                     .column-right {
                         width: 392px;
                         padding-top: 2px;
+                        @include media($xl){
+                            width: 350px;
+                        }
+                        @include media($lg){
+                            width: 281px;
+                        }
+                        @include media($md){
+                            width: 100%;
+                        }
                     }
                     .top-content {
                         font-family: "Akkurat LL Cyrillic Bold";
@@ -3385,6 +3774,17 @@ body {
                         color: $green-color;
                         margin-bottom: 94px;
                         position: relative;
+                        @include media($lg){
+                            font-size: 16px;
+                            line-height: 19px;
+                            margin-bottom: 44px;
+                        }
+                        @include media($md){
+                            font-size: 13px;
+                            line-height: 20px;
+                            letter-spacing: 0px;
+                            margin-bottom: 15px;
+                        }
                         span {
                             color: $main-color;
                         }    
@@ -3393,9 +3793,12 @@ body {
                             background-image: url(../images/wwa-imapct-bg.svg);
                             background-position: center;
                             background-repeat: no-repeat;
-                            top: 78px;
+                            top: 26px;
                             left: -10px;
                             z-index: -1;
+                            @include media($lg){
+                                content: none;
+                            }
                         }                 
                     }
                     .title {
@@ -3407,6 +3810,19 @@ body {
                         letter-spacing: 1.72px;
                         text-transform: uppercase;
                         margin-bottom:55px;
+                        @include media($xl){
+                            font-size: 24px;
+                        }
+                        @include media($lg){
+                            font-size: 18px;
+                            letter-spacing: 0.5px;
+                            margin-bottom: 21px;
+                        }
+                        @include media($md){
+                            font-size: 13.14px;
+                            letter-spacing: 0px;
+                            margin-bottom: 14px;
+                        }
                     }
                     .slider-wrap {
                         .slider-support{
@@ -3419,6 +3835,25 @@ body {
                                 display: flex;
                                 align-items: center;
                                 justify-content: center;
+                                @include media($xl){
+                                    width: 180px;
+                                }
+                                @include media($lg){
+                                    width: 113px;
+                                    height: 74px;
+                                }
+                                @include media($md){
+                                    width: 86px;
+                                    height: 55px;
+                                }
+                                .image-wrap {
+                                    width: 100%;
+                                    height: 100%;
+                                    padding: 5px;
+                                    @include media($md){
+                                        padding: 3px;
+                                    }
+                                }
                                 img {
                                     max-width: 100%;
                                     max-height: 100%;
@@ -3432,15 +3867,30 @@ body {
                         justify-content: space-between;
                         width: 100%;
                         margin-top: 40px;
+                        @include media($lg){
+                            margin-top: 18px;
+                        }
+                         @include media($md){
+                            margin-top: 13px;
+                        }
                         .nav-slide {
                             cursor: pointer;
+                            @include media($lg){
+                                width: 96px;
+                                svg {
+                                    width: 100%;
+                                }
+                            }
                         }
                         .pages {
                             font-family: "Akkurat Mono LL";
                             font-size: 16px;
                             font-style: normal;
                             font-weight: 400;
-                            color: $green-color
+                            color: $green-color;
+                            @include media($lg){
+                                font-size: 8px;
+                            }
                         }
                     }
                     .content {
@@ -3448,8 +3898,22 @@ body {
                         font-weight: 400;
                         line-height: 25px;
                         letter-spacing: -0.6px;
+                        @include media($xl){
+                            font-size: 16px;
+                        }
+                        @include media($lg){
+                            font-size: 10.678px;
+                            line-height: 17px; /* 112.383% */
+                            letter-spacing: 0.641px;
+                        }
+                        @include media($md){
+                            padding-top: 12px;
+                        }
                         p {
                             margin-bottom: 24px;
+                            @include media($lg){
+                                margin-bottom: 13px;
+                            }
                         }
                     }
                 }
@@ -3457,16 +3921,51 @@ body {
             &.WWA-targets {
                 padding-top: 50px;
                 padding-bottom: 113px;
+                @include media($lg){
+                    padding-top: 36px;
+                    padding-bottom: 60px;
+                }
+                @include media($md){
+                    padding-top: 7px;
+                    padding-bottom: 11px;
+                }
                 .top-row {
                     margin-bottom: 50px;
+                    @include media($lg){
+                        margin-bottom: 25px;
+                    }
+                    @include media($md){
+                        margin-bottom: 7px;
+                    }
                     .columns {
                         justify-content: space-between;
+                        @include media($md){
+                            flex-wrap: wrap;
+                        }
                     }
                     .column-left {
                         width: 380px;
+                        @include media($xl){
+                            width: 300px;
+                        }
+                        @include media($lg){
+                            width: 250px;
+                        }
+                        @include media($md){
+                            width: 100%;
+                        }
                     }
                     .column-right {
                         width: 710px;
+                        @include media($xl){
+                            width: 600px;
+                        }
+                        @include media($lg){
+                            width:381px;
+                        }
+                        @include media($md){
+                            width: 100%;
+                        }
                     }
                     .title {
                         -webkit-text-stroke: 2px;
@@ -3478,6 +3977,21 @@ body {
                         line-height: 58px;
                         letter-spacing: 7.5px;
                         text-transform: uppercase;
+                        @include media($xl){
+                            font-size: 36px;
+                            line-height: 44px;
+                        }
+                        @include media($lg){
+                            font-size: 26px;
+                            line-height: 34px;
+                            -webkit-text-stroke: 1px;
+                        }
+                        @include media($md){
+                            font-size: 20px;
+                            letter-spacing: 3px;
+                            line-height: 28px;
+                            margin-bottom: 12px;
+                        }
                     }
                     .content {
                         font-size: 35px;
@@ -3485,6 +3999,22 @@ body {
                         line-height: 42px;
                         letter-spacing: 2.9px;
                         text-transform: uppercase;
+                        @include media($xl){
+                            font-size: 26px;
+                            line-height: 34px;
+                        }
+                        @include media($lg){
+                            font-size: 18px;
+                            line-height: 23px;
+                            letter-spacing: 2px;
+                        }
+                        @include media($md){
+                            font-size: 13.14px;
+                            font-style: normal;
+                            letter-spacing: 0.788px;
+                            line-height: 14px;
+                            margin-bottom: 9px;
+                        }
                     }
                 }
                 .targets-wrap {
@@ -3502,6 +4032,25 @@ body {
                         position: relative;
                         width: 1068px;
                         min-height: 217px;
+                        @include media($xl){
+                            width: 800px;
+                        }
+                        @include media($lg){
+                            width: 570px;
+                            border-radius: 6px;
+                            border-width: 1px;
+                            padding: 2px 10px 4px 19px;
+                            min-height: 115px;
+                            margin-bottom: 11px;
+                            margin-left: 36px;
+                        }
+                        @include media($md){
+                            width: 93%;
+                            border-radius: 12.671px;
+                            border-width: 2px;
+                            padding: 6px 10px 4px 15px;
+                            margin-bottom: 8px;
+                        }
                         &:last-child {
                             margin-bottom: 0px;
                         }   
@@ -3511,6 +4060,20 @@ body {
                             left: -68px;
                             border-radius: 50%;
                             z-index: -1;
+                            @include media($xl){
+                               @include before-content(100px, 100px); 
+                               left: -50px;
+                            }
+                            @include media($lg){
+                               @include before-content(73px, 73px); 
+                               left: -37px;
+                               top: 9px;
+                            }
+                            @include media($md){
+                               @include before-content(68px, 68px); 
+                               left: -34px;
+                               top: 15px;
+                            }
                         }
                         .number {
                             font-family: "Akkurat Mono LL";
@@ -3522,6 +4085,19 @@ body {
                             text-transform: uppercase;
                             margin-bottom: 14px;
                             display: inline-block;
+                             @include media($lg){
+                                font-size: 8.697px;
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: normal;
+                                letter-spacing: 0.87px;
+                                margin-bottom: 8px;
+                             }
+                             @include media($md){
+                                font-size: 16.291px;
+                                letter-spacing: 1.629px;
+                                margin-bottom: 9px;
+                             }
                         }
                         .name {
                             font-family: "Akkurat LL Cyrillic Bold";
@@ -3532,10 +4108,31 @@ body {
                             letter-spacing: 1.75px;
                             text-transform: uppercase;
                             margin-bottom: 9px;
+                            @include media($lg){
+                                font-size: 18.686px;
+                                letter-spacing: 0.934px;
+                                margin-bottom: 5px;
+                            }
+                            @include media($md){
+                                font-size: 18px;
+                                line-height: 24px;
+                                letter-spacing: 0.9px;
+                                margin-bottom: 10px;
+                            }
                         }
                         .description {
                             letter-spacing: 0.8px;
                             line-height: 28px;
+                            @include media($lg){
+                                font-size: 10.678px;
+                                letter-spacing: 0.427px;
+                                line-height: 15px;
+                            }  
+                            @include media($md){
+                                font-size: 10px;
+                                letter-spacing: 0.2px;
+                                line-height: 14px;
+                            }
                         }  
                         &.blue-item {
                             border-color: $blue-color;
@@ -3544,22 +4141,22 @@ body {
                             }
                             .name {
                                 color: $blue-color;
-                        }
-                        .title {
-                            color: $blue-color;
-                        }
+                            }
+                            .number {
+                                color: $blue-color;
+                            }
                         }
                         &.purple-item {
                             border-color: $purple-color;
                             &::before {
                                 background-color: $purple-color;
                             }
-                            .name {
+                                .name {
+                                    color: $purple-color;
+                            }
+                            .number {
                                 color: $purple-color;
-                        }
-                        .title {
-                            color: $purple-color;
-                        }
+                            }
                         }
                         &.green-item {
                             border-color: $green-color;
@@ -3568,10 +4165,10 @@ body {
                             }
                             .name {
                                 color: $green-color;
-                        }
-                        .title {
-                            color: $green-color;
-                        }
+                            }
+                            .number {
+                                color: $green-color;
+                            }
                         }                                                                 
                     }
                 }                 
@@ -3579,11 +4176,24 @@ body {
             &.WWA-team-board {
                 .team-item {
                     width: 286px;
+                    @include media($xl){
+                        width: 200px;
+                    }
+                    @include media($lg){
+                        width: 168px;
+                    }
+                    @include media($lg){
+                        width: 131px;
+                    }
                     .image-wrap {
                         width: 100%;
                         height: 230px;
                         overflow: hidden;
                         margin-bottom: 24px;
+                        @include media($xl){
+                            height: auto;
+                            margin-bottom: 12px;
+                        }
                         img {
                             @include image-fit;
                         }
@@ -3596,6 +4206,19 @@ body {
                         letter-spacing: 0.69px;
                         text-transform: uppercase;
                         position: relative;
+                        @include media($xl){
+                            font-size: 18px;
+                            line-height: 24px;
+                        }
+                        @include media($lg){
+                            font-size: 14px;
+                            line-height: 20px;
+                        }
+                        @include media($md){
+                            font-size: 10.56px;
+                            letter-spacing: 0.317px;
+                            line-height: 15px;
+                        }
                         &::before {
                             content: '';
                             width: 100%;
@@ -3604,6 +4227,9 @@ body {
                             position: absolute;
                             bottom: -10px;
                             left: 0px;
+                            @include media($xl){
+                                bottom: 0px;
+                            }
                         }
                     }
                 }
@@ -3613,6 +4239,15 @@ body {
                     padding-top: 42px;
                     padding-bottom: 20px;
                     position: relative;
+                    @include media($lg){
+                        min-height: auto;
+                        padding-top: 22px;
+                        padding-bottom: 11px;
+                    }
+                    @include media($md){
+                        padding-top: 14px;
+                        padding-bottom: 7px;
+                    }
                     .title {
                         -webkit-text-stroke-width: 3px;
                         font-family: "Akkurat LL Cyrillic Bold";
@@ -3624,6 +4259,18 @@ body {
                         text-transform: uppercase;
                         color: #fff;
                         width: 265px;
+                        @include media($lg){
+                            -webkit-text-stroke-width: 1px;
+                            font-size: 37.372px;
+                            line-height: 42px;
+                            letter-spacing: 5.606px;
+                        }
+                        @include media($md){
+                            font-size: 20px;
+                            letter-spacing: 3px;
+                            padding-right: 150px;
+                            line-height: 26px;
+                        }
                     }
                     .background-image {
                         position: absolute;
@@ -3631,6 +4278,15 @@ body {
                         height: 184px;
                         right: 100px;
                         bottom: 0px;
+                        @include media($lg){
+                            width: 195px;
+                            height: 106px;
+                            bottom: -6px;
+                            right: 127px;
+                        }
+                        @include media($md){
+                            display: none;
+                        }
                         img {
                             max-width: 100%;
                             max-height: 100%;
@@ -3639,17 +4295,48 @@ body {
                 }
                 .managers {
                     padding-top: 19px;
+                    @include media($lg){
+                        padding-top: 8px;
+                    }
                     .manager-row {
                         margin-bottom: 30px;
+                        @include media($lg){
+                            margin-bottom: 12px;
+                        }
                         .columns {
                             justify-content: space-between;
+                            @include media($md){
+                                flex-wrap: wrap;
+                            }
                             .column-left {
                                 width: 365px;
+                                @include media($xl){
+                                    width: 250px;
+                                }
+                                @include media($lg){
+                                    width: 185px;
+                                    padding-top: 10px;
+                                }
+                                @include media($md){
+                                    width: 100%;
+                                    order: 3;
+                                }
                             }
                             .column-right {
                                 width: 478px;
                                 display: flex;
                                 padding-bottom: 10px;
+                                @include media($xl){
+                                    width: 300px;
+                                }
+                                @include media($lg){
+                                    width: 210px;
+                                    padding-bottom: 0px;
+                                }
+                                @include media($md){
+                                    width: 100%;
+                                    order: 1;
+                                }
                             }
                             .column-center {
                                 width: 386px;
@@ -3658,7 +4345,22 @@ body {
                                 padding-bottom: 8px;
                                 display: flex;
                                 flex-wrap: wrap;
-
+                                @include media($xl){
+                                    width: 352px;
+                                }
+                                @include media($lg){
+                                    width: 210px;
+                                    margin-top: 0px;
+                                    margin-left: 98px;
+                                    padding-top: 35px;
+                                    padding-left: 0px;
+                                    padding-bottom: 0px;
+                                }
+                                @include media($md){
+                                    width: 100%;
+                                    margin-left: 0px;
+                                    order: 2;
+                                }
                             }                        
                         }
                     }
@@ -3673,12 +4375,23 @@ body {
                         color: $blue-color;
                         margin-top: 64px;
                         display: inline-block;
+                        @include media($lg){
+                            font-size: 9.61px;
+                            letter-spacing: 0.48px;
+                            margin-top: 25px;
+                            margin-bottom: 22px;
+                        }
                     }
                     .icon {
                         width: 21px;
                         height: 21px;
                         margin-bottom: 17px;
-                        img{
+                        @include media($lg){
+                            width: 11px;
+                            height: 11px;
+                            margin-bottom: 14px;
+                        }
+                        svg{
                             max-width: 100%;
                             max-height: 100%;
                         }
@@ -3687,6 +4400,14 @@ body {
                         font-size: 18px;
                         font-style: normal;
                         line-height: 26px;
+                        @include media($xl){
+                            font-size: 14px;
+                            line-height: 20px;
+                        }
+                        @include media($lg){
+                            font-size: 10px;
+                            line-height: 14px;
+                        }
                         strong {
                             font-family: "Akkurat LL Cyrillic Bold";
                         }
@@ -3700,10 +4421,24 @@ body {
                         letter-spacing: 5.6px;
                         text-transform: uppercase;
                         width: 100%;
+                        @include media($xl){
+                            font-size: 56px;
+                            line-height: 64px;
+                        }
+                        @include media($lg){
+                            font-size: 42px;
+                            line-height: 46px;
+                            letter-spacing: 3.6px;
+                        }
                     }
                     .link-email {
                         margin-top: auto;
                         margin-left: 7px;
+                        @include media($lg){
+                            margin-left: 0px;
+                            position: relative;
+                            top: -4px;
+                        }
                         a {
                             display: inline-flex;
                             height: 32px;
@@ -3712,13 +4447,34 @@ body {
                             border-radius: 99px;
                             background: $main-color;
                             position: relative;
+                            @include media($xl){
+                                font-size: 14px;
+                                line-height: 20px;
+                                height: 24px;
+                                padding: 3px 49px 7px 26px;
+                            }
+                            @include media($lg){
+                                font-size: 8px;
+                                line-height: 16px;
+                                height: 18px;
+                                padding: 2px 61px 7px 26px;
+                            }
                             &::before {
                                 @include before-content(26px, 26px);
                                 right: 3px;
                                 top: 3px;
                                 background-image: url(../images/icon-mail-main-color.svg);
                                 background-position: center;
-                                background-repeat: no-repeat;                            
+                                background-repeat: no-repeat;  
+                                @include media($xl){
+                                    @include before-content(18px, 18px);
+                                    background-size: cover  
+                                }          
+                                @include media($lg){
+                                    @include before-content(14px, 14px); 
+                                    right: 2px;
+                                    top: 2px;
+                                }                  
                             }
                         }
                     }
@@ -3728,6 +4484,15 @@ body {
                         position: relative;
                         right: -192px;
                         margin-top: auto;
+                        @include media($xl){
+                            right: -115px;
+                            width: 300px;
+                            height: auto;
+                            right: -23px;
+                        }
+                        @include media($lg){
+                            width: 210px;
+                        }
                         img {
                             width: 100%;
                             height: auto;
@@ -3737,9 +4502,22 @@ body {
                 .advisors {
                     padding-top: 80px;
                     padding-bottom: 50px;
+                    @include media($lg){
+                        padding-top: 46px;
+                    }
+                    @include media($md){
+                        padding-top: 13px;
+                        padding-bottom: 25px;
+                    }
                     .title-row {
                         position: relative;
                         margin-bottom: 80px;
+                        @include media($lg){
+                            margin-bottom: 48px;
+                        }
+                        @include media($md){
+                            margin-bottom: 10px;
+                        }
                         .title {
                             -webkit-text-stroke: 2px;
                             font-family: "Akkurat LL Cyrillic Bold";
@@ -3752,6 +4530,16 @@ body {
                             color: $blue-color;
                             width: 524px;
                             margin-bottom: 30px;
+                            @include media($lg){
+                                -webkit-text-stroke: 1px;
+                                font-size: 29.371px;
+                                letter-spacing: 4.406px;
+                            }
+                            @include media($md){
+                                font-size: 20px;
+                                letter-spacing: 3px;
+                                margin-bottom: 15px;
+                            }
                         }
                         .slider-navigation {
                             display: flex;
@@ -3759,6 +4547,13 @@ body {
                             position: absolute;
                             top: 0px;
                             right: 0px;
+                            @include media($lg){
+                                margin-top: 18px;
+                            }
+                            @include media($md){
+                                position: static;
+                                margin-top: 0px;
+                            }
                             .nav-slide {
                                 width: 148px;
                                 height: 26px; 
@@ -3773,6 +4568,15 @@ body {
                                 align-items: center;
                                 position: relative;
                                 cursor: pointer;
+                                @include media($lg){
+                                    width: 86px;
+                                    height: 15px;
+                                    font-size: 5.874px;
+                                    line-height: 6px;
+                                    border-radius: 18.797px;
+                                    border: 0.5px solid $blue-color;
+                                    
+                                }
                                 &:hover {
                                     background: $blue-color;
                                     color: #fff;
@@ -3786,18 +4590,30 @@ body {
                                 &.prev-slide {
                                     margin-right: 63px;
                                     padding: 9px 25px 7px 68px;
+                                    @include media($lg){
+                                        padding: 2px 48px 2px 38px;
+                                    }
+                                    @include media($lg){
+                                        margin-right: 33px;
+                                    }
                                     svg {
                                         left: 8px;
                                     }
                                 }    
                                 &.next-slide {
                                     padding: 9px 8px 7px 42px;
+                                    @include media($lg){
+                                        padding: 4px 8px 2px 19px;
+                                    }
                                     svg {
                                         right: 8px;
                                     }
                                 }   
                                 svg {
                                     position: absolute;
+                                    @include media($lg){
+                                        width: 21px;
+                                    }
                                 }             
                             }
                         }                      
@@ -3810,9 +4626,22 @@ body {
                 .team {
                     padding-top: 70px;
                     padding-bottom: 82px;
+                    @include media($lg){
+                        padding-top: 26px;
+                        padding-bottom: 16px;
+                    }
+                    @include media($md){
+                        padding-bottom: 13px;
+                    }
                     .title-row {
                         position: relative;
                         margin-bottom: 58px;
+                        @include media($lg){
+                            margin-bottom: 30px;
+                        }
+                        @include media($md){
+                            margin-bottom: 24px;
+                        }
                         .title {
                             -webkit-text-stroke: 2px;
                             font-family: "Akkurat LL Cyrillic Bold";
@@ -3825,6 +4654,20 @@ body {
                             color: $blue-color;
                             width: 524px;
                             margin-bottom: 30px;
+                            @include media($lg){
+                                 -webkit-text-stroke: 1px;
+                                font-size: 26.694px;
+                                line-height: 33px;
+                                letter-spacing: 4.004px;
+                                width: 205px;
+                            }
+                            @include media($md){
+                                font-size: 20px;
+                                line-height: 26px;
+                                letter-spacing: 3px;
+                                width: 150px;
+                                margin-bottom: 0px;
+                            }
                         } 
                         .background-image {
                             position: absolute;
@@ -3832,20 +4675,126 @@ body {
                             height: 161px;
                             right: 0px;
                             bottom: -30px;
+                            @include media($lg){
+                                width: 230px;
+                                height: 85px;
+                                right: 5px;
+                                bottom: -13px;
+                            }
+                            @include media($md){
+                                width: 170px;
+                                height: 63px;
+                                right: -40px;
+                                bottom: -5px;
+                            }
                             img {
                                 width: 100%;
                                 height: auto;
                             }
                         }                     
                     }
+                    .slider-navigation {
+                        display: none;
+                        margin-top: 31px;
+                        position: absolute;
+                        top: 0px;
+                        right: 0px;
+                        @include media($lg){
+                            margin-top: 18px;
+                        }
+                        @include media($md){
+                            position: static;
+                            margin-top: 0px;
+                            display: flex;
+                            margin-bottom: 15px;
+                        }
+                        .nav-slide {
+                            width: 148px;
+                            height: 26px; 
+                            border-radius: 32px;
+                            border: 1px solid $blue-color;
+                            background: #FFF;  
+                            transform: 0.2s; 
+                            font-size: 10px;
+                            letter-spacing: 1px;
+                            text-transform: uppercase;
+                            display: inline-flex;
+                            align-items: center;
+                            position: relative;
+                            cursor: pointer;
+                            @include media($lg){
+                                width: 86px;
+                                height: 15px;
+                                font-size: 5.874px;
+                                line-height: 6px;
+                                border-radius: 18.797px;
+                                border: 0.5px solid $blue-color;
+                                
+                            }
+                            &:hover {
+                                background: $blue-color;
+                                color: #fff;
+                                transition: 0.3s;
+                                svg {
+                                    path {
+                                        fill: #fff;
+                                    }
+                                }
+                            } 
+                            &.prev-slide {
+                                margin-right: 63px;
+                                padding: 9px 25px 7px 68px;
+                                @include media($lg){
+                                    padding: 2px 48px 2px 38px;
+                                }
+                                @include media($lg){
+                                    margin-right: 33px;
+                                }
+                                svg {
+                                    left: 8px;
+                                }
+                            }    
+                            &.next-slide {
+                                padding: 9px 8px 7px 42px;
+                                @include media($lg){
+                                    padding: 4px 8px 2px 19px;
+                                }
+                                svg {
+                                    right: 8px;
+                                }
+                            }   
+                            svg {
+                                position: absolute;
+                                @include media($lg){
+                                    width: 21px;
+                                }
+                            }             
+                        }
+                    }  
                     .team-wrap {
                         display: flex;
                         flex-wrap: wrap;
                         justify-content: space-between;
                         .team-item {
                             margin-bottom: 27px;
+                            @include media($lg){
+                                width: 152px;
+                                margin-bottom: 15px;
+                            }
+                            @include media($md){
+                                width: 130px;
+                            }
                             .image-wrap {
                                 height: 245px;
+                                @include media($xl){
+                                    height: auto;
+                                }
+                                @include media($xl){
+                                    margin-bottom: 9px;
+                                }
+                                @include media($md){
+                                    margin-bottom: 11px;
+                                }
                             }
                             .name {
                                 font-size: 30px;
@@ -3856,8 +4805,45 @@ body {
                                 text-transform: uppercase;
                                 padding-bottom: 0px;
                                 margin-bottom: 17px;
+                                @include media($xl){
+                                    font-size: 22px;
+                                    line-height: 28px;
+                                }
+                                @include media($lg){
+                                    font-size: 16px;
+                                    line-height: 20px;
+                                    margin-bottom: 7px;
+                                }
+                                @include media($md){
+                                    font-size: 10.5px;
+                                    letter-spacing: 0.315px;
+                                    line-height: 12px;
+                                    padding-bottom: 8px;
+                                    margin-bottom: 10px;
+                                }
                                 &::before {
                                     bottom: 5px;
+                                    @include media($xl){
+                                        bottom: 0px;
+                                    }
+                                    @include media($lg){
+                                        bottom: 4px;
+                                    }
+                                    @include media($md){
+                                        bottom: 0px;
+                                    }
+                                }
+                            }
+                            .position {
+                                display: none;
+                                font-family: "Akkurat LL Cyrillic Bold";
+                                font-size: 8.243px;
+                                font-style: normal;
+                                font-weight: 700;
+                                line-height: 11px;
+                                padding-right: 50px;
+                                @include media($md){
+                                    display: block;
                                 }
                             }
                             .description {
@@ -3866,6 +4852,17 @@ body {
                                 font-weight: 400;
                                 line-height: 22px;
                                 letter-spacing: -0.36px; 
+                                @include media($xl){
+                                    font-size: 14px;
+                                    line-height: 18px;
+                                }
+                                @include media($lg){
+                                    font-size: 10px;
+                                    line-height: 11px;
+                                }
+                                @include media($md){
+                                    display: none;
+                                }
                                 span {
                                     font-family: "Akkurat LL Cyrillic Bold";
                                     font-size: 18px;
@@ -3873,12 +4870,31 @@ body {
                                     font-weight: 700;
                                     display: inline-block;
                                     position: relative;
+                                    @include media($xl){
+                                        font-size: 14px;
+                                        line-height: 18px;
+                                    }
+                                    @include media($lg){
+                                        font-size: 10px;
+                                        line-height: 16px;
+                                    }
                                     &::before {
                                         @include before-content(200px, 11px);
                                         background-image: url(../images/team-description-bg.svg);
                                         top: 12px;
                                         left: -1px;
                                         z-index: -1;
+                                        @include media($xl){
+                                            @include before-content(105px, 6px);
+                                            background-size: contain;
+                                        }
+                                                                                @include media($xl){
+                                            @include before-content(105px, 6px);
+                                        }
+                                        // @include media($lg){
+                                        //     font-size: 16px;
+                                        //     line-height: 22px;
+                                        // }
                                     }
                                 }
                             }
@@ -3887,11 +4903,26 @@ body {
                 }
                 .volunter {
                     padding-bottom: 124px;
+                    @include media($lg){
+                        padding-bottom: 53px;
+                    }
+                    @include media($md){
+                        padding-bottom: 34px;
+                    }
                     .title-row {
                         background-color: $blue-color;
                         min-height: 141px;
                         padding: 44px 0px 27px 0px;  
-                        position: relative;                      
+                        position: relative;    
+                        @include media($lg){
+                            min-height: auto;
+                            padding-top: 25px;
+                            padding-bottom: 16px;
+                        }    
+                        @include media($lg) {
+                            padding-top: 14px;
+                            padding-bottom: 7px;
+                        }            
                         .title {
                             color: #FFF;
                             -webkit-text-stroke: 3px;
@@ -3902,6 +4933,17 @@ body {
                             line-height: normal;
                             letter-spacing: 10.5px;
                             text-transform: uppercase;
+                            @include media($lg){
+                                font-size: 40.709px;
+                                letter-spacing: 6.106px;
+                                -webkit-text-stroke: 1px;
+                                letter-spacing: 7px;
+                            }
+                            @include media($md){
+                                font-size: 20px;
+                                letter-spacing: 3px;
+                                line-height: 24px;
+                            }
                         }
                         .background-image {
                             width: 218px;
@@ -3909,6 +4951,18 @@ body {
                             position: absolute;
                             right: 17px;
                             bottom: -71px;  
+                            @include media($lg){
+                                width: 126px;
+                                height: 115px;
+                                right: -22px;
+                                bottom: -59px;
+                            }
+                            @include media($md){
+                                width: 100px;
+                                height: 90px;
+                                right: -14px;
+                                bottom: -54px;
+                            }
                             img {
                                 max-width: 100%;
                                 height: auto;
@@ -3919,10 +4973,28 @@ body {
                         display: flex;
                         justify-content: space-between;
                         width: 1134px;
+                        @include media($xl){
+                            width: 100%;
+                        }
+                        @include media($lg){
+                            width: 660px;
+                        }
+                        @include media($md){
+                            width: 100%;
+                        }
                         .team-item {
+                            @include media($lg){
+                                // width: 286px;
+                            }
                             .image-wrap {
                                 height: 245px;
                                 margin-bottom: 24px;
+                                @include media($xl){
+                                    height: auto;
+                                }
+                                @include media($lg){
+                                    margin-bottom: 12px;
+                                }
                             }
                         }
                     }
@@ -3930,6 +5002,13 @@ body {
                         display: flex;
                         margin-top: 40px;
                         margin-bottom: 9px;
+                        @include media($lg){
+                            margin-top: 0px;
+                            margin-bottom: 5px;
+                        }
+                        @include media($md){
+                            margin-bottom: 11px;
+                        }
                         .nav-slide {
                             width: 148px;
                             height: 26px; 
@@ -3944,6 +5023,14 @@ body {
                             align-items: center;
                             position: relative;
                             cursor: pointer;
+                            @include media($lg){
+                                width: 86.07px;
+                                height: 16px;
+                                font-size: 5.816px;
+                                letter-spacing: 0.582px;
+                                border: 0.5px solid $yellow-color;
+                                margin-top: 23px;
+                            }
                             &:hover {
                                 background: $yellow-color;
                                 transition: 0.3s;
@@ -3951,18 +5038,36 @@ body {
                             &.prev-slide {
                                 margin-right: 63px;
                                 padding: 9px 25px 7px 68px;
+                                @include media($lg){
+                                    padding: 4px 15px 2px 40px;
+                                    margin-right: 39px;
+                                }
                                 svg {
                                     left: 8px;
+                                    @include media($lg){
+                                        left: 6px;
+                                    }
                                 }
                             }    
                             &.next-slide {
-                                padding: 9px 8px 7px 42px;
+                                padding: 9px 70px 7px 42px;
+                                @include media($lg){
+                                    padding: 4px 8px 2px 24px;
+                                }
                                 svg {
                                     right: 8px;
+                                    @include media($lg){
+                                        right: 6px;
+                                    }
                                 }
                             }   
                             svg {
                                 position: absolute;
+                                @include media($lg){
+                                    width: 21px;
+                                    height: 5px;
+                                    top: 4px;
+                                }
                             }             
                         }
                     }  

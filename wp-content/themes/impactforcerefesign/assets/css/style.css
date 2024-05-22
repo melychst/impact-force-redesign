@@ -3286,12 +3286,29 @@ body {
               body main section.news .bottom-row .last-news .news-item .title a {
                 font-size: 6.928px;
                 line-height: 8px; } }
-    body main section.WMA-hero {
+    body main section.WWA-hero {
       min-height: 597px;
       background-color: #003951;
       padding-top: 115px;
       padding-bottom: 90px; }
-      body main section.WMA-hero .hero-content-wrap .hero-title {
+      @media only screen and (max-width: 1199px) {
+        body main section.WWA-hero {
+          min-height: auto; } }
+      @media only screen and (max-width: 991px) {
+        body main section.WWA-hero {
+          padding-top: 61px;
+          padding-bottom: 48px; } }
+      @media only screen and (max-width: 767px) {
+        body main section.WWA-hero {
+          min-height: 433px;
+          padding-top: 22px; } }
+      @media only screen and (max-width: 991px) {
+        body main section.WWA-hero .hero-content-wrap {
+          width: 438px; } }
+      @media only screen and (max-width: 767px) {
+        body main section.WWA-hero .hero-content-wrap {
+          width: 100%; } }
+      body main section.WWA-hero .hero-content-wrap .hero-title {
         -webkit-text-stroke: 5px;
         font-family: "Akkurat LL Cyrillic Bold";
         font-size: 111.364px;
@@ -3302,7 +3319,23 @@ body {
         text-transform: uppercase;
         color: #ffffff;
         margin-bottom: 203px; }
-      body main section.WMA-hero .hero-content-wrap .sub-title {
+        @media only screen and (max-width: 1199px) {
+          body main section.WWA-hero .hero-content-wrap .hero-title {
+            font-size: 59.456px;
+            -webkit-text-stroke: 3px;
+            margin-bottom: 120px;
+            letter-spacing: 7px;
+            padding-left: 5px;
+            margin-bottom: 110px; } }
+        @media only screen and (max-width: 767px) {
+          body main section.WWA-hero .hero-content-wrap .hero-title {
+            padding-left: 0px;
+            font-size: 55.994px;
+            letter-spacing: 5.599px;
+            -webkit-text-stroke: 2px;
+            margin-bottom: 17px;
+            line-height: 59px; } }
+      body main section.WWA-hero .hero-content-wrap .sub-title {
         font-family: "Akkurat Mono LL";
         font-size: 32px;
         line-height: 38px;
@@ -3311,14 +3344,41 @@ body {
         color: #00B0EB;
         width: 645px;
         padding-left: 122px; }
-        body main section.WMA-hero .hero-content-wrap .sub-title span {
+        @media only screen and (max-width: 1199px) {
+          body main section.WWA-hero .hero-content-wrap .sub-title {
+            font-size: 28px; } }
+        @media only screen and (max-width: 991px) {
+          body main section.WWA-hero .hero-content-wrap .sub-title {
+            font-size: 18px;
+            padding-left: 67px;
+            letter-spacing: 0px;
+            width: 100%;
+            line-height: 20px; } }
+        @media only screen and (max-width: 767px) {
+          body main section.WWA-hero .hero-content-wrap .sub-title {
+            font-size: 13px;
+            line-height: 16px;
+            letter-spacing: -0.26px;
+            padding-left: 0px;
+            width: 176px; } }
+        body main section.WWA-hero .hero-content-wrap .sub-title span {
           position: absolute;
           top: 15px;
           left: 0px;
           line-height: 19px; }
-          body main section.WMA-hero .hero-content-wrap .sub-title span svg path {
+          @media only screen and (max-width: 991px) {
+            body main section.WWA-hero .hero-content-wrap .sub-title span {
+              width: 40px;
+              top: 3px; } }
+          @media only screen and (max-width: 767px) {
+            body main section.WWA-hero .hero-content-wrap .sub-title span {
+              display: none; } }
+          @media only screen and (max-width: 991px) {
+            body main section.WWA-hero .hero-content-wrap .sub-title span svg {
+              width: 100%; } }
+          body main section.WWA-hero .hero-content-wrap .sub-title span svg path {
             fill: #00B0EB; }
-        body main section.WMA-hero .hero-content-wrap .sub-title::before {
+        body main section.WWA-hero .hero-content-wrap .sub-title::before {
           content: '';
           width: 459px;
           height: 19px;
@@ -3329,13 +3389,43 @@ body {
           background-repeat: no-repeat;
           bottom: -13px;
           right: -50px; }
-      body main section.WMA-hero .background-image {
+          @media only screen and (max-width: 1199px) {
+            body main section.WWA-hero .hero-content-wrap .sub-title::before {
+              right: 30px; } }
+          @media only screen and (max-width: 991px) {
+            body main section.WWA-hero .hero-content-wrap .sub-title::before {
+              width: 210px;
+              height: 10px;
+              right: 66px;
+              bottom: -6px;
+              background-size: cover; } }
+          @media only screen and (max-width: 767px) {
+            body main section.WWA-hero .hero-content-wrap .sub-title::before {
+              width: 152px;
+              height: 7px; } }
+      body main section.WWA-hero .background-image {
         position: absolute;
         width: 625px;
         height: 580px;
         bottom: 0px;
         right: 0px; }
-        body main section.WMA-hero .background-image img {
+        @media only screen and (max-width: 1400px) {
+          body main section.WWA-hero .background-image {
+            width: 450px;
+            height: 422px; } }
+        @media only screen and (max-width: 991px) {
+          body main section.WWA-hero .background-image {
+            width: 325px;
+            height: 311px;
+            bottom: 0px;
+            right: 13px; } }
+        @media only screen and (max-width: 991px) {
+          body main section.WWA-hero .background-image {
+            width: 243px;
+            height: 260px;
+            bottom: 0px;
+            right: 13px; } }
+        body main section.WWA-hero .background-image img {
           -o-object-fit: cover;
              object-fit: cover;
           -o-object-position: center;
@@ -3346,12 +3436,31 @@ body {
       padding: 53px 0px 25px;
       min-height: 560px;
       background-color: #00B0EB; }
+      @media only screen and (max-width: 1400px) {
+        body main section.WWA-founded {
+          padding: 28px 0px 25px;
+          min-height: auto; } }
+      @media only screen and (max-width: 767px) {
+        body main section.WWA-founded {
+          padding: 34px 0px 32px;
+          min-height: auto; } }
       body main section.WWA-founded .background-image {
         width: 273px;
         height: 282px;
         position: absolute;
         top: 46px;
         right: 8px; }
+        @media only screen and (max-width: 1199px) {
+          body main section.WWA-founded .background-image {
+            width: 145px;
+            height: 150px; } }
+        @media only screen and (max-width: 991px) {
+          body main section.WWA-founded .background-image {
+            top: 24px;
+            right: 82px; } }
+        @media only screen and (max-width: 767px) {
+          body main section.WWA-founded .background-image {
+            display: none; } }
         body main section.WWA-founded .background-image img {
           -o-object-fit: cover;
              object-fit: cover;
@@ -3372,12 +3481,45 @@ body {
         letter-spacing: 11.2px;
         text-transform: uppercase;
         margin-bottom: 60px; }
+        @media only screen and (max-width: 1400px) {
+          body main section.WWA-founded .section-title {
+            font-size: 60px;
+            padding-right: 50px; } }
+        @media only screen and (max-width: 1199px) {
+          body main section.WWA-founded .section-title {
+            -webkit-text-stroke: 1px;
+            font-size: 36px;
+            letter-spacing: 7px;
+            line-height: 41px;
+            padding-right: 400px;
+            margin-bottom: 30px; } }
+        @media only screen and (max-width: 767px) {
+          body main section.WWA-founded .section-title {
+            -webkit-text-stroke: 1px;
+            font-size: 20px;
+            letter-spacing: 3px;
+            margin-bottom: 23px;
+            width: 100%;
+            padding-right: 0px;
+            line-height: 28px; } }
       body main section.WWA-founded .columns {
         -webkit-box-pack: justify;
             -ms-flex-pack: justify;
                 justify-content: space-between; }
+        @media only screen and (max-width: 767px) {
+          body main section.WWA-founded .columns {
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap; } }
         body main section.WWA-founded .columns .column {
           width: 610px; }
+          @media only screen and (max-width: 991px) {
+            body main section.WWA-founded .columns .column {
+              width: 48.5%; } }
+          @media only screen and (max-width: 767px) {
+            body main section.WWA-founded .columns .column {
+              width: 100%; }
+              body main section.WWA-founded .columns .column:first-child {
+                margin-bottom: 38px; } }
         body main section.WWA-founded .columns .meta {
           color: #FFF;
           font-size: 22.869px;
@@ -3387,6 +3529,18 @@ body {
           position: relative;
           padding-left: 212px;
           margin-bottom: 26px; }
+          @media only screen and (max-width: 991px) {
+            body main section.WWA-founded .columns .meta {
+              font-size: 12px;
+              line-height: 14px;
+              letter-spacing: 1.831px;
+              padding-left: 116px;
+              margin-bottom: 15px; } }
+          @media only screen and (max-width: 767px) {
+            body main section.WWA-founded .columns .meta {
+              font-size: 14.578px;
+              letter-spacing: 2.187px;
+              padding-left: 136px; } }
           body main section.WWA-founded .columns .meta::before {
             content: '';
             width: 180px;
@@ -3396,6 +3550,13 @@ body {
             background-color: #fff;
             left: 0px;
             top: 8px; }
+            @media only screen and (max-width: 991px) {
+              body main section.WWA-founded .columns .meta::before {
+                width: 98px; } }
+            @media only screen and (max-width: 991px) {
+              body main section.WWA-founded .columns .meta::before {
+                width: 114px;
+                top: 5px; } }
         body main section.WWA-founded .columns .column-title {
           width: 392px;
           height: 62px;
@@ -3420,24 +3581,91 @@ body {
           color: #00B0EB;
           padding-top: 13px;
           margin-bottom: 43px; }
+          @media only screen and (max-width: 1199px) {
+            body main section.WWA-founded .columns .column-title {
+              width: 210px;
+              height: 34px;
+              font-size: 20px;
+              padding-top: 0px;
+              line-height: 26px;
+              padding-top: 6px;
+              margin-bottom: 22px; } }
+          @media only screen and (max-width: 767px) {
+            body main section.WWA-founded .columns .column-title {
+              font-size: 22.948px;
+              letter-spacing: 0.688px;
+              height: 39px;
+              width: 250px;
+              padding-top: 11px;
+              padding-left: 36px;
+              -webkit-box-pack: left;
+                  -ms-flex-pack: left;
+                      justify-content: left;
+              margin-bottom: 31px; } }
         body main section.WWA-founded .columns .content {
           padding-left: 106px;
           line-height: 28px; }
+          @media only screen and (max-width: 1199px) {
+            body main section.WWA-founded .columns .content {
+              padding-left: 60px; } }
+          @media only screen and (max-width: 991px) {
+            body main section.WWA-founded .columns .content {
+              font-size: 10.678px;
+              line-height: 10.678px;
+              line-height: 16px;
+              padding-right: 25px; } }
+          @media only screen and (max-width: 767px) {
+            body main section.WWA-founded .columns .content {
+              padding-left: 38px;
+              padding-right: 0px;
+              font-size: 12px;
+              line-height: 17.749px; } }
     body main section.WWA-organisational {
       padding-top: 95px;
       padding-bottom: 80px;
       min-height: 709px; }
+      @media only screen and (max-width: 991px) {
+        body main section.WWA-organisational {
+          padding-top: 50px;
+          padding-bottom: 54px;
+          min-height: auto; } }
+      @media only screen and (max-width: 767px) {
+        body main section.WWA-organisational {
+          padding-top: 26px;
+          padding-bottom: 14px; } }
       body main section.WWA-organisational .top-row {
         margin-bottom: 38px;
         color: #00B0EB; }
+        @media only screen and (max-width: 991px) {
+          body main section.WWA-organisational .top-row {
+            margin-bottom: 18px; } }
+        @media only screen and (max-width: 767px) {
+          body main section.WWA-organisational .top-row {
+            margin-bottom: 13px; } }
         body main section.WWA-organisational .top-row .columns {
           -webkit-box-pack: justify;
               -ms-flex-pack: justify;
                   justify-content: space-between; }
+          @media only screen and (max-width: 767px) {
+            body main section.WWA-organisational .top-row .columns {
+              -ms-flex-wrap: wrap;
+                  flex-wrap: wrap; } }
           body main section.WWA-organisational .top-row .columns .left-column {
             width: 553px; }
+            @media only screen and (max-width: 991px) {
+              body main section.WWA-organisational .top-row .columns .left-column {
+                width: 295px; } }
+            @media only screen and (max-width: 767px) {
+              body main section.WWA-organisational .top-row .columns .left-column {
+                width: 100%; } }
           body main section.WWA-organisational .top-row .columns .right-column {
             width: 498px; }
+            @media only screen and (max-width: 991px) {
+              body main section.WWA-organisational .top-row .columns .right-column {
+                width: 282px; } }
+            @media only screen and (max-width: 767px) {
+              body main section.WWA-organisational .top-row .columns .right-column {
+                width: 100%; } }
         body main section.WWA-organisational .top-row .section-title {
           -webkit-text-stroke: 3px;
           font-family: "Akkurat LL Cyrillic Bold";
@@ -3447,21 +3675,62 @@ body {
           line-height: 65px;
           letter-spacing: 9.5px;
           text-transform: uppercase; }
+          @media only screen and (max-width: 991px) {
+            body main section.WWA-organisational .top-row .section-title {
+              -webkit-text-stroke: 1px;
+              font-size: 26.694px;
+              letter-spacing: 5.072px;
+              line-height: 36px; } }
+          @media only screen and (max-width: 767px) {
+            body main section.WWA-organisational .top-row .section-title {
+              font-size: 20px;
+              line-height: 28px;
+              letter-spacing: 3.8px;
+              margin-bottom: 7px; } }
         body main section.WWA-organisational .top-row .description {
           font-size: 23px;
           font-style: normal;
           font-weight: 700;
           line-height: 30px;
           letter-spacing: 0.6px; }
+          @media only screen and (max-width: 991px) {
+            body main section.WWA-organisational .top-row .description {
+              font-size: 12.279px;
+              line-height: 16px;
+              letter-spacing: 0.368px; } }
+          @media only screen and (max-width: 767px) {
+            body main section.WWA-organisational .top-row .description {
+              font-size: 10px;
+              line-height: 16px;
+              letter-spacing: 0.5px; } }
       body main section.WWA-organisational .bottom-row .columns {
         -webkit-box-pack: justify;
             -ms-flex-pack: justify;
                 justify-content: space-between; }
+        @media only screen and (max-width: 767px) {
+          body main section.WWA-organisational .bottom-row .columns {
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap; } }
         body main section.WWA-organisational .bottom-row .columns .column {
           width: 392px;
           min-height: 343px;
           background-color: #E4E5EA;
           border-radius: 12px; }
+          @media only screen and (max-width: 1400px) {
+            body main section.WWA-organisational .bottom-row .columns .column {
+              width: 350px; } }
+          @media only screen and (max-width: 1199px) {
+            body main section.WWA-organisational .bottom-row .columns .column {
+              width: 300px; } }
+          @media only screen and (max-width: 991px) {
+            body main section.WWA-organisational .bottom-row .columns .column {
+              width: 210px;
+              border-radius: 6px;
+              min-height: auto; } }
+          @media only screen and (max-width: 767px) {
+            body main section.WWA-organisational .bottom-row .columns .column {
+              width: 100%;
+              margin-bottom: 8px; } }
           body main section.WWA-organisational .bottom-row .columns .column .header {
             display: -webkit-box;
             display: -ms-flexbox;
@@ -3470,9 +3739,19 @@ body {
                 -ms-flex-pack: justify;
                     justify-content: space-between;
             padding: 18px 30px 38px 17px; }
+            @media only screen and (max-width: 991px) {
+              body main section.WWA-organisational .bottom-row .columns .column .header {
+                padding: 9px 17px 21px 9px; } }
+            @media only screen and (max-width: 767px) {
+              body main section.WWA-organisational .bottom-row .columns .column .header {
+                padding: 9px 7px 15px 9px; } }
             body main section.WWA-organisational .bottom-row .columns .column .header .icon-wrap {
               width: 65px;
               height: 65px; }
+              @media only screen and (max-width: 991px) {
+                body main section.WWA-organisational .bottom-row .columns .column .header .icon-wrap {
+                  width: 34px;
+                  height: 34px; } }
               body main section.WWA-organisational .bottom-row .columns .column .header .icon-wrap img {
                 -o-object-fit: cover;
                    object-fit: cover;
@@ -3490,9 +3769,24 @@ body {
               position: relative;
               top: 5px;
               left: 2px; }
+              @media only screen and (max-width: 991px) {
+                body main section.WWA-organisational .bottom-row .columns .column .header .number {
+                  font-size: 12.21px;
+                  letter-spacing: 1.831px;
+                  line-height: 14px; } }
           body main section.WWA-organisational .bottom-row .columns .column .content {
             line-height: 25px;
             padding: 0px 14px 22px 14px; }
+            @media only screen and (max-width: 991px) {
+              body main section.WWA-organisational .bottom-row .columns .column .content {
+                font-size: 10px;
+                line-height: 14px;
+                padding: 0px 10px 8px 8px; } }
+            @media only screen and (max-width: 767px) {
+              body main section.WWA-organisational .bottom-row .columns .column .content {
+                font-size: 10px;
+                line-height: 16px;
+                padding: 0px 10px 10px 8px; } }
             body main section.WWA-organisational .bottom-row .columns .column .content strong {
               font-family: "Akkurat LL Cyrillic Bold";
               font-weight: 700; }
@@ -3501,12 +3795,37 @@ body {
       min-height: 273px;
       padding-top: 57px;
       padding-bottom: 38px; }
+      @media only screen and (max-width: 991px) {
+        body main section.WWA-focus-on {
+          min-height: auto;
+          padding-top: 30px;
+          padding-bottom: 22px; } }
+      @media only screen and (max-width: 767px) {
+        body main section.WWA-focus-on {
+          padding-top: 22px;
+          padding-bottom: 13px; } }
+      body main section.WWA-focus-on .container {
+        position: relative;
+        z-index: 5; }
       body main section.WWA-focus-on .background-image {
         width: 348px;
         height: 184px;
         position: absolute;
         right: 0px;
-        bottom: -6px; }
+        bottom: -6px;
+        z-index: 1; }
+        @media only screen and (max-width: 991px) {
+          body main section.WWA-focus-on .background-image {
+            width: 193px;
+            height: 106px;
+            right: 76px;
+            bottom: -9px; } }
+        @media only screen and (max-width: 767px) {
+          body main section.WWA-focus-on .background-image {
+            width: 114px;
+            height: 105px;
+            right: 31px;
+            bottom: -47px; } }
         body main section.WWA-focus-on .background-image img {
           width: 100%;
           height: auto; }
@@ -3521,56 +3840,136 @@ body {
         -webkit-text-stroke: 3px;
         color: #fff;
         margin-bottom: 42px; }
-      body main section.WWA-focus-on .content-link a {
-        display: -webkit-inline-box;
-        display: -ms-inline-flexbox;
-        display: inline-flex;
-        -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center;
-        padding-left: 57px;
-        padding-right: 104px;
-        background-color: #003548;
-        border-radius: 35px;
-        height: 65px;
-        position: relative;
-        font-family: "Akkurat LL Cyrillic Bold";
-        font-size: 24px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: normal;
-        text-transform: uppercase;
-        color: #ffffff;
-        padding-top: 6px;
-        letter-spacing: -0.7px; }
-        body main section.WWA-focus-on .content-link a::after {
-          content: '';
-          width: 48px;
-          height: 48px;
-          position: absolute;
-          display: block;
-          background-color: #ffffff;
-          border-radius: 50%;
-          background-image: url(../images/icon-square-arrow-green-new.svg);
-          background-position: center;
-          background-repeat: no-repeat;
-          top: 8px;
-          right: 11px;
-          background-size: 20px 20px;
-          -webkit-transform: rotate(180deg);
-                  transform: rotate(180deg); }
+        @media only screen and (max-width: 991px) {
+          body main section.WWA-focus-on .section-title {
+            font-size: 37.372px;
+            line-height: 42px;
+            letter-spacing: 5.606px;
+            margin-bottom: 18px;
+            -webkit-text-stroke: 1px; } }
+        @media only screen and (max-width: 767px) {
+          body main section.WWA-focus-on .section-title {
+            font-size: 20px;
+            letter-spacing: 3px;
+            line-height: 22px;
+            margin-bottom: 11px; } }
+      body main section.WWA-focus-on .content-link {
+        display: inline-block; }
+        body main section.WWA-focus-on .content-link a {
+          display: -webkit-inline-box;
+          display: -ms-inline-flexbox;
+          display: inline-flex;
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center;
+          padding-left: 57px;
+          padding-right: 104px;
+          background-color: #003548;
+          border-radius: 35px;
+          height: 65px;
+          position: relative;
+          font-family: "Akkurat LL Cyrillic Bold";
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+          text-transform: uppercase;
+          color: #ffffff;
+          padding-top: 6px;
+          letter-spacing: -0.7px; }
+          @media only screen and (max-width: 991px) {
+            body main section.WWA-focus-on .content-link a {
+              height: 35px;
+              padding-left: 34px;
+              padding-right: 60px;
+              font-size: 12px;
+              padding-top: 6px;
+              line-height: 14px;
+              letter-spacing: 0px; } }
+          @media only screen and (max-width: 767px) {
+            body main section.WWA-focus-on .content-link a {
+              font-size: 7px;
+              padding-left: 8px;
+              padding-right: 20px;
+              height: 20px; } }
+          body main section.WWA-focus-on .content-link a::after {
+            content: '';
+            width: 48px;
+            height: 48px;
+            position: absolute;
+            display: block;
+            background-color: #ffffff;
+            border-radius: 50%;
+            background-image: url(../images/icon-square-arrow-green-new.svg);
+            background-position: center;
+            background-repeat: no-repeat;
+            top: 8px;
+            right: 11px;
+            background-size: 20px 20px;
+            -webkit-transform: rotate(180deg);
+                    transform: rotate(180deg); }
+            @media only screen and (max-width: 991px) {
+              body main section.WWA-focus-on .content-link a::after {
+                content: '';
+                width: 25px;
+                height: 25px;
+                position: absolute;
+                display: block;
+                background-size: 11px 11px;
+                top: 6px;
+                right: 4px; } }
+            @media only screen and (max-width: 767px) {
+              body main section.WWA-focus-on .content-link a::after {
+                content: '';
+                width: 16px;
+                height: 16px;
+                position: absolute;
+                display: block;
+                background-size: 6px 6px;
+                top: 2px;
+                right: 2px; } }
     body main section.WWA-impact {
       padding-top: 82px;
       padding-bottom: 62px; }
+      @media only screen and (max-width: 991px) {
+        body main section.WWA-impact {
+          padding-top: 43px;
+          padding-bottom: 30px; } }
+      @media only screen and (max-width: 767px) {
+        body main section.WWA-impact {
+          padding-top: 19px;
+          padding-bottom: 10px; } }
       body main section.WWA-impact .columns {
         -webkit-box-pack: justify;
             -ms-flex-pack: justify;
                 justify-content: space-between; }
+        @media only screen and (max-width: 767px) {
+          body main section.WWA-impact .columns {
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap; } }
         body main section.WWA-impact .columns .column-left {
           width: 712px; }
+          @media only screen and (max-width: 1199px) {
+            body main section.WWA-impact .columns .column-left {
+              width: 580px; } }
+          @media only screen and (max-width: 991px) {
+            body main section.WWA-impact .columns .column-left {
+              width: 390px; } }
+          @media only screen and (max-width: 767px) {
+            body main section.WWA-impact .columns .column-left {
+              width: 100%; } }
         body main section.WWA-impact .columns .column-right {
           width: 392px;
           padding-top: 2px; }
+          @media only screen and (max-width: 1199px) {
+            body main section.WWA-impact .columns .column-right {
+              width: 350px; } }
+          @media only screen and (max-width: 991px) {
+            body main section.WWA-impact .columns .column-right {
+              width: 281px; } }
+          @media only screen and (max-width: 767px) {
+            body main section.WWA-impact .columns .column-right {
+              width: 100%; } }
         body main section.WWA-impact .columns .top-content {
           font-family: "Akkurat LL Cyrillic Bold";
           font-size: 30px;
@@ -3581,6 +3980,17 @@ body {
           color: #43E0D5;
           margin-bottom: 94px;
           position: relative; }
+          @media only screen and (max-width: 991px) {
+            body main section.WWA-impact .columns .top-content {
+              font-size: 16px;
+              line-height: 19px;
+              margin-bottom: 44px; } }
+          @media only screen and (max-width: 767px) {
+            body main section.WWA-impact .columns .top-content {
+              font-size: 13px;
+              line-height: 20px;
+              letter-spacing: 0px;
+              margin-bottom: 15px; } }
           body main section.WWA-impact .columns .top-content span {
             color: #003548; }
           body main section.WWA-impact .columns .top-content::before {
@@ -3592,9 +4002,12 @@ body {
             background-image: url(../images/wwa-imapct-bg.svg);
             background-position: center;
             background-repeat: no-repeat;
-            top: 78px;
+            top: 26px;
             left: -10px;
             z-index: -1; }
+            @media only screen and (max-width: 991px) {
+              body main section.WWA-impact .columns .top-content::before {
+                content: none; } }
         body main section.WWA-impact .columns .title {
           font-family: "Akkurat Mono LL";
           font-size: 32px;
@@ -3604,6 +4017,19 @@ body {
           letter-spacing: 1.72px;
           text-transform: uppercase;
           margin-bottom: 55px; }
+          @media only screen and (max-width: 1199px) {
+            body main section.WWA-impact .columns .title {
+              font-size: 24px; } }
+          @media only screen and (max-width: 991px) {
+            body main section.WWA-impact .columns .title {
+              font-size: 18px;
+              letter-spacing: 0.5px;
+              margin-bottom: 21px; } }
+          @media only screen and (max-width: 767px) {
+            body main section.WWA-impact .columns .title {
+              font-size: 13.14px;
+              letter-spacing: 0px;
+              margin-bottom: 14px; } }
         body main section.WWA-impact .columns .slider-wrap .slider-support {
           display: -webkit-box;
           display: -ms-flexbox;
@@ -3624,6 +4050,24 @@ body {
             -webkit-box-pack: center;
                 -ms-flex-pack: center;
                     justify-content: center; }
+            @media only screen and (max-width: 1199px) {
+              body main section.WWA-impact .columns .slider-wrap .slider-support .slide-item {
+                width: 180px; } }
+            @media only screen and (max-width: 991px) {
+              body main section.WWA-impact .columns .slider-wrap .slider-support .slide-item {
+                width: 113px;
+                height: 74px; } }
+            @media only screen and (max-width: 767px) {
+              body main section.WWA-impact .columns .slider-wrap .slider-support .slide-item {
+                width: 86px;
+                height: 55px; } }
+            body main section.WWA-impact .columns .slider-wrap .slider-support .slide-item .image-wrap {
+              width: 100%;
+              height: 100%;
+              padding: 5px; }
+              @media only screen and (max-width: 767px) {
+                body main section.WWA-impact .columns .slider-wrap .slider-support .slide-item .image-wrap {
+                  padding: 3px; } }
             body main section.WWA-impact .columns .slider-wrap .slider-support .slide-item img {
               max-width: 100%;
               max-height: 100%; }
@@ -3636,34 +4080,99 @@ body {
                   justify-content: space-between;
           width: 100%;
           margin-top: 40px; }
+          @media only screen and (max-width: 991px) {
+            body main section.WWA-impact .columns .slider-navigation {
+              margin-top: 18px; } }
+          @media only screen and (max-width: 767px) {
+            body main section.WWA-impact .columns .slider-navigation {
+              margin-top: 13px; } }
           body main section.WWA-impact .columns .slider-navigation .nav-slide {
             cursor: pointer; }
+            @media only screen and (max-width: 991px) {
+              body main section.WWA-impact .columns .slider-navigation .nav-slide {
+                width: 96px; }
+                body main section.WWA-impact .columns .slider-navigation .nav-slide svg {
+                  width: 100%; } }
           body main section.WWA-impact .columns .slider-navigation .pages {
             font-family: "Akkurat Mono LL";
             font-size: 16px;
             font-style: normal;
             font-weight: 400;
             color: #43E0D5; }
+            @media only screen and (max-width: 991px) {
+              body main section.WWA-impact .columns .slider-navigation .pages {
+                font-size: 8px; } }
         body main section.WWA-impact .columns .content {
           font-style: normal;
           font-weight: 400;
           line-height: 25px;
           letter-spacing: -0.6px; }
+          @media only screen and (max-width: 1199px) {
+            body main section.WWA-impact .columns .content {
+              font-size: 16px; } }
+          @media only screen and (max-width: 991px) {
+            body main section.WWA-impact .columns .content {
+              font-size: 10.678px;
+              line-height: 17px;
+              /* 112.383% */
+              letter-spacing: 0.641px; } }
+          @media only screen and (max-width: 767px) {
+            body main section.WWA-impact .columns .content {
+              padding-top: 12px; } }
           body main section.WWA-impact .columns .content p {
             margin-bottom: 24px; }
+            @media only screen and (max-width: 991px) {
+              body main section.WWA-impact .columns .content p {
+                margin-bottom: 13px; } }
     body main section.WWA-targets {
       padding-top: 50px;
       padding-bottom: 113px; }
+      @media only screen and (max-width: 991px) {
+        body main section.WWA-targets {
+          padding-top: 36px;
+          padding-bottom: 60px; } }
+      @media only screen and (max-width: 767px) {
+        body main section.WWA-targets {
+          padding-top: 7px;
+          padding-bottom: 11px; } }
       body main section.WWA-targets .top-row {
         margin-bottom: 50px; }
+        @media only screen and (max-width: 991px) {
+          body main section.WWA-targets .top-row {
+            margin-bottom: 25px; } }
+        @media only screen and (max-width: 767px) {
+          body main section.WWA-targets .top-row {
+            margin-bottom: 7px; } }
         body main section.WWA-targets .top-row .columns {
           -webkit-box-pack: justify;
               -ms-flex-pack: justify;
                   justify-content: space-between; }
+          @media only screen and (max-width: 767px) {
+            body main section.WWA-targets .top-row .columns {
+              -ms-flex-wrap: wrap;
+                  flex-wrap: wrap; } }
         body main section.WWA-targets .top-row .column-left {
           width: 380px; }
+          @media only screen and (max-width: 1199px) {
+            body main section.WWA-targets .top-row .column-left {
+              width: 300px; } }
+          @media only screen and (max-width: 991px) {
+            body main section.WWA-targets .top-row .column-left {
+              width: 250px; } }
+          @media only screen and (max-width: 767px) {
+            body main section.WWA-targets .top-row .column-left {
+              width: 100%; } }
         body main section.WWA-targets .top-row .column-right {
           width: 710px; }
+          @media only screen and (max-width: 1199px) {
+            body main section.WWA-targets .top-row .column-right {
+              width: 600px; } }
+          @media only screen and (max-width: 991px) {
+            body main section.WWA-targets .top-row .column-right {
+              width: 381px; } }
+          @media only screen and (max-width: 767px) {
+            body main section.WWA-targets .top-row .column-right {
+              width: 100%; } }
         body main section.WWA-targets .top-row .title {
           -webkit-text-stroke: 2px;
           color: #00B0EB;
@@ -3674,12 +4183,43 @@ body {
           line-height: 58px;
           letter-spacing: 7.5px;
           text-transform: uppercase; }
+          @media only screen and (max-width: 1199px) {
+            body main section.WWA-targets .top-row .title {
+              font-size: 36px;
+              line-height: 44px; } }
+          @media only screen and (max-width: 991px) {
+            body main section.WWA-targets .top-row .title {
+              font-size: 26px;
+              line-height: 34px;
+              -webkit-text-stroke: 1px; } }
+          @media only screen and (max-width: 767px) {
+            body main section.WWA-targets .top-row .title {
+              font-size: 20px;
+              letter-spacing: 3px;
+              line-height: 28px;
+              margin-bottom: 12px; } }
         body main section.WWA-targets .top-row .content {
           font-size: 35px;
           font-style: normal;
           line-height: 42px;
           letter-spacing: 2.9px;
           text-transform: uppercase; }
+          @media only screen and (max-width: 1199px) {
+            body main section.WWA-targets .top-row .content {
+              font-size: 26px;
+              line-height: 34px; } }
+          @media only screen and (max-width: 991px) {
+            body main section.WWA-targets .top-row .content {
+              font-size: 18px;
+              line-height: 23px;
+              letter-spacing: 2px; } }
+          @media only screen and (max-width: 767px) {
+            body main section.WWA-targets .top-row .content {
+              font-size: 13.14px;
+              font-style: normal;
+              letter-spacing: 0.788px;
+              line-height: 14px;
+              margin-bottom: 9px; } }
       body main section.WWA-targets .targets-wrap {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -3702,6 +4242,25 @@ body {
           position: relative;
           width: 1068px;
           min-height: 217px; }
+          @media only screen and (max-width: 1199px) {
+            body main section.WWA-targets .targets-wrap .target-item {
+              width: 800px; } }
+          @media only screen and (max-width: 991px) {
+            body main section.WWA-targets .targets-wrap .target-item {
+              width: 570px;
+              border-radius: 6px;
+              border-width: 1px;
+              padding: 2px 10px 4px 19px;
+              min-height: 115px;
+              margin-bottom: 11px;
+              margin-left: 36px; } }
+          @media only screen and (max-width: 767px) {
+            body main section.WWA-targets .targets-wrap .target-item {
+              width: 93%;
+              border-radius: 12.671px;
+              border-width: 2px;
+              padding: 6px 10px 4px 15px;
+              margin-bottom: 8px; } }
           body main section.WWA-targets .targets-wrap .target-item:last-child {
             margin-bottom: 0px; }
           body main section.WWA-targets .targets-wrap .target-item::before {
@@ -3714,6 +4273,32 @@ body {
             left: -68px;
             border-radius: 50%;
             z-index: -1; }
+            @media only screen and (max-width: 1199px) {
+              body main section.WWA-targets .targets-wrap .target-item::before {
+                content: '';
+                width: 100px;
+                height: 100px;
+                position: absolute;
+                display: block;
+                left: -50px; } }
+            @media only screen and (max-width: 991px) {
+              body main section.WWA-targets .targets-wrap .target-item::before {
+                content: '';
+                width: 73px;
+                height: 73px;
+                position: absolute;
+                display: block;
+                left: -37px;
+                top: 9px; } }
+            @media only screen and (max-width: 767px) {
+              body main section.WWA-targets .targets-wrap .target-item::before {
+                content: '';
+                width: 68px;
+                height: 68px;
+                position: absolute;
+                display: block;
+                left: -34px;
+                top: 15px; } }
           body main section.WWA-targets .targets-wrap .target-item .number {
             font-family: "Akkurat Mono LL";
             font-size: 16.291px;
@@ -3724,6 +4309,19 @@ body {
             text-transform: uppercase;
             margin-bottom: 14px;
             display: inline-block; }
+            @media only screen and (max-width: 991px) {
+              body main section.WWA-targets .targets-wrap .target-item .number {
+                font-size: 8.697px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                letter-spacing: 0.87px;
+                margin-bottom: 8px; } }
+            @media only screen and (max-width: 767px) {
+              body main section.WWA-targets .targets-wrap .target-item .number {
+                font-size: 16.291px;
+                letter-spacing: 1.629px;
+                margin-bottom: 9px; } }
           body main section.WWA-targets .targets-wrap .target-item .name {
             font-family: "Akkurat LL Cyrillic Bold";
             font-size: 35px;
@@ -3733,16 +4331,37 @@ body {
             letter-spacing: 1.75px;
             text-transform: uppercase;
             margin-bottom: 9px; }
+            @media only screen and (max-width: 991px) {
+              body main section.WWA-targets .targets-wrap .target-item .name {
+                font-size: 18.686px;
+                letter-spacing: 0.934px;
+                margin-bottom: 5px; } }
+            @media only screen and (max-width: 767px) {
+              body main section.WWA-targets .targets-wrap .target-item .name {
+                font-size: 18px;
+                line-height: 24px;
+                letter-spacing: 0.9px;
+                margin-bottom: 10px; } }
           body main section.WWA-targets .targets-wrap .target-item .description {
             letter-spacing: 0.8px;
             line-height: 28px; }
+            @media only screen and (max-width: 991px) {
+              body main section.WWA-targets .targets-wrap .target-item .description {
+                font-size: 10.678px;
+                letter-spacing: 0.427px;
+                line-height: 15px; } }
+            @media only screen and (max-width: 767px) {
+              body main section.WWA-targets .targets-wrap .target-item .description {
+                font-size: 10px;
+                letter-spacing: 0.2px;
+                line-height: 14px; } }
           body main section.WWA-targets .targets-wrap .target-item.blue-item {
             border-color: #00B0EB; }
             body main section.WWA-targets .targets-wrap .target-item.blue-item::before {
               background-color: #00B0EB; }
             body main section.WWA-targets .targets-wrap .target-item.blue-item .name {
               color: #00B0EB; }
-            body main section.WWA-targets .targets-wrap .target-item.blue-item .title {
+            body main section.WWA-targets .targets-wrap .target-item.blue-item .number {
               color: #00B0EB; }
           body main section.WWA-targets .targets-wrap .target-item.purple-item {
             border-color: #9575CD; }
@@ -3750,7 +4369,7 @@ body {
               background-color: #9575CD; }
             body main section.WWA-targets .targets-wrap .target-item.purple-item .name {
               color: #9575CD; }
-            body main section.WWA-targets .targets-wrap .target-item.purple-item .title {
+            body main section.WWA-targets .targets-wrap .target-item.purple-item .number {
               color: #9575CD; }
           body main section.WWA-targets .targets-wrap .target-item.green-item {
             border-color: #43E0D5; }
@@ -3758,15 +4377,28 @@ body {
               background-color: #43E0D5; }
             body main section.WWA-targets .targets-wrap .target-item.green-item .name {
               color: #43E0D5; }
-            body main section.WWA-targets .targets-wrap .target-item.green-item .title {
+            body main section.WWA-targets .targets-wrap .target-item.green-item .number {
               color: #43E0D5; }
     body main section.WWA-team-board .team-item {
       width: 286px; }
+      @media only screen and (max-width: 1199px) {
+        body main section.WWA-team-board .team-item {
+          width: 200px; } }
+      @media only screen and (max-width: 991px) {
+        body main section.WWA-team-board .team-item {
+          width: 168px; } }
+      @media only screen and (max-width: 991px) {
+        body main section.WWA-team-board .team-item {
+          width: 131px; } }
       body main section.WWA-team-board .team-item .image-wrap {
         width: 100%;
         height: 230px;
         overflow: hidden;
         margin-bottom: 24px; }
+        @media only screen and (max-width: 1199px) {
+          body main section.WWA-team-board .team-item .image-wrap {
+            height: auto;
+            margin-bottom: 12px; } }
         body main section.WWA-team-board .team-item .image-wrap img {
           -o-object-fit: cover;
              object-fit: cover;
@@ -3782,6 +4414,19 @@ body {
         letter-spacing: 0.69px;
         text-transform: uppercase;
         position: relative; }
+        @media only screen and (max-width: 1199px) {
+          body main section.WWA-team-board .team-item .name {
+            font-size: 18px;
+            line-height: 24px; } }
+        @media only screen and (max-width: 991px) {
+          body main section.WWA-team-board .team-item .name {
+            font-size: 14px;
+            line-height: 20px; } }
+        @media only screen and (max-width: 767px) {
+          body main section.WWA-team-board .team-item .name {
+            font-size: 10.56px;
+            letter-spacing: 0.317px;
+            line-height: 15px; } }
         body main section.WWA-team-board .team-item .name::before {
           content: '';
           width: 100%;
@@ -3790,12 +4435,24 @@ body {
           position: absolute;
           bottom: -10px;
           left: 0px; }
+          @media only screen and (max-width: 1199px) {
+            body main section.WWA-team-board .team-item .name::before {
+              bottom: 0px; } }
     body main section.WWA-team-board .board-title {
       background-color: #00B0EB;
       min-height: 218px;
       padding-top: 42px;
       padding-bottom: 20px;
       position: relative; }
+      @media only screen and (max-width: 991px) {
+        body main section.WWA-team-board .board-title {
+          min-height: auto;
+          padding-top: 22px;
+          padding-bottom: 11px; } }
+      @media only screen and (max-width: 767px) {
+        body main section.WWA-team-board .board-title {
+          padding-top: 14px;
+          padding-bottom: 7px; } }
       body main section.WWA-team-board .board-title .title {
         -webkit-text-stroke-width: 3px;
         font-family: "Akkurat LL Cyrillic Bold";
@@ -3807,31 +4464,88 @@ body {
         text-transform: uppercase;
         color: #fff;
         width: 265px; }
+        @media only screen and (max-width: 991px) {
+          body main section.WWA-team-board .board-title .title {
+            -webkit-text-stroke-width: 1px;
+            font-size: 37.372px;
+            line-height: 42px;
+            letter-spacing: 5.606px; } }
+        @media only screen and (max-width: 767px) {
+          body main section.WWA-team-board .board-title .title {
+            font-size: 20px;
+            letter-spacing: 3px;
+            padding-right: 150px;
+            line-height: 26px; } }
       body main section.WWA-team-board .board-title .background-image {
         position: absolute;
         width: 348px;
         height: 184px;
         right: 100px;
         bottom: 0px; }
+        @media only screen and (max-width: 991px) {
+          body main section.WWA-team-board .board-title .background-image {
+            width: 195px;
+            height: 106px;
+            bottom: -6px;
+            right: 127px; } }
+        @media only screen and (max-width: 767px) {
+          body main section.WWA-team-board .board-title .background-image {
+            display: none; } }
         body main section.WWA-team-board .board-title .background-image img {
           max-width: 100%;
           max-height: 100%; }
     body main section.WWA-team-board .managers {
       padding-top: 19px; }
+      @media only screen and (max-width: 991px) {
+        body main section.WWA-team-board .managers {
+          padding-top: 8px; } }
       body main section.WWA-team-board .managers .manager-row {
         margin-bottom: 30px; }
+        @media only screen and (max-width: 991px) {
+          body main section.WWA-team-board .managers .manager-row {
+            margin-bottom: 12px; } }
         body main section.WWA-team-board .managers .manager-row .columns {
           -webkit-box-pack: justify;
               -ms-flex-pack: justify;
                   justify-content: space-between; }
+          @media only screen and (max-width: 767px) {
+            body main section.WWA-team-board .managers .manager-row .columns {
+              -ms-flex-wrap: wrap;
+                  flex-wrap: wrap; } }
           body main section.WWA-team-board .managers .manager-row .columns .column-left {
             width: 365px; }
+            @media only screen and (max-width: 1199px) {
+              body main section.WWA-team-board .managers .manager-row .columns .column-left {
+                width: 250px; } }
+            @media only screen and (max-width: 991px) {
+              body main section.WWA-team-board .managers .manager-row .columns .column-left {
+                width: 185px;
+                padding-top: 10px; } }
+            @media only screen and (max-width: 767px) {
+              body main section.WWA-team-board .managers .manager-row .columns .column-left {
+                width: 100%;
+                -webkit-box-ordinal-group: 4;
+                    -ms-flex-order: 3;
+                        order: 3; } }
           body main section.WWA-team-board .managers .manager-row .columns .column-right {
             width: 478px;
             display: -webkit-box;
             display: -ms-flexbox;
             display: flex;
             padding-bottom: 10px; }
+            @media only screen and (max-width: 1199px) {
+              body main section.WWA-team-board .managers .manager-row .columns .column-right {
+                width: 300px; } }
+            @media only screen and (max-width: 991px) {
+              body main section.WWA-team-board .managers .manager-row .columns .column-right {
+                width: 210px;
+                padding-bottom: 0px; } }
+            @media only screen and (max-width: 767px) {
+              body main section.WWA-team-board .managers .manager-row .columns .column-right {
+                width: 100%;
+                -webkit-box-ordinal-group: 2;
+                    -ms-flex-order: 1;
+                        order: 1; } }
           body main section.WWA-team-board .managers .manager-row .columns .column-center {
             width: 386px;
             margin-top: 58px;
@@ -3842,6 +4556,24 @@ body {
             display: flex;
             -ms-flex-wrap: wrap;
                 flex-wrap: wrap; }
+            @media only screen and (max-width: 1199px) {
+              body main section.WWA-team-board .managers .manager-row .columns .column-center {
+                width: 352px; } }
+            @media only screen and (max-width: 991px) {
+              body main section.WWA-team-board .managers .manager-row .columns .column-center {
+                width: 210px;
+                margin-top: 0px;
+                margin-left: 98px;
+                padding-top: 35px;
+                padding-left: 0px;
+                padding-bottom: 0px; } }
+            @media only screen and (max-width: 767px) {
+              body main section.WWA-team-board .managers .manager-row .columns .column-center {
+                width: 100%;
+                margin-left: 0px;
+                -webkit-box-ordinal-group: 3;
+                    -ms-flex-order: 2;
+                        order: 2; } }
       body main section.WWA-team-board .managers .position {
         font-family: "Akkurat LL Cyrillic Bold";
         font-size: 18px;
@@ -3853,17 +4585,36 @@ body {
         color: #00B0EB;
         margin-top: 64px;
         display: inline-block; }
+        @media only screen and (max-width: 991px) {
+          body main section.WWA-team-board .managers .position {
+            font-size: 9.61px;
+            letter-spacing: 0.48px;
+            margin-top: 25px;
+            margin-bottom: 22px; } }
       body main section.WWA-team-board .managers .icon {
         width: 21px;
         height: 21px;
         margin-bottom: 17px; }
-        body main section.WWA-team-board .managers .icon img {
+        @media only screen and (max-width: 991px) {
+          body main section.WWA-team-board .managers .icon {
+            width: 11px;
+            height: 11px;
+            margin-bottom: 14px; } }
+        body main section.WWA-team-board .managers .icon svg {
           max-width: 100%;
           max-height: 100%; }
       body main section.WWA-team-board .managers .description {
         font-size: 18px;
         font-style: normal;
         line-height: 26px; }
+        @media only screen and (max-width: 1199px) {
+          body main section.WWA-team-board .managers .description {
+            font-size: 14px;
+            line-height: 20px; } }
+        @media only screen and (max-width: 991px) {
+          body main section.WWA-team-board .managers .description {
+            font-size: 10px;
+            line-height: 14px; } }
         body main section.WWA-team-board .managers .description strong {
           font-family: "Akkurat LL Cyrillic Bold"; }
       body main section.WWA-team-board .managers .name {
@@ -3875,9 +4626,23 @@ body {
         letter-spacing: 5.6px;
         text-transform: uppercase;
         width: 100%; }
+        @media only screen and (max-width: 1199px) {
+          body main section.WWA-team-board .managers .name {
+            font-size: 56px;
+            line-height: 64px; } }
+        @media only screen and (max-width: 991px) {
+          body main section.WWA-team-board .managers .name {
+            font-size: 42px;
+            line-height: 46px;
+            letter-spacing: 3.6px; } }
       body main section.WWA-team-board .managers .link-email {
         margin-top: auto;
         margin-left: 7px; }
+        @media only screen and (max-width: 991px) {
+          body main section.WWA-team-board .managers .link-email {
+            margin-left: 0px;
+            position: relative;
+            top: -4px; } }
         body main section.WWA-team-board .managers .link-email a {
           display: -webkit-inline-box;
           display: -ms-inline-flexbox;
@@ -3888,6 +4653,18 @@ body {
           border-radius: 99px;
           background: #003548;
           position: relative; }
+          @media only screen and (max-width: 1199px) {
+            body main section.WWA-team-board .managers .link-email a {
+              font-size: 14px;
+              line-height: 20px;
+              height: 24px;
+              padding: 3px 49px 7px 26px; } }
+          @media only screen and (max-width: 991px) {
+            body main section.WWA-team-board .managers .link-email a {
+              font-size: 8px;
+              line-height: 16px;
+              height: 18px;
+              padding: 2px 61px 7px 26px; } }
           body main section.WWA-team-board .managers .link-email a::before {
             content: '';
             width: 26px;
@@ -3899,21 +4676,60 @@ body {
             background-image: url(../images/icon-mail-main-color.svg);
             background-position: center;
             background-repeat: no-repeat; }
+            @media only screen and (max-width: 1199px) {
+              body main section.WWA-team-board .managers .link-email a::before {
+                content: '';
+                width: 18px;
+                height: 18px;
+                position: absolute;
+                display: block;
+                background-size: cover; } }
+            @media only screen and (max-width: 991px) {
+              body main section.WWA-team-board .managers .link-email a::before {
+                content: '';
+                width: 14px;
+                height: 14px;
+                position: absolute;
+                display: block;
+                right: 2px;
+                top: 2px; } }
       body main section.WWA-team-board .managers .image-wrap {
         width: 386px;
         height: 290px;
         position: relative;
         right: -192px;
         margin-top: auto; }
+        @media only screen and (max-width: 1199px) {
+          body main section.WWA-team-board .managers .image-wrap {
+            right: -115px;
+            width: 300px;
+            height: auto;
+            right: -23px; } }
+        @media only screen and (max-width: 991px) {
+          body main section.WWA-team-board .managers .image-wrap {
+            width: 210px; } }
         body main section.WWA-team-board .managers .image-wrap img {
           width: 100%;
           height: auto; }
     body main section.WWA-team-board .advisors {
       padding-top: 80px;
       padding-bottom: 50px; }
+      @media only screen and (max-width: 991px) {
+        body main section.WWA-team-board .advisors {
+          padding-top: 46px; } }
+      @media only screen and (max-width: 767px) {
+        body main section.WWA-team-board .advisors {
+          padding-top: 13px;
+          padding-bottom: 25px; } }
       body main section.WWA-team-board .advisors .title-row {
         position: relative;
         margin-bottom: 80px; }
+        @media only screen and (max-width: 991px) {
+          body main section.WWA-team-board .advisors .title-row {
+            margin-bottom: 48px; } }
+        @media only screen and (max-width: 767px) {
+          body main section.WWA-team-board .advisors .title-row {
+            margin-bottom: 10px; } }
         body main section.WWA-team-board .advisors .title-row .title {
           -webkit-text-stroke: 2px;
           font-family: "Akkurat LL Cyrillic Bold";
@@ -3926,6 +4742,16 @@ body {
           color: #00B0EB;
           width: 524px;
           margin-bottom: 30px; }
+          @media only screen and (max-width: 991px) {
+            body main section.WWA-team-board .advisors .title-row .title {
+              -webkit-text-stroke: 1px;
+              font-size: 29.371px;
+              letter-spacing: 4.406px; } }
+          @media only screen and (max-width: 767px) {
+            body main section.WWA-team-board .advisors .title-row .title {
+              font-size: 20px;
+              letter-spacing: 3px;
+              margin-bottom: 15px; } }
         body main section.WWA-team-board .advisors .title-row .slider-navigation {
           display: -webkit-box;
           display: -ms-flexbox;
@@ -3934,6 +4760,13 @@ body {
           position: absolute;
           top: 0px;
           right: 0px; }
+          @media only screen and (max-width: 991px) {
+            body main section.WWA-team-board .advisors .title-row .slider-navigation {
+              margin-top: 18px; } }
+          @media only screen and (max-width: 767px) {
+            body main section.WWA-team-board .advisors .title-row .slider-navigation {
+              position: static;
+              margin-top: 0px; } }
           body main section.WWA-team-board .advisors .title-row .slider-navigation .nav-slide {
             width: 148px;
             height: 26px;
@@ -3953,6 +4786,14 @@ body {
                     align-items: center;
             position: relative;
             cursor: pointer; }
+            @media only screen and (max-width: 991px) {
+              body main section.WWA-team-board .advisors .title-row .slider-navigation .nav-slide {
+                width: 86px;
+                height: 15px;
+                font-size: 5.874px;
+                line-height: 6px;
+                border-radius: 18.797px;
+                border: 0.5px solid #00B0EB; } }
             body main section.WWA-team-board .advisors .title-row .slider-navigation .nav-slide:hover {
               background: #00B0EB;
               color: #fff;
@@ -3963,14 +4804,26 @@ body {
             body main section.WWA-team-board .advisors .title-row .slider-navigation .nav-slide.prev-slide {
               margin-right: 63px;
               padding: 9px 25px 7px 68px; }
+              @media only screen and (max-width: 991px) {
+                body main section.WWA-team-board .advisors .title-row .slider-navigation .nav-slide.prev-slide {
+                  padding: 2px 48px 2px 38px; } }
+              @media only screen and (max-width: 991px) {
+                body main section.WWA-team-board .advisors .title-row .slider-navigation .nav-slide.prev-slide {
+                  margin-right: 33px; } }
               body main section.WWA-team-board .advisors .title-row .slider-navigation .nav-slide.prev-slide svg {
                 left: 8px; }
             body main section.WWA-team-board .advisors .title-row .slider-navigation .nav-slide.next-slide {
               padding: 9px 8px 7px 42px; }
+              @media only screen and (max-width: 991px) {
+                body main section.WWA-team-board .advisors .title-row .slider-navigation .nav-slide.next-slide {
+                  padding: 4px 8px 2px 19px; } }
               body main section.WWA-team-board .advisors .title-row .slider-navigation .nav-slide.next-slide svg {
                 right: 8px; }
             body main section.WWA-team-board .advisors .title-row .slider-navigation .nav-slide svg {
               position: absolute; }
+              @media only screen and (max-width: 991px) {
+                body main section.WWA-team-board .advisors .title-row .slider-navigation .nav-slide svg {
+                  width: 21px; } }
       body main section.WWA-team-board .advisors .advisors-slider {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -3981,9 +4834,22 @@ body {
     body main section.WWA-team-board .team {
       padding-top: 70px;
       padding-bottom: 82px; }
+      @media only screen and (max-width: 991px) {
+        body main section.WWA-team-board .team {
+          padding-top: 26px;
+          padding-bottom: 16px; } }
+      @media only screen and (max-width: 767px) {
+        body main section.WWA-team-board .team {
+          padding-bottom: 13px; } }
       body main section.WWA-team-board .team .title-row {
         position: relative;
         margin-bottom: 58px; }
+        @media only screen and (max-width: 991px) {
+          body main section.WWA-team-board .team .title-row {
+            margin-bottom: 30px; } }
+        @media only screen and (max-width: 767px) {
+          body main section.WWA-team-board .team .title-row {
+            margin-bottom: 24px; } }
         body main section.WWA-team-board .team .title-row .title {
           -webkit-text-stroke: 2px;
           font-family: "Akkurat LL Cyrillic Bold";
@@ -3996,15 +4862,115 @@ body {
           color: #00B0EB;
           width: 524px;
           margin-bottom: 30px; }
+          @media only screen and (max-width: 991px) {
+            body main section.WWA-team-board .team .title-row .title {
+              -webkit-text-stroke: 1px;
+              font-size: 26.694px;
+              line-height: 33px;
+              letter-spacing: 4.004px;
+              width: 205px; } }
+          @media only screen and (max-width: 767px) {
+            body main section.WWA-team-board .team .title-row .title {
+              font-size: 20px;
+              line-height: 26px;
+              letter-spacing: 3px;
+              width: 150px;
+              margin-bottom: 0px; } }
         body main section.WWA-team-board .team .title-row .background-image {
           position: absolute;
           width: 434px;
           height: 161px;
           right: 0px;
           bottom: -30px; }
+          @media only screen and (max-width: 991px) {
+            body main section.WWA-team-board .team .title-row .background-image {
+              width: 230px;
+              height: 85px;
+              right: 5px;
+              bottom: -13px; } }
+          @media only screen and (max-width: 767px) {
+            body main section.WWA-team-board .team .title-row .background-image {
+              width: 170px;
+              height: 63px;
+              right: -40px;
+              bottom: -5px; } }
           body main section.WWA-team-board .team .title-row .background-image img {
             width: 100%;
             height: auto; }
+      body main section.WWA-team-board .team .slider-navigation {
+        display: none;
+        margin-top: 31px;
+        position: absolute;
+        top: 0px;
+        right: 0px; }
+        @media only screen and (max-width: 991px) {
+          body main section.WWA-team-board .team .slider-navigation {
+            margin-top: 18px; } }
+        @media only screen and (max-width: 767px) {
+          body main section.WWA-team-board .team .slider-navigation {
+            position: static;
+            margin-top: 0px;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            margin-bottom: 15px; } }
+        body main section.WWA-team-board .team .slider-navigation .nav-slide {
+          width: 148px;
+          height: 26px;
+          border-radius: 32px;
+          border: 1px solid #00B0EB;
+          background: #FFF;
+          -webkit-transform: 0.2s;
+                  transform: 0.2s;
+          font-size: 10px;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+          display: -webkit-inline-box;
+          display: -ms-inline-flexbox;
+          display: inline-flex;
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center;
+          position: relative;
+          cursor: pointer; }
+          @media only screen and (max-width: 991px) {
+            body main section.WWA-team-board .team .slider-navigation .nav-slide {
+              width: 86px;
+              height: 15px;
+              font-size: 5.874px;
+              line-height: 6px;
+              border-radius: 18.797px;
+              border: 0.5px solid #00B0EB; } }
+          body main section.WWA-team-board .team .slider-navigation .nav-slide:hover {
+            background: #00B0EB;
+            color: #fff;
+            -webkit-transition: 0.3s;
+            transition: 0.3s; }
+            body main section.WWA-team-board .team .slider-navigation .nav-slide:hover svg path {
+              fill: #fff; }
+          body main section.WWA-team-board .team .slider-navigation .nav-slide.prev-slide {
+            margin-right: 63px;
+            padding: 9px 25px 7px 68px; }
+            @media only screen and (max-width: 991px) {
+              body main section.WWA-team-board .team .slider-navigation .nav-slide.prev-slide {
+                padding: 2px 48px 2px 38px; } }
+            @media only screen and (max-width: 991px) {
+              body main section.WWA-team-board .team .slider-navigation .nav-slide.prev-slide {
+                margin-right: 33px; } }
+            body main section.WWA-team-board .team .slider-navigation .nav-slide.prev-slide svg {
+              left: 8px; }
+          body main section.WWA-team-board .team .slider-navigation .nav-slide.next-slide {
+            padding: 9px 8px 7px 42px; }
+            @media only screen and (max-width: 991px) {
+              body main section.WWA-team-board .team .slider-navigation .nav-slide.next-slide {
+                padding: 4px 8px 2px 19px; } }
+            body main section.WWA-team-board .team .slider-navigation .nav-slide.next-slide svg {
+              right: 8px; }
+          body main section.WWA-team-board .team .slider-navigation .nav-slide svg {
+            position: absolute; }
+            @media only screen and (max-width: 991px) {
+              body main section.WWA-team-board .team .slider-navigation .nav-slide svg {
+                width: 21px; } }
       body main section.WWA-team-board .team .team-wrap {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -4016,8 +4982,24 @@ body {
                 justify-content: space-between; }
         body main section.WWA-team-board .team .team-wrap .team-item {
           margin-bottom: 27px; }
+          @media only screen and (max-width: 991px) {
+            body main section.WWA-team-board .team .team-wrap .team-item {
+              width: 152px;
+              margin-bottom: 15px; } }
+          @media only screen and (max-width: 767px) {
+            body main section.WWA-team-board .team .team-wrap .team-item {
+              width: 130px; } }
           body main section.WWA-team-board .team .team-wrap .team-item .image-wrap {
             height: 245px; }
+            @media only screen and (max-width: 1199px) {
+              body main section.WWA-team-board .team .team-wrap .team-item .image-wrap {
+                height: auto; } }
+            @media only screen and (max-width: 1199px) {
+              body main section.WWA-team-board .team .team-wrap .team-item .image-wrap {
+                margin-bottom: 9px; } }
+            @media only screen and (max-width: 767px) {
+              body main section.WWA-team-board .team .team-wrap .team-item .image-wrap {
+                margin-bottom: 11px; } }
           body main section.WWA-team-board .team .team-wrap .team-item .name {
             font-size: 30px;
             font-style: normal;
@@ -4027,14 +5009,61 @@ body {
             text-transform: uppercase;
             padding-bottom: 0px;
             margin-bottom: 17px; }
+            @media only screen and (max-width: 1199px) {
+              body main section.WWA-team-board .team .team-wrap .team-item .name {
+                font-size: 22px;
+                line-height: 28px; } }
+            @media only screen and (max-width: 991px) {
+              body main section.WWA-team-board .team .team-wrap .team-item .name {
+                font-size: 16px;
+                line-height: 20px;
+                margin-bottom: 7px; } }
+            @media only screen and (max-width: 767px) {
+              body main section.WWA-team-board .team .team-wrap .team-item .name {
+                font-size: 10.5px;
+                letter-spacing: 0.315px;
+                line-height: 12px;
+                padding-bottom: 8px;
+                margin-bottom: 10px; } }
             body main section.WWA-team-board .team .team-wrap .team-item .name::before {
               bottom: 5px; }
+              @media only screen and (max-width: 1199px) {
+                body main section.WWA-team-board .team .team-wrap .team-item .name::before {
+                  bottom: 0px; } }
+              @media only screen and (max-width: 991px) {
+                body main section.WWA-team-board .team .team-wrap .team-item .name::before {
+                  bottom: 4px; } }
+              @media only screen and (max-width: 767px) {
+                body main section.WWA-team-board .team .team-wrap .team-item .name::before {
+                  bottom: 0px; } }
+          body main section.WWA-team-board .team .team-wrap .team-item .position {
+            display: none;
+            font-family: "Akkurat LL Cyrillic Bold";
+            font-size: 8.243px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 11px;
+            padding-right: 50px; }
+            @media only screen and (max-width: 767px) {
+              body main section.WWA-team-board .team .team-wrap .team-item .position {
+                display: block; } }
           body main section.WWA-team-board .team .team-wrap .team-item .description {
             font-size: 18px;
             font-style: normal;
             font-weight: 400;
             line-height: 22px;
             letter-spacing: -0.36px; }
+            @media only screen and (max-width: 1199px) {
+              body main section.WWA-team-board .team .team-wrap .team-item .description {
+                font-size: 14px;
+                line-height: 18px; } }
+            @media only screen and (max-width: 991px) {
+              body main section.WWA-team-board .team .team-wrap .team-item .description {
+                font-size: 10px;
+                line-height: 11px; } }
+            @media only screen and (max-width: 767px) {
+              body main section.WWA-team-board .team .team-wrap .team-item .description {
+                display: none; } }
             body main section.WWA-team-board .team .team-wrap .team-item .description span {
               font-family: "Akkurat LL Cyrillic Bold";
               font-size: 18px;
@@ -4042,6 +5071,14 @@ body {
               font-weight: 700;
               display: inline-block;
               position: relative; }
+              @media only screen and (max-width: 1199px) {
+                body main section.WWA-team-board .team .team-wrap .team-item .description span {
+                  font-size: 14px;
+                  line-height: 18px; } }
+              @media only screen and (max-width: 991px) {
+                body main section.WWA-team-board .team .team-wrap .team-item .description span {
+                  font-size: 10px;
+                  line-height: 16px; } }
               body main section.WWA-team-board .team .team-wrap .team-item .description span::before {
                 content: '';
                 width: 200px;
@@ -4052,13 +5089,43 @@ body {
                 top: 12px;
                 left: -1px;
                 z-index: -1; }
+                @media only screen and (max-width: 1199px) {
+                  body main section.WWA-team-board .team .team-wrap .team-item .description span::before {
+                    content: '';
+                    width: 105px;
+                    height: 6px;
+                    position: absolute;
+                    display: block;
+                    background-size: contain; } }
+                @media only screen and (max-width: 1199px) {
+                  body main section.WWA-team-board .team .team-wrap .team-item .description span::before {
+                    content: '';
+                    width: 105px;
+                    height: 6px;
+                    position: absolute;
+                    display: block; } }
     body main section.WWA-team-board .volunter {
       padding-bottom: 124px; }
+      @media only screen and (max-width: 991px) {
+        body main section.WWA-team-board .volunter {
+          padding-bottom: 53px; } }
+      @media only screen and (max-width: 767px) {
+        body main section.WWA-team-board .volunter {
+          padding-bottom: 34px; } }
       body main section.WWA-team-board .volunter .title-row {
         background-color: #00B0EB;
         min-height: 141px;
         padding: 44px 0px 27px 0px;
         position: relative; }
+        @media only screen and (max-width: 991px) {
+          body main section.WWA-team-board .volunter .title-row {
+            min-height: auto;
+            padding-top: 25px;
+            padding-bottom: 16px; } }
+        @media only screen and (max-width: 991px) {
+          body main section.WWA-team-board .volunter .title-row {
+            padding-top: 14px;
+            padding-bottom: 7px; } }
         body main section.WWA-team-board .volunter .title-row .title {
           color: #FFF;
           -webkit-text-stroke: 3px;
@@ -4069,12 +5136,35 @@ body {
           line-height: normal;
           letter-spacing: 10.5px;
           text-transform: uppercase; }
+          @media only screen and (max-width: 991px) {
+            body main section.WWA-team-board .volunter .title-row .title {
+              font-size: 40.709px;
+              letter-spacing: 6.106px;
+              -webkit-text-stroke: 1px;
+              letter-spacing: 7px; } }
+          @media only screen and (max-width: 767px) {
+            body main section.WWA-team-board .volunter .title-row .title {
+              font-size: 20px;
+              letter-spacing: 3px;
+              line-height: 24px; } }
         body main section.WWA-team-board .volunter .title-row .background-image {
           width: 218px;
           height: 198px;
           position: absolute;
           right: 17px;
           bottom: -71px; }
+          @media only screen and (max-width: 991px) {
+            body main section.WWA-team-board .volunter .title-row .background-image {
+              width: 126px;
+              height: 115px;
+              right: -22px;
+              bottom: -59px; } }
+          @media only screen and (max-width: 767px) {
+            body main section.WWA-team-board .volunter .title-row .background-image {
+              width: 100px;
+              height: 90px;
+              right: -14px;
+              bottom: -54px; } }
           body main section.WWA-team-board .volunter .title-row .background-image img {
             max-width: 100%;
             height: auto; }
@@ -4086,15 +5176,37 @@ body {
             -ms-flex-pack: justify;
                 justify-content: space-between;
         width: 1134px; }
+        @media only screen and (max-width: 1199px) {
+          body main section.WWA-team-board .volunter .volunter-slider {
+            width: 100%; } }
+        @media only screen and (max-width: 991px) {
+          body main section.WWA-team-board .volunter .volunter-slider {
+            width: 660px; } }
+        @media only screen and (max-width: 767px) {
+          body main section.WWA-team-board .volunter .volunter-slider {
+            width: 100%; } }
         body main section.WWA-team-board .volunter .volunter-slider .team-item .image-wrap {
           height: 245px;
           margin-bottom: 24px; }
+          @media only screen and (max-width: 1199px) {
+            body main section.WWA-team-board .volunter .volunter-slider .team-item .image-wrap {
+              height: auto; } }
+          @media only screen and (max-width: 991px) {
+            body main section.WWA-team-board .volunter .volunter-slider .team-item .image-wrap {
+              margin-bottom: 12px; } }
       body main section.WWA-team-board .volunter .slider-navigation {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
         margin-top: 40px;
         margin-bottom: 9px; }
+        @media only screen and (max-width: 991px) {
+          body main section.WWA-team-board .volunter .slider-navigation {
+            margin-top: 0px;
+            margin-bottom: 5px; } }
+        @media only screen and (max-width: 767px) {
+          body main section.WWA-team-board .volunter .slider-navigation {
+            margin-bottom: 11px; } }
         body main section.WWA-team-board .volunter .slider-navigation .nav-slide {
           width: 148px;
           height: 26px;
@@ -4114,6 +5226,14 @@ body {
                   align-items: center;
           position: relative;
           cursor: pointer; }
+          @media only screen and (max-width: 991px) {
+            body main section.WWA-team-board .volunter .slider-navigation .nav-slide {
+              width: 86.07px;
+              height: 16px;
+              font-size: 5.816px;
+              letter-spacing: 0.582px;
+              border: 0.5px solid #CDDC39;
+              margin-top: 23px; } }
           body main section.WWA-team-board .volunter .slider-navigation .nav-slide:hover {
             background: #CDDC39;
             -webkit-transition: 0.3s;
@@ -4121,14 +5241,32 @@ body {
           body main section.WWA-team-board .volunter .slider-navigation .nav-slide.prev-slide {
             margin-right: 63px;
             padding: 9px 25px 7px 68px; }
+            @media only screen and (max-width: 991px) {
+              body main section.WWA-team-board .volunter .slider-navigation .nav-slide.prev-slide {
+                padding: 4px 15px 2px 40px;
+                margin-right: 39px; } }
             body main section.WWA-team-board .volunter .slider-navigation .nav-slide.prev-slide svg {
               left: 8px; }
+              @media only screen and (max-width: 991px) {
+                body main section.WWA-team-board .volunter .slider-navigation .nav-slide.prev-slide svg {
+                  left: 6px; } }
           body main section.WWA-team-board .volunter .slider-navigation .nav-slide.next-slide {
-            padding: 9px 8px 7px 42px; }
+            padding: 9px 70px 7px 42px; }
+            @media only screen and (max-width: 991px) {
+              body main section.WWA-team-board .volunter .slider-navigation .nav-slide.next-slide {
+                padding: 4px 8px 2px 24px; } }
             body main section.WWA-team-board .volunter .slider-navigation .nav-slide.next-slide svg {
               right: 8px; }
+              @media only screen and (max-width: 991px) {
+                body main section.WWA-team-board .volunter .slider-navigation .nav-slide.next-slide svg {
+                  right: 6px; } }
           body main section.WWA-team-board .volunter .slider-navigation .nav-slide svg {
             position: absolute; }
+            @media only screen and (max-width: 991px) {
+              body main section.WWA-team-board .volunter .slider-navigation .nav-slide svg {
+                width: 21px;
+                height: 5px;
+                top: 4px; } }
     body main section.OW-hero {
       background-color: #CDDC39; }
       body main section.OW-hero .container {
@@ -6997,5 +8135,4 @@ body {
         body main footer .footer-wrap .logo-wrap {
           width: 77px;
           padding-top: 36px; } }
-
 /*# sourceMappingURL=style.css.map */

@@ -12,7 +12,12 @@
             endif;
         ?>
     </div>
+    <?php 
+        $image = get_field('image');
+        if( $image ): 
+    ?>
     <div class="background-image">
-        <img src="images/main-who-section-image.png" alt="">
+        <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
     </div>
+    <?php endif; ?>
 </section>  

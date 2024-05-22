@@ -1,4 +1,4 @@
-<section class="WMA-hero">
+<section class="WWA-hero">
     <div class="container">
         <div class="hero-content-wrap">
             <h1 class="hero-title"><?php echo get_field('title'); ?></h1>
