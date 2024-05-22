@@ -6249,6 +6249,7 @@ body {
                                 background-repeat: no-repeat;
                                 top: 9px;
                                 left: 22px;
+                                z-index: 5;
                                 @include media($lg){
                                     @include before-content(17px, 12px);
                                     top: 5px;

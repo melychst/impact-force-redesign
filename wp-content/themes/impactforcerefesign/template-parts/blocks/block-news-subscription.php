@@ -5,14 +5,7 @@
     <div class="container">
         <div class="title">Subscription form to Newsletter</div>
         <div class="form-wrap">
-            <form action="">
-                <div class="field-wrap field-mail">
-                    <input type="email" name="" id="" placeholder="_your e-mail">
-                </div>
-                <div class="field-wrap field-submit">
-                    <input type="submit" value="subscribe">
-                </div>
-            </form>
+            <?php echo do_shortcode('[contact-form-7 id="a8df819" title="Contact form 1"]'); ?>
         </div>
     </div>
 </section>
