@@ -4131,7 +4131,7 @@ body {
                         padding-top: 20px;
                         padding-bottom: 12px;
                     }
-                    @include media($lg){
+                    @include media($md){
                         padding-top: 9px;
                         padding-bottom: 10px;
                     }
@@ -4279,11 +4279,12 @@ body {
                         @include media($lg){
                             margin-left: 0px;
                             min-height: 1px;
-                            padding: 10px 29px 8px 24px;
+                            padding: 10px 20px 8px 24px;
                             border-radius: 7.707px;
                         }
                         @include media($sm){
-                            padding: 10px 29px 8px 16px;
+                            padding: 7px 18px 21px 16px;
+                            border-radius: 12.671px;
                         }
                         &:last-child {
                             margin-bottom: 0px;
@@ -4326,7 +4327,8 @@ body {
                             }
                             @include media($sm){
                                 font-size: 16px;
-                                margin-bottom: 7px;
+                                margin-bottom: 10px;
+                                letter-spacing: 0px;
                             }
                         }
                         .name {
@@ -4341,6 +4343,7 @@ body {
                             @include media($lg){
                                 font-size: 22px;
                                 line-height: 110%;
+                                padding-right: 18px;
                             }
                             @include media($sm){
                                 font-size: 18px;
@@ -4373,8 +4376,14 @@ body {
                             top: 10px;
                             right: 10px;
                             @include media($lg){
-                                top: -8px;
-                                right: -8px;
+                                top: 14px;
+                                right: 14px;
+                                width: 43px;
+                                height: 43px;
+                            }
+                            @include media($md){
+                                top: 5px;
+                                right: 6px;
                             }
                             img {
                                 width: 100%;
@@ -4657,6 +4666,10 @@ body {
                         height: 574px;
                         @include media($lg){
                             height: auto;
+                        }
+                        @include media($md){
+                            width: 88%;
+                            margin: 0 auto 35px;
                         }
                         img {
                             max-width: 100%;

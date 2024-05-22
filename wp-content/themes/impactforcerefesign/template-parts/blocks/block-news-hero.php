@@ -41,9 +41,11 @@
                                 <img src="<?php echo $slide['image']['url']; ?>" alt="<?php echo $slide['image']['alt']; ?>">
                             </div>
                         <?php endif; ?>
-                        <div class="image-wrap mobile-mage-wrap">
-                            <img src="images/news-slide-image-1-mobile.png" alt="">
-                        </div>
+                        <?php if( !empty($slide['image']) ): ?>
+                            <div class="image-wrap mobile-mage-wrap">
+                                <img src="<?php echo $slide['image_mobile']['url']; ?>" alt="<?php echo $slide['image_mobile']['alt']; ?>">
+                            </div>
+                        <?php endif; ?>
                     </div>
                 </div>
             <?php
