@@ -334,8 +334,8 @@
         margin: 23,
         responsive: {
           768: {
-            items: 4,
             margin: 17,
+            items: 4,
           },
           991: {
             margin: 32,

@@ -18,41 +18,43 @@
     </div>
     <div class="managers">
         <div class="container">
-            <?php
-                $managers = get_field('managers');
-                if( !empty($managers) ):
-                    foreach( $managers as $key => $manager):
-            ?>
-                        <div class="manager-row">
-                            <div class="columns display-flex">
-                                <div class="column column-left">
-                                    <span class="position"><?php echo $manager['position']; ?></span>
-                                    <div class="icon">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
-                                            <path d="M0 17.3005H14.5803L0 2.72021L2.72021 0L17.3005 14.5803V0H21V17.3005V21H17.3005H0V17.3005Z" fill="#00B0EB"/>
-                                        </svg>
-                                    </div>
-                                    <div class="description"><?php echo $manager['content']; ?></div>
-                                </div>
-                                <div class="column column-center">
-                                    <div class="name"><?php echo $manager['name']; ?></div>
-                                    <div class="link-email">
-                                        <a href="mailto:<?php echo $manager['email']; ?>"><?php echo $manager['email']; ?></a>
-                                    </div>
-                                </div>
-                                <div class="column column-right">
-                                    <?php if( $manager['image'] ): ?>
-                                        <div class="image-wrap">
-                                            <img src="<?php echo $manager['image']['url']; ?>" alt="<?php echo $manager['name']; ?>">
+            <div class="managers-wrap">
+                <?php
+                        $managers = get_field('managers');
+                        if( !empty($managers) ):
+                            foreach( $managers as $key => $manager):
+                    ?>
+                                <div class="manager-row">
+                                    <div class="columns display-flex">
+                                        <div class="column column-left">
+                                            <span class="position"><?php echo $manager['position']; ?></span>
+                                            <div class="icon">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
+                                                    <path d="M0 17.3005H14.5803L0 2.72021L2.72021 0L17.3005 14.5803V0H21V17.3005V21H17.3005H0V17.3005Z" fill="#00B0EB"/>
+                                                </svg>
+                                            </div>
+                                            <div class="description"><?php echo $manager['content']; ?></div>
                                         </div>
-                                    <?php endif; ?>
+                                        <div class="column column-center">
+                                            <div class="name"><?php echo $manager['name']; ?></div>
+                                            <div class="link-email">
+                                                <a href="mailto:<?php echo $manager['email']; ?>"><?php echo $manager['email']; ?></a>
+                                            </div>
+                                        </div>
+                                        <div class="column column-right">
+                                            <?php if( $manager['image'] ): ?>
+                                                <div class="image-wrap">
+                                                    <img src="<?php echo $manager['image']['url']; ?>" alt="<?php echo $manager['name']; ?>">
+                                                </div>
+                                            <?php endif; ?>
+                                        </div>
+                                    </div>                        
                                 </div>
-                            </div>                        
-                        </div>
-            <?php
-                    endforeach;
-                endif;
-            ?>
+                    <?php
+                            endforeach;
+                        endif;
+                    ?>
+            </div>
         </div>
     </div>
     <div class="advisors">
