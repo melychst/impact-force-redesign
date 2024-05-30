@@ -76,14 +76,6 @@ body {
             li {
                 display: inline-flex;
             }
-            .lenguage-wrap {
-                padding-top: 18px;
-                padding-left: 14px;
-                @include media($md){
-                    padding-top: 0px;
-                    padding-left: 0px;
-                }
-            }
             .social-wrap {
                 display: flex;
                 .social-link {
@@ -143,7 +135,13 @@ body {
                     }
                 }
             }
-            .lenguage-wrap {
+            .language-wrap {
+                padding-top: 18px;
+                padding-left: 14px;
+                @include media($md){
+                    padding-top: 0px;
+                    padding-left: 0px;
+                }                
                 li {
                     margin-right: 42px;
                     @include media($lg){
@@ -154,6 +152,12 @@ body {
                     }
                     &:last-child {
                         margin-right: 0px;
+                    }
+                    &.wpml-ls-current-language {
+                        a {
+                            background-color: $blue-color;
+                            color: #ffffff;
+                        }
                     }
                     a {
                         display: flex;
@@ -201,6 +205,30 @@ body {
                 &:first-child {
                     margin-left: 0px;
                 }
+                &.purpure-link {
+                    a {
+                        color: $purple-color;    
+                    }
+                }
+                &.icon-link {
+                    a {
+                        padding-right: 34px;
+                        &::after {
+                            @include after-content(22px, 22px);
+                            position: absolute;
+                            right: 0px;
+                            top: -2px;
+                            background-color: $purple-color;
+                            background-image: url(../images/icon-square-arrow.svg);
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            border-radius: 50%;
+                            @include media($lg){
+                                @include after-content(12px, 12px);
+                            }
+                        }                        
+                    }
+                }
             }
             a {
                 display: inline-block;
@@ -223,26 +251,26 @@ body {
                     border-bottom: 2px solid $yellow-color;
                     transition: 0.2s;
                 }
-                &.purpure-link {
-                    color: $purple-color;
-                }
-                &.icon-link {
-                    padding-right: 34px;
-                    &::after {
-                        @include after-content(22px, 22px);
-                        position: absolute;
-                        right: 0px;
-                        top: -2px;
-                        background-color: $purple-color;
-                        background-image: url(../images/icon-square-arrow.svg);
-                        background-position: center;
-                        background-repeat: no-repeat;
-                        border-radius: 50%;
-                        @include media($lg){
-                            @include after-content(12px, 12px);
-                        }
-                    }
-                }
+                // &.purpure-link {
+                //     color: $purple-color;
+                // }
+                // &.icon-link {
+                //     padding-right: 34px;
+                //     &::after {
+                //         @include after-content(22px, 22px);
+                //         position: absolute;
+                //         right: 0px;
+                //         top: -2px;
+                //         background-color: $purple-color;
+                //         background-image: url(../images/icon-square-arrow.svg);
+                //         background-position: center;
+                //         background-repeat: no-repeat;
+                //         border-radius: 50%;
+                //         @include media($lg){
+                //             @include after-content(12px, 12px);
+                //         }
+                //     }
+                // }
             }
         }
         .mobile-burger {
@@ -6856,6 +6884,7 @@ body {
                             .container {
                                 min-height: 550px;
                                 position: relative;
+                                padding-bottom: 30px;
                                 @include media($xl){
                                     min-height: 0px;
                                     padding-bottom: 16px;
@@ -7014,10 +7043,10 @@ body {
                                 width: 640px;
                                 height: 640px;
                                 position: absolute;
-                                bottom: 0px;
+                                bottom: -30px;
                                 right: -52px;
                                 z-index: 1;
-                                &.mobile-mage-wrap {
+                                &.mobile-image-wrap {
                                     display: none;
                                     @include media($md){
                                         display: block;
@@ -7609,9 +7638,6 @@ body {
                             }
                         }
                     }
-                    .content {
-
-                    }
                 }
                 &.article-template-2 {
                     padding-bottom: 93px;
@@ -7972,6 +7998,64 @@ body {
                     }
                 }
             } 
+            &.page-content {
+                padding: 50px 0px;
+                font-size: 18px;
+                font-style: normal;
+                line-height: 22px;
+                letter-spacing: 0.36px; 
+                @include media($lg){
+                    font-size: 10px;
+                    line-height: 110%;
+                }
+                strong {
+                    font-family: "Akkurat LL Cyrillic Bold";
+                    font-weight: 700;
+                }  
+                p {
+                    margin-bottom: 15px;
+                    @include media($lg){
+                        margin-bottom: 12px;
+                    }
+                }
+                img {
+                    max-width: 100%;
+                    @include media($lg){
+                        width: 216px;
+                    }
+                    @include media($md){
+                        width: 100%;
+                    }
+                }  
+                .alignleft {
+                    float: left;
+                    margin: 32px 32px 32px 0px;
+                    @include media($lg){
+                        margin: 14px 76px 20px 0px;
+                    }
+                    @include media($md){
+                        float: none;
+                        margin-bottom: 30px;
+                        margin-right: 0px;
+                    }
+                }
+                .alignright {
+                    float: right;
+                    margin: 32px 0px 32px 32px;
+                    @include media($lg){
+                        margin: 14px 0px 20px 32px;
+                    }
+                    @include media($md){
+                        float: none;
+                        margin-bottom: 30px;
+                        margin-left: 0px;
+                    }
+                }
+                .aligncenter {
+                    display: block;
+                    text-align: center;
+                }
+            }
         }
 
         footer { 
