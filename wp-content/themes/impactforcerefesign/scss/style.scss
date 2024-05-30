@@ -8056,6 +8056,12 @@ body {
                     text-align: center;
                 }
             }
+            &.page-404 {
+                padding: 100px 0px;
+                h1 {
+                    font-size: 36px;
+                }
+            }
         }
 
         footer { 
