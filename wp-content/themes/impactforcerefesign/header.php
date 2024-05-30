@@ -25,11 +25,19 @@
                 </div>
                 <div class="column column-right">
                     <div class="top-row display-flex">
-                        <div class="sub-column lenguage-column">
-                            <!-- <ul class="lenguage-wrap">
+                        <div class="sub-column language-column">
+                            <!-- <ul class="language-wrap">
                                 <li><a class="active" href="#">ENG</a></li>
                                 <li><a href="#">Ukr</a></li>
                             </ul> -->
+                            <div class="language-wrap">
+                                <?php
+                                    wp_nav_menu(array(
+                                    "theme_location"  => "language",
+                                    "menu"              => "language",
+                                    ));
+                                ?> 
+                            </div>
                         </div>
                         <?php
                             $social_group = get_field('social_settings', 'option');

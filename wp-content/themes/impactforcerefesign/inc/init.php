@@ -39,6 +39,7 @@ function custom_acf_init() {
         'News hero',
         'News grid',
         'News subscription',
+        'Page content'
     );
     // check function exists
     if( function_exists('acf_register_block') ) {
