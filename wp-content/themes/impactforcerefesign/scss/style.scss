@@ -201,6 +201,30 @@ body {
                 &:first-child {
                     margin-left: 0px;
                 }
+                &.purpure-link {
+                    a {
+                        color: $purple-color;    
+                    }
+                }
+                &.icon-link {
+                    a {
+                        padding-right: 34px;
+                        &::after {
+                            @include after-content(22px, 22px);
+                            position: absolute;
+                            right: 0px;
+                            top: -2px;
+                            background-color: $purple-color;
+                            background-image: url(../images/icon-square-arrow.svg);
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            border-radius: 50%;
+                            @include media($lg){
+                                @include after-content(12px, 12px);
+                            }
+                        }                        
+                    }
+                }
             }
             a {
                 display: inline-block;
@@ -223,26 +247,26 @@ body {
                     border-bottom: 2px solid $yellow-color;
                     transition: 0.2s;
                 }
-                &.purpure-link {
-                    color: $purple-color;
-                }
-                &.icon-link {
-                    padding-right: 34px;
-                    &::after {
-                        @include after-content(22px, 22px);
-                        position: absolute;
-                        right: 0px;
-                        top: -2px;
-                        background-color: $purple-color;
-                        background-image: url(../images/icon-square-arrow.svg);
-                        background-position: center;
-                        background-repeat: no-repeat;
-                        border-radius: 50%;
-                        @include media($lg){
-                            @include after-content(12px, 12px);
-                        }
-                    }
-                }
+                // &.purpure-link {
+                //     color: $purple-color;
+                // }
+                // &.icon-link {
+                //     padding-right: 34px;
+                //     &::after {
+                //         @include after-content(22px, 22px);
+                //         position: absolute;
+                //         right: 0px;
+                //         top: -2px;
+                //         background-color: $purple-color;
+                //         background-image: url(../images/icon-square-arrow.svg);
+                //         background-position: center;
+                //         background-repeat: no-repeat;
+                //         border-radius: 50%;
+                //         @include media($lg){
+                //             @include after-content(12px, 12px);
+                //         }
+                //     }
+                // }
             }
         }
         .mobile-burger {
@@ -6856,6 +6880,7 @@ body {
                             .container {
                                 min-height: 550px;
                                 position: relative;
+                                padding-bottom: 30px;
                                 @include media($xl){
                                     min-height: 0px;
                                     padding-bottom: 16px;
@@ -7014,10 +7039,10 @@ body {
                                 width: 640px;
                                 height: 640px;
                                 position: absolute;
-                                bottom: 0px;
+                                bottom: -30px;
                                 right: -52px;
                                 z-index: 1;
-                                &.mobile-mage-wrap {
+                                &.mobile-image-wrap {
                                     display: none;
                                     @include media($md){
                                         display: block;
