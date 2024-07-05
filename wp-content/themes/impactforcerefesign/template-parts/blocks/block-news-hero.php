@@ -46,7 +46,7 @@
                                 <img src="<?php echo $slide['image']['url']; ?>" alt="<?php echo $slide['image']['alt']; ?>">
                             </div>
                         <?php endif; ?>
-                        <?php if( !empty($slide['image_mobile']) ): ?>
+                        <?php if( !empty($slide['image']) ): ?>
                             <div class="image-wrap mobile-image-wrap">
                                 <img src="<?php echo $slide['image_mobile']['url']; ?>" alt="<?php echo $slide['image_mobile']['alt']; ?>">
                             </div>
