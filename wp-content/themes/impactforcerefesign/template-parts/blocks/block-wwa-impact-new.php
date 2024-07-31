@@ -11,8 +11,8 @@
                         <div class="slider-wrap">
                             <div id="impact-slider" class="slider-support owl-carousel">
                                 <?php 
-                                    if( !empty($slider['slider']) ):
-                                        foreach( $slider['slider'] as $key => $slide):
+                                    if( !empty($slider['slider_child']) ):
+                                        foreach( $slider['slider_child'] as $key => $slide):
                                 ?>
                                         <div class="slide-item">
                                             <?php if( $slide['icon'] ): ?>
@@ -27,11 +27,11 @@
                                 ?>
                             </div>
                         </div>
-                        <?php if(count($slider['slider']) > 3): ?>
+                        <?php if( !empty($slider['slider_child']) && (count($slider['slider_child'])) > 3): ?>
                             <div id="impact-slider-navigation" class="slider-navigation">
                                 <div class="prev-slide nav-slide">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="181" height="12" viewBox="0 0 181 12" fill="none">
-                                    <path d="M0.0820308 6.6939C1.3121 6.93879 4.34627 8.00002 4.26427 12L5.65836 12C5.74036 9.30614 4.59228 7.67349 3.28021 6.6939L180.082 6.69388L180.082 5.22449L3.28021 5.22451C4.51028 4.24492 5.65834 2.6939 5.57634 2.28852e-05L4.18227 2.3007e-05C4.26427 3.91839 1.2301 4.89798 2.99252e-05 5.22451L0.0820308 6.6939Z" fill="#43E0D5"/>
+                                        <path d="M0.0820308 6.6939C1.3121 6.93879 4.34627 8.00002 4.26427 12L5.65836 12C5.74036 9.30614 4.59228 7.67349 3.28021 6.6939L180.082 6.69388L180.082 5.22449L3.28021 5.22451C4.51028 4.24492 5.65834 2.6939 5.57634 2.28852e-05L4.18227 2.3007e-05C4.26427 3.91839 1.2301 4.89798 2.99252e-05 5.22451L0.0820308 6.6939Z" fill="#43E0D5"/>
                                     </svg>
                                 </div>
                                 <div class="pages"><span class="current">01</span> / <span class="all">04</span></div>
