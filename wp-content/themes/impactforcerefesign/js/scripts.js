@@ -335,10 +335,10 @@
         responsive: {
           768: {
             margin: 17,
-            items: 4,
           },
           991: {
             margin: 32,
+            items: 4,
           },
         },
       });
@@ -385,11 +385,11 @@
         margin: 26,
         responsive: {
           768: {
-            items: 3,
             margin: 80,
           },
           991: {
             margin: 135,
+            items: 3,
           },
         },
       });

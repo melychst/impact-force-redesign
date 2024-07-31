@@ -29,6 +29,7 @@ function custom_acf_init() {
         'WWA organisational',
         'WWA focus on',
         'WWA impact',
+        'WWA impact new',
         'WWA targets',
         'WWA team board',
         'OW hero',
