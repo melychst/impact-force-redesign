@@ -386,17 +386,18 @@ body {
         height: 16px; }
   body .mobile-navigation {
     position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0px;
-    right: -100%;
+    top: 50px;
+    right: 35px;
     background-color: #fff;
     z-index: 10;
-    padding-top: 60px;
+    padding-right: 35px;
+    opacity: 0;
+    visibility: hidden;
     -webkit-transition: 0.3s;
     transition: 0.3s; }
     body .mobile-navigation.active {
-      right: 0px;
+      opacity: 1;
+      visibility: visible;
       -webkit-transition: 0.3s;
       transition: 0.3s; }
     body .mobile-navigation ul {
@@ -405,7 +406,35 @@ body {
       padding-left: 21px; }
       body .mobile-navigation ul li {
         list-style: none;
-        margin-bottom: 5px; }
+        margin-bottom: -2px;
+        line-height: 18px; }
+        body .mobile-navigation ul li.purpure-link a {
+          color: #9575CD; }
+        body .mobile-navigation ul li.icon-link a {
+          padding-right: 34px;
+          position: relative; }
+          body .mobile-navigation ul li.icon-link a::after {
+            content: '';
+            width: 22px;
+            height: 22px;
+            position: absolute;
+            display: block;
+            position: absolute;
+            right: 12px;
+            top: -2px;
+            background-color: #9575CD;
+            background-image: url(../images/icon-square-arrow.svg);
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 50%; }
+            @media only screen and (max-width: 991px) {
+              body .mobile-navigation ul li.icon-link a::after {
+                content: '';
+                width: 12px;
+                height: 12px;
+                position: absolute;
+                display: block;
+                background-size: 6px; } }
         body .mobile-navigation ul li a {
           display: -webkit-inline-box;
           display: -ms-inline-flexbox;
@@ -425,8 +454,8 @@ body {
           letter-spacing: 0.24px; }
     body .mobile-navigation .burger-close {
       position: absolute;
-      right: 15px;
-      top: 56px; }
+      right: 14px;
+      top: 7px; }
   body .main-wrap {
     position: relative;
     overflow: hidden; }
@@ -2836,7 +2865,13 @@ body {
           text-transform: uppercase;
           padding-bottom: 1px;
           border-bottom: 1px solid #003548;
-          position: relative; }
+          position: relative;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: justify;
+              -ms-flex-pack: justify;
+                  justify-content: space-between; }
           @media only screen and (max-width: 991px) {
             body main section.news .top-row .sub-title {
               font-size: 9.592px;
@@ -2844,28 +2879,10 @@ body {
           @media only screen and (max-width: 767px) {
             body main section.news .top-row .sub-title {
               display: none; } }
-          body main section.news .top-row .sub-title::after {
-            content: '';
-            width: 14px;
-            height: 14px;
-            position: absolute;
-            display: block;
-            background-image: url(../images/icon-square-arrow.svg);
-            background-size: 14px 14px;
-            background-position: center;
-            background-repeat: no-repeat;
-            right: 0px;
-            top: 2px;
-            -webkit-transform: rotate(90deg);
-                    transform: rotate(90deg); }
-            @media only screen and (max-width: 991px) {
-              body main section.news .top-row .sub-title::after {
-                content: '';
-                width: 8px;
-                height: 8px;
-                position: absolute;
-                display: block;
-                background-size: cover; } }
+          @media only screen and (max-width: 991px) {
+            body main section.news .top-row .sub-title a svg {
+              width: 8px;
+              height: 8px; } }
       body main section.news .bottom-row {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -2917,38 +2934,25 @@ body {
             text-transform: uppercase;
             padding-bottom: 1px;
             border-bottom: 1px solid #003548;
-            position: relative; }
+            position: relative;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between; }
             @media only screen and (max-width: 991px) {
               body main section.news .bottom-row .right-column .sub-title {
                 font-size: 9.592px;
                 line-height: 12px; } }
             @media only screen and (max-width: 767px) {
               body main section.news .bottom-row .right-column .sub-title {
-                display: block;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
                 margin-top: 35px;
                 margin-bottom: 18px; } }
-            body main section.news .bottom-row .right-column .sub-title::after {
-              content: '';
-              width: 14px;
-              height: 14px;
-              position: absolute;
-              display: block;
-              background-image: url(../images/icon-square-arrow.svg);
-              background-size: 14px 14px;
-              background-position: center;
-              background-repeat: no-repeat;
-              right: 0px;
-              top: 2px;
-              -webkit-transform: rotate(90deg);
-                      transform: rotate(90deg); }
-              @media only screen and (max-width: 991px) {
-                body main section.news .bottom-row .right-column .sub-title::after {
-                  content: '';
-                  width: 8px;
-                  height: 8px;
-                  position: absolute;
-                  display: block;
-                  background-size: cover; } }
+            @media only screen and (max-width: 991px) {
+              body main section.news .bottom-row .right-column .sub-title a svg {
+                width: 8px;
+                height: 8px; } }
         body main section.news .bottom-row .news-slider {
           position: relative; }
           body main section.news .bottom-row .news-slider .slider-item {
@@ -3435,6 +3439,17 @@ body {
              object-position: center;
           width: 100%;
           height: 100%; }
+      body main section.WWA-hero .img-wrap {
+        position: absolute;
+        display: none;
+        bottom: -282px;
+        left: 15px; }
+        @media only screen and (max-width: 767px) {
+          body main section.WWA-hero .img-wrap {
+            display: block; } }
+        @media only screen and (max-width: 479px) {
+          body main section.WWA-hero .img-wrap {
+            bottom: -222px; } }
     body main section.WWA-founded {
       padding: 53px 0px 25px;
       min-height: 560px;
@@ -3858,6 +3873,9 @@ body {
             margin-bottom: 11px; } }
       body main section.WWA-focus-on .content-link {
         display: inline-block; }
+        @media only screen and (max-width: 479px) {
+          body main section.WWA-focus-on .content-link {
+            display: block; } }
         body main section.WWA-focus-on .content-link a {
           display: -webkit-inline-box;
           display: -ms-inline-flexbox;
@@ -3895,6 +3913,9 @@ body {
               padding-left: 8px;
               padding-right: 20px;
               height: 20px; } }
+          @media only screen and (max-width: 479px) {
+            body main section.WWA-focus-on .content-link a {
+              width: 100%; } }
           body main section.WWA-focus-on .content-link a::after {
             content: '';
             width: 48px;
@@ -5323,11 +5344,15 @@ body {
       body main section.OW-hero .container {
         min-height: 670px;
         padding-top: 62px;
-        position: relative; }
+        position: relative;
+        padding-bottom: 120px; }
         @media only screen and (max-width: 991px) {
           body main section.OW-hero .container {
             min-height: 356px;
             padding-top: 30px; } }
+        @media only screen and (max-width: 767px) {
+          body main section.OW-hero .container {
+            padding-bottom: 180px; } }
         @media only screen and (max-width: 479px) {
           body main section.OW-hero .container {
             display: -webkit-box;
@@ -5422,7 +5447,9 @@ body {
               background-size: 13px 13px;
               background-position: center;
               right: 0px;
-              top: 0px; }
+              top: 0px;
+              -webkit-transition: 0.3s;
+              transition: 0.3s; }
               @media only screen and (max-width: 991px) {
                 body main section.OW-hero .hero-content .read-more a::before {
                   width: 9px;
@@ -5448,6 +5475,11 @@ body {
               @media only screen and (max-width: 991px) {
                 body main section.OW-hero .hero-content .read-more a::after {
                   width: 150px; } }
+          body main section.OW-hero .hero-content .read-more.active a::before {
+            -webkit-transform: rotate(-180deg);
+                    transform: rotate(-180deg);
+            -webkit-transition: 0.3s;
+            transition: 0.3s; }
       body main section.OW-hero .hero-title {
         color: #FFF;
         -webkit-text-stroke: 5px;
@@ -5472,11 +5504,31 @@ body {
                     order: 1;
             position: static;
             -webkit-text-stroke: 2px;
-            font-size: 50px;
+            font-size: 48px;
             letter-spacing: 3.5px;
             text-align: center;
             margin-bottom: 30px;
             margin-bottom: 44px; } }
+      body main section.OW-hero .img-wrap {
+        position: absolute;
+        display: none; }
+        @media only screen and (max-width: 479px) {
+          body main section.OW-hero .img-wrap {
+            display: block; } }
+        body main section.OW-hero .img-wrap.left-image {
+          bottom: 15px;
+          left: 15px; }
+        body main section.OW-hero .img-wrap.right-image {
+          bottom: 20px;
+          right: 15px; }
+      body main section.OW-hero .additional-content {
+        margin-top: 35px;
+        display: none; }
+        @media only screen and (max-width: 767px) {
+          body main section.OW-hero .additional-content {
+            margin-top: 5px; } }
+        body main section.OW-hero .additional-content.active {
+          display: block; }
     body main section.OW-pillars .title-row {
       background-color: #003548;
       min-height: 275px;
@@ -5925,6 +5977,37 @@ body {
             -webkit-box-pack: justify;
                 -ms-flex-pack: justify;
                     justify-content: space-between; } }
+        body main section.OW-pillars .pillars-slider-wrap .slider-navigation[data-color-nav=blue] .nav-slide {
+          border: 1px solid #00B0EB; }
+          body main section.OW-pillars .pillars-slider-wrap .slider-navigation[data-color-nav=blue] .nav-slide:hover {
+            background: #00B0EB;
+            color: #fff;
+            -webkit-transition: 0.3s;
+            transition: 0.3s; }
+            body main section.OW-pillars .pillars-slider-wrap .slider-navigation[data-color-nav=blue] .nav-slide:hover svg path {
+              fill: #fff; }
+        body main section.OW-pillars .pillars-slider-wrap .slider-navigation[data-color-nav=green] .nav-slide {
+          border: 1px solid #43E0D5; }
+          body main section.OW-pillars .pillars-slider-wrap .slider-navigation[data-color-nav=green] .nav-slide svg path {
+            fill: #43E0D5; }
+          body main section.OW-pillars .pillars-slider-wrap .slider-navigation[data-color-nav=green] .nav-slide:hover {
+            background: #43E0D5;
+            color: #fff;
+            -webkit-transition: 0.3s;
+            transition: 0.3s; }
+            body main section.OW-pillars .pillars-slider-wrap .slider-navigation[data-color-nav=green] .nav-slide:hover svg path {
+              fill: #fff; }
+        body main section.OW-pillars .pillars-slider-wrap .slider-navigation[data-color-nav=purple] .nav-slide {
+          border: 1px solid #9575CD; }
+          body main section.OW-pillars .pillars-slider-wrap .slider-navigation[data-color-nav=purple] .nav-slide svg path {
+            fill: #9575CD; }
+          body main section.OW-pillars .pillars-slider-wrap .slider-navigation[data-color-nav=purple] .nav-slide:hover {
+            background: #9575CD;
+            color: #fff;
+            -webkit-transition: 0.3s;
+            transition: 0.3s; }
+            body main section.OW-pillars .pillars-slider-wrap .slider-navigation[data-color-nav=purple] .nav-slide:hover svg path {
+              fill: #fff; }
         body main section.OW-pillars .pillars-slider-wrap .slider-navigation .nav-slide {
           width: 148px;
           height: 26px;
@@ -6138,64 +6221,36 @@ body {
         body main section.OW-pillar-advocacy .pillar-advocacy-wrap {
           padding-top: 26px;
           padding-bottom: 20px; } }
-      @media only screen and (max-width: 1199px) {
-        body main section.OW-pillar-advocacy .pillar-advocacy-wrap .columns {
-          -webkit-box-pack: justify;
-              -ms-flex-pack: justify;
-                  justify-content: space-between; } }
-      @media only screen and (max-width: 479px) {
-        body main section.OW-pillar-advocacy .pillar-advocacy-wrap .columns {
-          -ms-flex-wrap: wrap;
-              flex-wrap: wrap; } }
-      body main section.OW-pillar-advocacy .pillar-advocacy-wrap .columns .column-left {
-        width: 578px; }
-        @media only screen and (max-width: 1199px) {
-          body main section.OW-pillar-advocacy .pillar-advocacy-wrap .columns .column-left {
-            width: 47%; } }
-        @media only screen and (max-width: 479px) {
-          body main section.OW-pillar-advocacy .pillar-advocacy-wrap .columns .column-left {
-            width: 100%; } }
-      body main section.OW-pillar-advocacy .pillar-advocacy-wrap .columns .column-right {
-        width: 605px;
-        margin-left: 58px;
+      body main section.OW-pillar-advocacy .pillar-advocacy-wrap .title-columns {
         position: relative;
-        padding-bottom: 266px; }
-        @media only screen and (max-width: 1199px) {
-          body main section.OW-pillar-advocacy .pillar-advocacy-wrap .columns .column-right {
-            width: 50%;
-            margin-left: 0px;
-            padding-bottom: 148px; } }
-        @media only screen and (max-width: 479px) {
-          body main section.OW-pillar-advocacy .pillar-advocacy-wrap .columns .column-right {
-            width: 100%;
-            padding-bottom: 0px; } }
-      @media only screen and (max-width: 479px) {
-        body main section.OW-pillar-advocacy .pillar-advocacy-wrap .columns .sub-columns {
-          display: -webkit-box;
-          display: -ms-flexbox;
-          display: flex;
-          -webkit-box-pack: justify;
-              -ms-flex-pack: justify;
-                  justify-content: space-between; } }
-      @media only screen and (max-width: 479px) {
-        body main section.OW-pillar-advocacy .pillar-advocacy-wrap .columns .sub-columns .sub-colum {
-          position: relative;
-          width: 130px; } }
-      body main section.OW-pillar-advocacy .pillar-advocacy-wrap .columns .title-column {
-        position: relative;
-        padding-left: 73px;
-        margin-bottom: 55px; }
+        margin-bottom: 55px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        width: 100%; }
         @media only screen and (max-width: 991px) {
-          body main section.OW-pillar-advocacy .pillar-advocacy-wrap .columns .title-column {
+          body main section.OW-pillar-advocacy .pillar-advocacy-wrap .title-columns {
             padding-left: 45px;
             margin-bottom: 31px; } }
         @media only screen and (max-width: 991px) {
-          body main section.OW-pillar-advocacy .pillar-advocacy-wrap .columns .title-column {
+          body main section.OW-pillar-advocacy .pillar-advocacy-wrap .title-columns {
             padding-left: 0px; } }
         @media only screen and (max-width: 479px) {
-          body main section.OW-pillar-advocacy .pillar-advocacy-wrap .columns .title-column {
+          body main section.OW-pillar-advocacy .pillar-advocacy-wrap .title-columns {
             margin-bottom: 26px; } }
-        body main section.OW-pillar-advocacy .pillar-advocacy-wrap .columns .title-column .number {
+        body main section.OW-pillar-advocacy .pillar-advocacy-wrap .title-columns .sub-colum {
+          position: relative;
+          width: 50%;
+          padding-left: 73px; }
+          @media only screen and (max-width: 479px) {
+            body main section.OW-pillar-advocacy .pillar-advocacy-wrap .title-columns .sub-colum {
+              position: relative;
+              width: 130px;
+              padding-left: 0px; } }
+        body main section.OW-pillar-advocacy .pillar-advocacy-wrap .title-columns .number {
           font-family: "Akkurat Mono LL";
           font-size: 20px;
           font-style: normal;
@@ -6208,16 +6263,16 @@ body {
           top: 9px;
           left: 0px; }
           @media only screen and (max-width: 991px) {
-            body main section.OW-pillar-advocacy .pillar-advocacy-wrap .columns .title-column .number {
+            body main section.OW-pillar-advocacy .pillar-advocacy-wrap .title-columns .number {
               font-size: 11.474px;
               line-height: 100%;
               letter-spacing: 1.147px;
               top: 7px; } }
           @media only screen and (max-width: 479px) {
-            body main section.OW-pillar-advocacy .pillar-advocacy-wrap .columns .title-column .number {
+            body main section.OW-pillar-advocacy .pillar-advocacy-wrap .title-columns .number {
               top: -17px;
               font-size: 8px; } }
-        body main section.OW-pillar-advocacy .pillar-advocacy-wrap .columns .title-column .name {
+        body main section.OW-pillar-advocacy .pillar-advocacy-wrap .title-columns .name {
           -webkit-text-stroke: 1px;
           font-family: "Akkurat Mono LL";
           font-size: 35px;
@@ -6237,14 +6292,24 @@ body {
           padding-left: 38px;
           padding-top: 10px;
           padding-right: 42px;
-          border: #00B0EB 2px solid;
-          color: #00B0EB; }
+          border: #003548 2px solid;
+          cursor: pointer;
+          -webkit-transition: 0.2s;
+          transition: 0.2s; }
+          body main section.OW-pillar-advocacy .pillar-advocacy-wrap .title-columns .name.active {
+            border: #00B0EB 2px solid;
+            color: #00B0EB; }
+          body main section.OW-pillar-advocacy .pillar-advocacy-wrap .title-columns .name:hover {
+            border: #00B0EB 2px solid;
+            color: #00B0EB;
+            -webkit-transition: 0.2s;
+            transition: 0.2s; }
           @media only screen and (max-width: 1199px) {
-            body main section.OW-pillar-advocacy .pillar-advocacy-wrap .columns .title-column .name {
+            body main section.OW-pillar-advocacy .pillar-advocacy-wrap .title-columns .name {
               font-size: 24px;
               line-height: 110%; } }
           @media only screen and (max-width: 991px) {
-            body main section.OW-pillar-advocacy .pillar-advocacy-wrap .columns .title-column .name {
+            body main section.OW-pillar-advocacy .pillar-advocacy-wrap .title-columns .name {
               font-size: 20.08px;
               letter-spacing: 1.205px;
               padding-top: 7px;
@@ -6253,88 +6318,196 @@ body {
               height: 29.26px;
               padding-left: 20px; } }
           @media only screen and (max-width: 767px) {
-            body main section.OW-pillar-advocacy .pillar-advocacy-wrap .columns .title-column .name {
+            body main section.OW-pillar-advocacy .pillar-advocacy-wrap .title-columns .name {
               font-size: 10px;
               line-height: 100%;
               letter-spacing: 0.6px;
               padding: 6px 10px 3px 10px;
               height: auto; } }
           @media only screen and (max-width: 479px) {
-            body main section.OW-pillar-advocacy .pillar-advocacy-wrap .columns .title-column .name {
+            body main section.OW-pillar-advocacy .pillar-advocacy-wrap .title-columns .name {
               border-radius: 31.748px;
               border: 0.894px solid #00B0EB;
-              padding: 6px 8px 3px 10px;
+              padding: 6px 6px 3px 8px;
               width: 100%; } }
-        body main section.OW-pillar-advocacy .pillar-advocacy-wrap .columns .title-column .display-mobile {
+        body main section.OW-pillar-advocacy .pillar-advocacy-wrap .title-columns .display-mobile {
           display: none; }
           @media only screen and (max-width: 479px) {
-            body main section.OW-pillar-advocacy .pillar-advocacy-wrap .columns .title-column .display-mobile {
+            body main section.OW-pillar-advocacy .pillar-advocacy-wrap .title-columns .display-mobile {
               display: block; } }
         @media only screen and (max-width: 479px) {
-          body main section.OW-pillar-advocacy .pillar-advocacy-wrap .columns .title-column.display-desktop {
+          body main section.OW-pillar-advocacy .pillar-advocacy-wrap .title-columns.display-desktop {
             display: none; } }
-      body main section.OW-pillar-advocacy .pillar-advocacy-wrap .columns .list-wrap .list-item {
-        margin-bottom: 85px;
-        position: relative; }
-        @media only screen and (max-width: 991px) {
-          body main section.OW-pillar-advocacy .pillar-advocacy-wrap .columns .list-wrap .list-item {
-            margin-bottom: 68px; } }
+      body main section.OW-pillar-advocacy .pillar-advocacy-wrap .columns {
+        display: none; }
+        body main section.OW-pillar-advocacy .pillar-advocacy-wrap .columns.active {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex; }
+        @media only screen and (max-width: 1199px) {
+          body main section.OW-pillar-advocacy .pillar-advocacy-wrap .columns {
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between; } }
         @media only screen and (max-width: 479px) {
-          body main section.OW-pillar-advocacy .pillar-advocacy-wrap .columns .list-wrap .list-item {
-            margin-bottom: 32px; } }
-        body main section.OW-pillar-advocacy .pillar-advocacy-wrap .columns .list-wrap .list-item:last-child {
-          margin-bottom: 0px; }
+          body main section.OW-pillar-advocacy .pillar-advocacy-wrap .columns {
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap; } }
+        body main section.OW-pillar-advocacy .pillar-advocacy-wrap .columns .column-left {
+          width: 578px; }
+          @media only screen and (max-width: 1199px) {
+            body main section.OW-pillar-advocacy .pillar-advocacy-wrap .columns .column-left {
+              width: 47%; } }
           @media only screen and (max-width: 479px) {
-            body main section.OW-pillar-advocacy .pillar-advocacy-wrap .columns .list-wrap .list-item:last-child {
+            body main section.OW-pillar-advocacy .pillar-advocacy-wrap .columns .column-left {
+              width: 100%; } }
+        body main section.OW-pillar-advocacy .pillar-advocacy-wrap .columns .column-right {
+          width: 605px;
+          margin-left: 58px;
+          position: relative;
+          padding-bottom: 266px; }
+          @media only screen and (max-width: 1199px) {
+            body main section.OW-pillar-advocacy .pillar-advocacy-wrap .columns .column-right {
+              width: 50%;
+              margin-left: 0px;
+              padding-bottom: 148px; } }
+          @media only screen and (max-width: 479px) {
+            body main section.OW-pillar-advocacy .pillar-advocacy-wrap .columns .column-right {
+              width: 100%;
+              padding-bottom: 0px; } }
+        body main section.OW-pillar-advocacy .pillar-advocacy-wrap .columns .list-wrap .list-item {
+          margin-bottom: 85px;
+          position: relative; }
+          @media only screen and (max-width: 991px) {
+            body main section.OW-pillar-advocacy .pillar-advocacy-wrap .columns .list-wrap .list-item {
+              margin-bottom: 68px; } }
+          @media only screen and (max-width: 479px) {
+            body main section.OW-pillar-advocacy .pillar-advocacy-wrap .columns .list-wrap .list-item {
               margin-bottom: 32px; } }
-        body main section.OW-pillar-advocacy .pillar-advocacy-wrap .columns .list-wrap .list-item .image-wrap {
+          body main section.OW-pillar-advocacy .pillar-advocacy-wrap .columns .list-wrap .list-item:last-child {
+            margin-bottom: 0px; }
+            @media only screen and (max-width: 479px) {
+              body main section.OW-pillar-advocacy .pillar-advocacy-wrap .columns .list-wrap .list-item:last-child {
+                margin-bottom: 32px; } }
+          body main section.OW-pillar-advocacy .pillar-advocacy-wrap .columns .list-wrap .list-item .image-wrap {
+            position: absolute;
+            left: 0px;
+            top: 0px; }
+            @media only screen and (max-width: 991px) {
+              body main section.OW-pillar-advocacy .pillar-advocacy-wrap .columns .list-wrap .list-item .image-wrap {
+                width: 42px;
+                height: 42px; }
+                body main section.OW-pillar-advocacy .pillar-advocacy-wrap .columns .list-wrap .list-item .image-wrap img {
+                  max-width: 100%; } }
+            @media only screen and (max-width: 479px) {
+              body main section.OW-pillar-advocacy .pillar-advocacy-wrap .columns .list-wrap .list-item .image-wrap {
+                width: 33px;
+                height: 33px; } }
+          body main section.OW-pillar-advocacy .pillar-advocacy-wrap .columns .list-wrap .list-item .content {
+            padding-left: 106px;
+            font-family: "Akkurat LL Cyrillic Bold";
+            font-size: 23px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 28px;
+            /* 86.957% */
+            letter-spacing: 0.69px; }
+            @media only screen and (max-width: 991px) {
+              body main section.OW-pillar-advocacy .pillar-advocacy-wrap .columns .list-wrap .list-item .content {
+                font-size: 13.196px;
+                font-weight: 700;
+                line-height: 110%;
+                letter-spacing: 0.396px;
+                padding-left: 63px; } }
+            @media only screen and (max-width: 479px) {
+              body main section.OW-pillar-advocacy .pillar-advocacy-wrap .columns .list-wrap .list-item .content {
+                padding-left: 43px; } }
+        body main section.OW-pillar-advocacy .pillar-advocacy-wrap .columns .background-image {
+          width: 630px;
+          height: 234px;
           position: absolute;
-          left: 0px;
-          top: 0px; }
+          bottom: 0px;
+          left: 4px; }
           @media only screen and (max-width: 991px) {
-            body main section.OW-pillar-advocacy .pillar-advocacy-wrap .columns .list-wrap .list-item .image-wrap {
-              width: 42px;
-              height: 42px; }
-              body main section.OW-pillar-advocacy .pillar-advocacy-wrap .columns .list-wrap .list-item .image-wrap img {
-                max-width: 100%; } }
+            body main section.OW-pillar-advocacy .pillar-advocacy-wrap .columns .background-image {
+              width: 361px;
+              height: initial; } }
           @media only screen and (max-width: 479px) {
-            body main section.OW-pillar-advocacy .pillar-advocacy-wrap .columns .list-wrap .list-item .image-wrap {
-              width: 33px;
-              height: 33px; } }
-        body main section.OW-pillar-advocacy .pillar-advocacy-wrap .columns .list-wrap .list-item .content {
-          padding-left: 106px;
-          font-family: "Akkurat LL Cyrillic Bold";
-          font-size: 23px;
-          font-style: normal;
-          font-weight: 700;
-          line-height: 28px;
-          /* 86.957% */
-          letter-spacing: 0.69px; }
-          @media only screen and (max-width: 991px) {
-            body main section.OW-pillar-advocacy .pillar-advocacy-wrap .columns .list-wrap .list-item .content {
-              font-size: 13.196px;
-              font-weight: 700;
-              line-height: 110%;
-              letter-spacing: 0.396px;
-              padding-left: 63px; } }
-          @media only screen and (max-width: 479px) {
-            body main section.OW-pillar-advocacy .pillar-advocacy-wrap .columns .list-wrap .list-item .content {
-              padding-left: 43px; } }
-      body main section.OW-pillar-advocacy .pillar-advocacy-wrap .columns .background-image {
-        width: 630px;
-        height: 234px;
-        position: absolute;
-        bottom: 0px;
-        left: 4px; }
-        @media only screen and (max-width: 991px) {
-          body main section.OW-pillar-advocacy .pillar-advocacy-wrap .columns .background-image {
-            width: 361px;
-            height: initial; } }
-        @media only screen and (max-width: 479px) {
-          body main section.OW-pillar-advocacy .pillar-advocacy-wrap .columns .background-image {
-            display: none; } }
-        body main section.OW-pillar-advocacy .pillar-advocacy-wrap .columns .background-image img {
-          max-width: 100%; }
+            body main section.OW-pillar-advocacy .pillar-advocacy-wrap .columns .background-image {
+              display: none; } }
+          body main section.OW-pillar-advocacy .pillar-advocacy-wrap .columns .background-image img {
+            max-width: 100%; }
+        body main section.OW-pillar-advocacy .pillar-advocacy-wrap .columns.columns-networks .column-left {
+          width: 604px;
+          margin-right: 138px; }
+          @media only screen and (max-width: 767px) {
+            body main section.OW-pillar-advocacy .pillar-advocacy-wrap .columns.columns-networks .column-left {
+              width: 100%;
+              margin-right: 0px; } }
+          body main section.OW-pillar-advocacy .pillar-advocacy-wrap .columns.columns-networks .column-left .content-wrap .content {
+            margin-bottom: 47px; }
+            @media only screen and (max-width: 767px) {
+              body main section.OW-pillar-advocacy .pillar-advocacy-wrap .columns.columns-networks .column-left .content-wrap .content {
+                margin-bottom: 18px; } }
+          body main section.OW-pillar-advocacy .pillar-advocacy-wrap .columns.columns-networks .column-left .content-wrap p {
+            font-size: 27px;
+            line-height: 27px;
+            color: #00B0EB; }
+            @media only screen and (max-width: 767px) {
+              body main section.OW-pillar-advocacy .pillar-advocacy-wrap .columns.columns-networks .column-left .content-wrap p {
+                font-size: 13px;
+                line-height: 12px; } }
+            @media only screen and (max-width: 767px) {
+              body main section.OW-pillar-advocacy .pillar-advocacy-wrap .columns.columns-networks .column-left .content-wrap p {
+                font-size: 11px;
+                line-height: 11px; } }
+          @media only screen and (max-width: 767px) {
+            body main section.OW-pillar-advocacy .pillar-advocacy-wrap .columns.columns-networks .column-left .image-wrap {
+              display: none; } }
+          body main section.OW-pillar-advocacy .pillar-advocacy-wrap .columns.columns-networks .column-left .image-wrap img {
+            max-width: 100%; }
+        body main section.OW-pillar-advocacy .pillar-advocacy-wrap .columns.columns-networks .column-right {
+          width: 425px;
+          margin-left: 0px;
+          padding-bottom: 0px; }
+          @media only screen and (max-width: 767px) {
+            body main section.OW-pillar-advocacy .pillar-advocacy-wrap .columns.columns-networks .column-right {
+              width: 100%; } }
+          body main section.OW-pillar-advocacy .pillar-advocacy-wrap .columns.columns-networks .column-right .list-item {
+            margin-bottom: 25px;
+            padding-left: 58px;
+            position: relative; }
+            @media only screen and (max-width: 767px) {
+              body main section.OW-pillar-advocacy .pillar-advocacy-wrap .columns.columns-networks .column-right .list-item {
+                padding-left: 25px; } }
+            body main section.OW-pillar-advocacy .pillar-advocacy-wrap .columns.columns-networks .column-right .list-item:last-child {
+              margin-bottom: 0px; }
+            body main section.OW-pillar-advocacy .pillar-advocacy-wrap .columns.columns-networks .column-right .list-item .content {
+              font-size: 20px;
+              line-height: 20px;
+              padding-left: 0px; }
+              @media only screen and (max-width: 767px) {
+                body main section.OW-pillar-advocacy .pillar-advocacy-wrap .columns.columns-networks .column-right .list-item .content {
+                  font-size: 12px;
+                  line-height: 12px; } }
+              @media only screen and (max-width: 479px) {
+                body main section.OW-pillar-advocacy .pillar-advocacy-wrap .columns.columns-networks .column-right .list-item .content {
+                  font-size: 10px;
+                  line-height: 12px; } }
+            body main section.OW-pillar-advocacy .pillar-advocacy-wrap .columns.columns-networks .column-right .list-item .icon-img {
+              position: absolute;
+              top: 0px;
+              left: 0px;
+              width: 26px;
+              height: 26px; }
+              @media only screen and (max-width: 479px) {
+                body main section.OW-pillar-advocacy .pillar-advocacy-wrap .columns.columns-networks .column-right .list-item .icon-img {
+                  width: 11px;
+                  height: 11px;
+                  top: -4px; } }
+              body main section.OW-pillar-advocacy .pillar-advocacy-wrap .columns.columns-networks .column-right .list-item .icon-img svg {
+                width: 100%;
+                height: 100%; }
     body main section.OW-pillar-capacity-bildings .title-row {
       background-color: #43E0D5;
       min-height: 227px;
@@ -6498,7 +6671,6 @@ body {
             min-height: 200px;
             -ms-flex-negative: 0;
                 flex-shrink: 0;
-            background-color: #5D7989;
             margin-top: 15px; }
             @media only screen and (max-width: 767px) {
               body main section.OW-pillar-capacity-bildings .pillar-capacity-bildings-wrap .columns .column-right .image-wrap-mobile {
@@ -6534,8 +6706,7 @@ body {
             margin-bottom: 10px; } }
       body main section.OW-pillar-capacity-bildings .pillar-capacity-bildings-wrap .image-wrap {
         width: 100%;
-        height: 381px;
-        background-color: #5D7989; }
+        height: 381px; }
         @media only screen and (max-width: 1199px) {
           body main section.OW-pillar-capacity-bildings .pillar-capacity-bildings-wrap .image-wrap {
             height: 204px; } }
@@ -6839,7 +7010,7 @@ body {
                 justify-content: space-between; }
         body main section.OW-pillar-community-empowerment .pillar-community-empowerment-wrap .list-wrap .list-item {
           margin-bottom: 32px;
-          width: 498px; }
+          width: 580px; }
           @media only screen and (max-width: 1199px) {
             body main section.OW-pillar-community-empowerment .pillar-community-empowerment-wrap .list-wrap .list-item {
               width: 45%; } }
@@ -6873,6 +7044,8 @@ body {
               body main section.OW-pillar-community-empowerment .pillar-community-empowerment-wrap .list-wrap .list-item .title-item {
                 font-size: 15px;
                 letter-spacing: 0.75px; } }
+            body main section.OW-pillar-community-empowerment .pillar-community-empowerment-wrap .list-wrap .list-item .title-item:hover {
+              color: #9575CD; }
             body main section.OW-pillar-community-empowerment .pillar-community-empowerment-wrap .list-wrap .list-item .title-item::before {
               content: '';
               width: 100%;
@@ -8367,6 +8540,9 @@ body {
                 height: 12px; } }
         body main footer .footer-wrap .social-wrap .social-link.facebook-link a {
           padding-right: 5px; }
+          @media only screen and (max-width: 767px) {
+            body main footer .footer-wrap .social-wrap .social-link.facebook-link a {
+              padding-right: 2px; } }
     body main footer .footer-wrap .logo-wrap {
       padding-top: 25px; }
       @media only screen and (max-width: 1199px) {

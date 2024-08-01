@@ -46,8 +46,11 @@
                         <?php 
                             if( !empty($slider['slider']) ):
                                 foreach( $slider['slider']as $key => $slide ):
+                                    if( $key == 0 ):
+                                        $first_slide_color = $slide['color'];
+                                    endif;
                         ?>
-                                    <div class="slide-item blue-item">
+                                    <div class="slide-item <?php echo $slide['color'] .'-item'; ?>" data-slide-color="<?php echo $slide['color']; ?>">
                                         <div class="slide-title"><?php echo $slide['title']; ?></div>
                                         <div class="content"><?php echo $slide['content']; ?></div>
                                     </div>                        
@@ -57,7 +60,7 @@
                         ?>
                     </div>
                     
-                    <div id="pillars-slider-navigtion" class="slider-navigation">
+                    <div id="pillars-slider-navigtion" class="slider-navigation" data-color-nav="<?php echo $first_slide_color; ?>">
                         <div class="prev-slide nav-slide">
                             <span>PREVIOUS</span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="37" height="9" viewBox="0 0 37 9" fill="none">

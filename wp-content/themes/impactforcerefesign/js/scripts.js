@@ -11,6 +11,8 @@
   advisorSlider();
   volunteersSlider();
   teamSlider();
+  additionalContent();
+  advocacyTabs();
 
   function documentReady() {
     jQuery(document).ready(function () {
@@ -238,12 +240,20 @@
       var sliderNavigation = jQuery('#pillars-slider-navigtion');
       jQuery('.next-slide', sliderNavigation).click(function () {
         slider.trigger('next.owl.carousel');
+        var current_slide_color = jQuery('.owl-item.active .slide-item').data(
+          'slide-color'
+        );
+        sliderNavigation.attr('data-color-nav', current_slide_color);
       });
       // Go to the previous item
       jQuery('.prev-slide', sliderNavigation).click(function () {
         // With optional speed parameter
         // Parameters has to be in square bracket '[]'
         slider.trigger('prev.owl.carousel');
+        var current_slide_color = jQuery('.owl-item.active .slide-item').data(
+          'slide-color'
+        );
+        sliderNavigation.attr('data-color-nav', current_slide_color);
       });
     }
   }
@@ -402,6 +412,31 @@
         slider.trigger('prev.owl.carousel');
       });
     }
+  }
+
+  function additionalContent() {
+    jQuery('[data-content-btn-id]').on('click', function (e) {
+      e.preventDefault();
+      var id = jQuery(this).data('content-btn-id');
+      jQuery(this).toggleClass('active');
+      jQuery('[data-content-id=' + id + ']').toggleClass('active');
+    });
+  }
+
+  function advocacyTabs() {
+    jQuery('.tab-name').on('click', function () {
+      var tabName = jQuery(this).data('tab-name');
+      console.log(tabName);
+      if (jQuery(this).hasClass('active')) {
+        return;
+      }
+
+      jQuery('.tab-name').removeClass('active');
+      jQuery(this).addClass('active');
+
+      jQuery('.tab-content').removeClass('active');
+      jQuery('[data-tab-content=' + tabName + ']').addClass('active');
+    });
   }
 
 })(jQuery)

@@ -323,6 +323,33 @@
                             "placeholder": "",
                             "new_lines": "",
                             "parent_repeater": "field_664af9b823338"
+                        },
+                        {
+                            "key": "field_66ab822bd79af",
+                            "label": "Color",
+                            "name": "color",
+                            "aria-label": "",
+                            "type": "radio",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "blue": "Blue",
+                                "green": "Green",
+                                "purple": "Purple"
+                            },
+                            "default_value": "",
+                            "return_format": "value",
+                            "allow_null": 0,
+                            "other_choice": 0,
+                            "layout": "vertical",
+                            "save_other_choice": 0,
+                            "parent_repeater": "field_664af9b823338"
                         }
                     ]
                 }
@@ -372,5 +399,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1716196073
+    "modified": 1722516145
 }

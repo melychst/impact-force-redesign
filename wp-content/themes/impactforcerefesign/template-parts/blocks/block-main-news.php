@@ -1,3 +1,10 @@
+<?php
+    $args = array(
+        'post_type' => 'post',
+        'posts_per_page' => 5
+    );
+    $the_query = new WP_Query($args);
+?>
 <section class="news">
     <div class="container">
         <div class="top-row">
@@ -6,7 +13,14 @@
                     <div class="section-title"><?php echo get_field('title'); ?></div>
                 </div>
                 <div class="column right-column">
-                    <div class="sub-title"><?php echo get_field('subtitle'); ?></div>
+                    <div class="sub-title">
+                        <span><?php echo get_field('subtitle'); ?></span> 
+                        <a href="/news">
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 11.4611H9.72021L0 1.81347L1.81347 0L11.4611 9.72021V0H14V11.4611V14H11.4611H0V11.4611Z" fill="#003548"/>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -15,36 +29,36 @@
                 <div id="news-slider" class="news-slider owl-carousel">
                     <?php
                         $last_news = get_field('last_news');
-                        if( !empty($last_news) ):
-                            foreach ($last_news as $key => $news):
-                                if( isset($news['post_item']) ):
-                                    $post_id = $news['post_item']->ID;
-                                    $post_link = get_the_permalink($post_id);
+                        if( $the_query->have_posts() ): 
+                            while( $the_query->have_posts() ):
+                                $post = $the_query->the_post();
+                                $post_id = $post->ID;
+                                $post_link = get_the_permalink($post_id);
                     ?>
-                                    <div class="slider-item">
-                                        <div class="image-wrap">
-                                            <img src="<?php echo get_the_post_thumbnail_url($post_id); ?>" alt="">
+                                <div class="slider-item">
+                                    <div class="image-wrap">
+                                        <img src="<?php echo get_the_post_thumbnail_url($post_id); ?>" alt="">
+                                    </div>
+                                    <div class="content-wrap">
+                                        <div class="date">/<?php echo get_the_date(); ?></div>
+                                        <div class="title">
+                                            <a href="<?php echo $post_link ?>"><?php echo get_the_title($post_id); ?></a>
                                         </div>
-                                        <div class="content-wrap">
-                                            <div class="date">/<?php echo get_the_date(); ?></div>
-                                            <div class="title">
-                                                <a href="<?php echo $post_link ?>"><?php echo get_the_title($post_id); ?></a>
-                                            </div>
-                                            <div class="description"><?php echo get_the_excerpt($post_id); ?></div>
-                                            <div class="read-more">
-                                                <a href="<?php echo $post_link ?>">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
-                                                    <path d="M0.925598 9.681H8.53519L0.925598 2.1282L2.3453 0.708496L9.8981 8.31809V0.708496H11.8857V9.681V11.6686H9.8981H0.925598V9.681Z" fill="#003548"/>
-                                                    </svg>
-                                                </a>
-                                            </div>
+                                        <div class="description"><?php echo get_the_excerpt($post_id); ?></div>
+                                        <div class="read-more">
+                                            <a href="<?php echo $post_link ?>">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                                                <path d="M0.925598 9.681H8.53519L0.925598 2.1282L2.3453 0.708496L9.8981 8.31809V0.708496H11.8857V9.681V11.6686H9.8981H0.925598V9.681Z" fill="#003548"/>
+                                                </svg>
+                                            </a>
                                         </div>
-                                    </div>                    
-                    <?php       endif;
-                            endforeach;
-                    ?>
+                                    </div>
+                                </div> 
+
                     <?php
-                        endif;
+                            endwhile;
+                            wp_reset_postdata();
+                        endif;    
                     ?>
                 </div>
                 <div id="news-slider-navigation"  class="slider-navigation">
@@ -62,16 +76,16 @@
                     </div>
                 </div>
             </div>
-            <?php
-                $args = array(
-                    'post_type' => 'post',
-                    'posts_per_page' => 5
-                );
-                $the_query = new WP_Query($args);
-            ?>
             <div class="column right-column">
-                <div class="sub-title"><?php echo get_field('subtitle'); ?></div>
-                <div class="last-news">
+                <div class="sub-title">
+                    <span><?php echo get_field('subtitle'); ?></span>
+                    <a href="/news">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 11.4611H9.72021L0 1.81347L1.81347 0L11.4611 9.72021V0H14V11.4611V14H11.4611H0V11.4611Z" fill="#003548"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="last-news"> 
                     <?php 
                         if( $the_query->have_posts() ): 
                             while( $the_query->have_posts() ):

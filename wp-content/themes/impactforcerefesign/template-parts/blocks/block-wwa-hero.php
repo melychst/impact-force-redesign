@@ -11,6 +11,11 @@
                 <?php echo get_field('subtitle'); ?>
             </div>
         </div>
+        <div class="img-wrap mobile-image">
+            <svg width="12" height="181" viewBox="0 0 12 181" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.69387 180C6.93877 178.77 7.99999 175.736 12 175.818L12 174.424C9.30612 174.342 7.67346 175.49 6.69387 176.802L6.69388 -2.31938e-07L5.22449 -2.96167e-07L5.22449 176.802C4.24489 175.572 2.69388 174.424 1.50849e-09 174.506L-5.94284e-08 175.9C3.91837 175.818 4.89796 178.852 5.22449 180.082L6.69387 180Z" fill="white"/>
+            </svg>
+        </div>        
     </div>
     <?php 
         $image = get_field('image');
@@ -22,4 +27,5 @@
     <?php
         endif;
     ?>
+
 </section>

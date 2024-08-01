@@ -301,16 +301,19 @@ body {
     }
     .mobile-navigation {
         position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0px;
-        right: -100%;
+        // width: 100%;
+        // height: 100%;
+        top: 50px;
+        right: 35px;
         background-color: #fff;
         z-index: 10;
-        padding-top: 60px;
+        padding-right: 35px;
+        opacity: 0;
+        visibility: hidden;
         transition: 0.3s;
         &.active {
-            right: 0px;
+            opacity: 1;
+            visibility: visible;
             transition: 0.3s;
         }
         ul {
@@ -319,7 +322,34 @@ body {
             padding-left: 21px;
             li {
                 list-style: none;
-                margin-bottom: 5px;
+                margin-bottom: -2px;
+                line-height: 18px;
+                &.purpure-link {
+                    a {
+                        color: $purple-color;
+                    }
+                }
+                &.icon-link {
+                    a {
+                        padding-right: 34px;
+                        position: relative;
+                        &::after {
+                            @include after-content(22px, 22px);
+                            position: absolute;
+                            right: 12px;
+                            top: -2px;
+                            background-color: $purple-color;
+                            background-image: url(../images/icon-square-arrow.svg);
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            border-radius: 50%;
+                            @include media($lg){
+                                @include after-content(12px, 12px);
+                                background-size: 6px;
+                            }
+                        }                        
+                    }
+                }
                 a {
                     display: inline-flex;
                     align-items: center;
@@ -336,8 +366,8 @@ body {
         }
         .burger-close {
             position: absolute;
-            right: 15px;
-            top: 56px;
+            right: 14px;
+            top: 7px;
         }
     }
     .main-wrap {
@@ -2671,6 +2701,8 @@ body {
                         padding-bottom: 1px;
                         border-bottom: 1px solid $main-color;
                         position: relative;
+                        display: flex;
+                        justify-content: space-between;
                         @include media($lg){
                             font-size: 9.592px; 
                             line-height: 12px;    
@@ -2678,18 +2710,29 @@ body {
                         @include media($md){
                             display: none;
                         }
+                        a {
+                            svg {
+                                @include media($lg){
+                                    // @include after-content(8px, 8px);
+                                    // background-size: cover;
+                                    width: 8px;
+                                    height: 8px;
+                                }
+                            }
+                        }
                         &::after {
-                            @include after-content(14px, 14px);
-                            background-image: url(../images/icon-square-arrow.svg);
-                            background-size: 14px 14px;
-                            background-position: center;
-                            background-repeat: no-repeat;
-                            right: 0px;
-                            top: 2px;
-                            transform: rotate(90deg);
+                            // @include after-content(14px, 14px);
+                            // background-image: url(../images/icon-square-arrow.svg);
+                            // background-size: 14px 14px;
+                            // background-position: center;
+                            // background-repeat: no-repeat;
+                            // right: 0px;
+                            // top: 2px;
+                            // transform: rotate(90deg);
+
                             @include media($lg){
-                                @include after-content(8px, 8px);
-                                background-size: cover;
+                                // @include after-content(8px, 8px);
+                                // background-size: cover;
                             }
                         }
                     }
@@ -2739,28 +2782,39 @@ body {
                             padding-bottom: 1px;
                             border-bottom: 1px solid $main-color;
                             position: relative;
+                            justify-content: space-between;
                             @include media($lg){
                                 font-size: 9.592px; 
                                 line-height: 12px;    
                             }
                             @include media($md){
-                                display: block;
+                                display: flex;
                                 margin-top: 35px;
                                 margin-bottom: 18px;
                             }
-                            &::after {
-                                @include after-content(14px, 14px);
-                                background-image: url(../images/icon-square-arrow.svg);
-                                background-size: 14px 14px;
-                                background-position: center;
-                                background-repeat: no-repeat;
-                                right: 0px;
-                                top: 2px;
-                                transform: rotate(90deg);
-                                @include media($lg){
-                                    @include after-content(8px, 8px);
-                                    background-size: cover;
+                            a {
+                                svg {
+                                    @include media($lg){
+                                        // @include after-content(8px, 8px);
+                                        // background-size: cover;
+                                        width: 8px;
+                                        height: 8px;
+                                    }
                                 }
+                            }
+                            &::after {
+                                // @include after-content(14px, 14px);
+                                // background-image: url(../images/icon-square-arrow.svg);
+                                // background-size: 14px 14px;
+                                // background-position: center;
+                                // background-repeat: no-repeat;
+                                // right: 0px;
+                                // top: 2px;
+                                // transform: rotate(90deg);
+                                // @include media($lg){
+                                //     @include after-content(8px, 8px);
+                                //     background-size: cover;
+                                // }
                             }
                         } 
                    }
@@ -3266,6 +3320,18 @@ body {
                         @include image-fit;
                     }
                 }
+                .img-wrap {
+                    position: absolute;
+                    display: none;
+                    bottom: -282px;
+                    left: 15px;
+                    @include media($md){
+                       display: block;
+                    }
+                    @include media($sm){
+                       bottom: -222px;
+                    }
+                }
             }
             &.WWA-founded {
                 padding: 53px 0px 25px;
@@ -3690,6 +3756,9 @@ body {
                 }
                 .content-link {
                     display: inline-block;
+                    @include media($sm){
+                        display: block;
+                    }
                     a {
                         display: inline-flex;
                         align-items: center;
@@ -3722,7 +3791,9 @@ body {
                             padding-left: 8px;
                             padding-right: 20px;
                             height: 20px;
-
+                        }
+                        @include media($sm) {
+                            width: 100%;
                         }
                         &::after {
                             @include after-content(48px, 48px);
@@ -5156,9 +5227,13 @@ body {
                     min-height: 670px;
                     padding-top: 62px;
                     position: relative;
+                    padding-bottom: 120px;
                     @include media($lg){
                         min-height: 356px;
                         padding-top: 30px;
+                    }
+                    @include media($md){
+                        padding-bottom: 180px;
                     }
                     @include media($sm){
                         display: flex;
@@ -5242,6 +5317,7 @@ body {
                                 background-position: center;
                                 right: 0px;
                                 top: 0px;
+                                transition: 0.3s;
                                 @include media($lg){
                                     width: 9px;
                                     height: 9px;
@@ -5270,6 +5346,14 @@ body {
                                 }
                             }
                         }
+                        &.active {
+                            a {
+                                &::before {
+                                    transform: rotate(-180deg);
+                                    transition: 0.3s;
+                                }                                    
+                            }
+                        }
                     }
                 }
                 .hero-title {
@@ -5293,11 +5377,36 @@ body {
                         order: 1;
                         position: static;
                         -webkit-text-stroke: 2px;
-                        font-size: 50px;
+                        font-size: 48px;
                         letter-spacing: 3.5px;
                         text-align: center;
                         margin-bottom: 30px;
                         margin-bottom: 44px;
+                    }
+                }
+                .img-wrap {
+                    position: absolute;
+                    display: none;
+                    @include media($sm){
+                       display: block;
+                    }                   
+                    &.left-image {
+                        bottom: 15px;
+                        left: 15px;
+                    }
+                    &.right-image {
+                        bottom: 20px;
+                        right: 15px;
+                    }
+                }
+                .additional-content {
+                    margin-top: 35px;
+                    display: none;
+                    @include media($md){
+                        margin-top: 5px;
+                    }
+                    &.active {
+                        display: block;
                     }
                 }
             }
@@ -5769,6 +5878,61 @@ body {
                         @include media($md){
                             justify-content: space-between;
                         }
+                        &[data-color-nav=blue] {
+                            .nav-slide {
+                                border: 1px solid $blue-color;
+                                &:hover {
+                                    background: $blue-color;
+                                    color: #fff;
+                                    transition: 0.3s;
+                                    svg {
+                                        path {
+                                            fill: #fff;
+                                        }
+                                    }
+                                } 
+                            }                                                 
+                        }
+                        &[data-color-nav=green] {
+                            .nav-slide {
+                                border: 1px solid $green-color;
+                                svg {
+                                    path {
+                                        fill: $green-color;
+                                    }
+                                }
+                                &:hover {
+                                    background: $green-color;
+                                    color: #fff;
+                                    transition: 0.3s;
+                                    svg {
+                                        path {
+                                            fill: #fff;
+                                        }
+                                    }
+                                }                                    
+                            }
+                        }
+                        &[data-color-nav=purple] {
+                            .nav-slide {
+                                border: 1px solid $purple-color;
+                                svg {
+                                    path {
+                                        fill: $purple-color;
+                                    }
+                                }
+                                &:hover {
+                                    background: $purple-color;
+                                    color: #fff;
+                                    transition: 0.3s;
+                                    svg {
+                                        path {
+                                            fill: #fff;
+                                        }
+                                    }
+                                }
+                            }
+                        }   
                         .nav-slide {
                             width: 148px;
                             height: 26px; 
@@ -5989,8 +6153,128 @@ body {
                     @include media($sm){
                         padding-top: 26px;
                         padding-bottom: 20px;
-                    }             
+                    }       
+                    .title-columns {
+                        position: relative;
+                        margin-bottom: 55px;
+                        display: flex;
+                        justify-content: space-between;
+                        width: 100%;
+                        @include media($lg){
+                            padding-left: 45px;
+                            margin-bottom: 31px;
+                        }
+                        @include media($lg){
+                            padding-left: 0px;
+                        }
+                        @include media($sm){
+                            margin-bottom: 26px;
+                        }
+                        .sub-colum {
+                            position: relative;
+                            width: 50%;
+                            padding-left: 73px;
+                            @include media($sm){
+                                position: relative;
+                                width: 130px;
+                                padding-left: 0px;
+                            }                                
+                        }                            
+                        .number {
+                            font-family: "Akkurat Mono LL";
+                            font-size: 20px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: normal;
+                            letter-spacing: 2px;
+                            text-transform: uppercase;
+                            color: $blue-color;
+                            position: absolute;
+                            top: 9px;
+                            left: 0px;
+                            @include media($lg){
+                                font-size: 11.474px;
+                                line-height: 100%;
+                                letter-spacing: 1.147px;
+                                top: 7px;
+                            }
+                            @include media($sm){
+                                top: -17px;
+                                font-size: 8px;
+                            }
+                        }
+                        .name {
+                            -webkit-text-stroke: 1px;
+                            font-family: "Akkurat Mono LL";
+                            font-size: 35px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 35px;
+                            letter-spacing: 2.1px;
+                            text-transform: uppercase;
+                            display: inline-flex;
+                            align-items: center;
+                            height: 51px;
+                            border-radius: 71px;
+                            padding-left: 38px;
+                            padding-top: 10px;
+                            padding-right: 42px;
+                            border: $main-color 2px solid;
+                            cursor: pointer;
+                            transition: 0.2s;
+                            &.active {
+                                border: $blue-color 2px solid;
+                                color: $blue-color;
+                            }
+                            &:hover {
+                                border: $blue-color 2px solid;
+                                color: $blue-color;
+                                transition: 0.2s;
+                            }
+                            @include media($xl){
+                                font-size: 24px;
+                                line-height: 110%;
+                            }
+                            @include media($lg){
+                                font-size: 20.08px;
+                                letter-spacing: 1.205px;
+                                padding-top: 7px;
+                                padding-right: 24px;
+                                border-radius: 40.734px;
+                                height: 29.26px;
+                                padding-left: 20px;
+                            }   
+                            @include media($md){
+                                font-size: 10px;
+                                line-height: 100%;
+                                letter-spacing: 0.6px;
+                                padding: 6px 10px 3px 10px;
+                                height: auto;
+                            }  
+                            @include media($sm) {
+                                border-radius: 31.748px;
+                                border: 0.894px solid #00B0EB;
+                                padding: 6px 6px 3px 8px;
+                                width: 100%;
+                            }                           
+                        }
+                        .display-mobile {
+                            display: none;
+                            @include media($sm){
+                                display: block;
+                            }
+                        }
+                        &.display-desktop {
+                            @include media($sm){
+                                display: none;
+                            }
+                        }
+                    }      
                     .columns {
+                        display: none;
+                        &.active {
+                            display: flex;
+                        }
                         @include media($xl){
                             justify-content: space-between;
                         }
@@ -6019,112 +6303,6 @@ body {
                             @include media($sm){
                                 width: 100%;
                                 padding-bottom: 0px;
-                            }
-                        }
-                        .sub-columns {
-                            @include media($sm){
-                                display: flex;
-                                justify-content: space-between;
-                            }
-                            .sub-colum {
-                                @include media($sm){
-                                    position: relative;
-                                    width: 130px;
-                                }                                
-                            }
-                        }
-                        .title-column {
-                            position: relative;
-                            padding-left: 73px;
-                            margin-bottom: 55px;
-                            @include media($lg){
-                                padding-left: 45px;
-                                margin-bottom: 31px;
-                            }
-                            @include media($lg){
-                                padding-left: 0px;
-                            }
-                            @include media($sm){
-                                margin-bottom: 26px;
-                            }
-                            .number {
-                                font-family: "Akkurat Mono LL";
-                                font-size: 20px;
-                                font-style: normal;
-                                font-weight: 400;
-                                line-height: normal;
-                                letter-spacing: 2px;
-                                text-transform: uppercase;
-                                color: $blue-color;
-                                position: absolute;
-                                top: 9px;
-                                left: 0px;
-                                @include media($lg){
-                                    font-size: 11.474px;
-                                    line-height: 100%;
-                                    letter-spacing: 1.147px;
-                                    top: 7px;
-                                }
-                                @include media($sm){
-                                    top: -17px;
-                                    font-size: 8px;
-                                }
-                            }
-                            .name {
-                                -webkit-text-stroke: 1px;
-                                font-family: "Akkurat Mono LL";
-                                font-size: 35px;
-                                font-style: normal;
-                                font-weight: 400;
-                                line-height: 35px;
-                                letter-spacing: 2.1px;
-                                text-transform: uppercase;
-                                display: inline-flex;
-                                align-items: center;
-                                height: 51px;
-                                border-radius: 71px;
-                                padding-left: 38px;
-                                padding-top: 10px;
-                                padding-right: 42px;
-                                border: $blue-color 2px solid;
-                                color: $blue-color;
-                                @include media($xl){
-                                    font-size: 24px;
-                                    line-height: 110%;
-                                }
-                                @include media($lg){
-                                    font-size: 20.08px;
-                                    letter-spacing: 1.205px;
-                                    padding-top: 7px;
-                                    padding-right: 24px;
-                                    border-radius: 40.734px;
-                                    height: 29.26px;
-                                    padding-left: 20px;
-                                }   
-                                @include media($md){
-                                    font-size: 10px;
-                                    line-height: 100%;
-                                    letter-spacing: 0.6px;
-                                    padding: 6px 10px 3px 10px;
-                                    height: auto;
-                                }  
-                                @include media($sm) {
-                                    border-radius: 31.748px;
-                                    border: 0.894px solid #00B0EB;
-                                    padding: 6px 8px 3px 10px;
-                                    width: 100%;
-                                }                           
-                            }
-                            .display-mobile {
-                                display: none;
-                                @include media($sm){
-                                    display: block;
-                                }
-                            }
-                            &.display-desktop {
-                                @include media($sm){
-                                    display: none;
-                                }
                             }
                         }
                         .list-wrap {
@@ -6195,6 +6373,93 @@ body {
                             }
                             img {
                                 max-width: 100%;
+                            }
+                        }
+                        &.columns-networks {
+                            .column-left {
+                                width: 604px;
+                                margin-right: 138px;
+                                @include media($md){
+                                    width: 100%;
+                                    margin-right: 0px;
+                                }
+                                .content-wrap {
+                                    .content {
+                                        margin-bottom: 47px;
+                                        @include media($md){
+                                            margin-bottom: 18px;
+                                        }                                        
+                                    }
+                                    p {
+                                        font-size: 27px;
+                                        line-height: 27px;
+                                        color: $blue-color;
+                                        @include media($md){
+                                            font-size: 13px;
+                                            line-height: 12px;
+                                        }
+                                        @include media($md){
+                                            font-size: 11px;
+                                            line-height: 11px;
+                                        }
+                                    }
+                                }
+                                .image-wrap {
+                                     @include media($md){
+                                        display: none;
+                                     }
+                                    img {
+                                        max-width: 100%;
+                                    }
+                                }
+                            }
+                            .column-right {
+                                width: 425px;
+                                margin-left: 0px;
+                                padding-bottom: 0px;
+                                @include media($md){
+                                    width: 100%;
+                                }
+                                .list-item {
+                                    margin-bottom: 25px;
+                                    padding-left: 58px;
+                                    position: relative;
+                                    @include media($md){
+                                        padding-left: 25px;
+                                    }
+                                    &:last-child {
+                                        margin-bottom: 0px;
+                                    }
+                                    .content {
+                                        font-size: 20px;
+                                        line-height: 20px;
+                                        padding-left: 0px;
+                                        @include media($md){
+                                            font-size: 12px;
+                                            line-height: 12px;
+                                        }
+                                        @include media($sm){
+                                            font-size: 10px;
+                                            line-height: 12px;
+                                        }
+                                    }
+                                    .icon-img {
+                                        position: absolute;
+                                        top: 0px;
+                                        left: 0px;
+                                        width: 26px;
+                                        height: 26px;
+                                        @include media($sm){
+                                            width: 11px;
+                                            height: 11px;
+                                            top: -4px;
+                                        }
+                                        svg {
+                                            width: 100%;
+                                            height: 100%;
+                                        }
+                                    }
+                                }
                             }
                         }
                     }
@@ -6357,7 +6622,7 @@ body {
                                 width: 100%;
                                 min-height: 200px;
                                 flex-shrink: 0;
-                                background-color: #5D7989;
+                                // background-color: #5D7989;
                                 margin-top: 15px;
                                 @include media($md){
                                     display: block;
@@ -6399,7 +6664,7 @@ body {
                     .image-wrap {
                         width: 100%;
                         height: 381px;
-                        background-color: #5D7989;
+                        // background-color: #5D7989;
                         @include media($xl){
                             height: 204px;
                         }
@@ -6702,7 +6967,7 @@ body {
                         justify-content: space-between;
                         .list-item {
                             margin-bottom: 32px;
-                            width: 498px;
+                            width: 580px;
                             @include media($xl){
                                 width: 45%;
                             }
@@ -6738,6 +7003,9 @@ body {
                                 @include media($sm){
                                     font-size: 15px;
                                     letter-spacing: 0.75px;
+                                }
+                                &:hover {
+                                    color: $purple-color;
                                 }
                                 &::before {
                                     content: '';
@@ -8253,6 +8521,9 @@ body {
                         &.facebook-link {
                             a {
                                 padding-right: 5px;
+                                @include media($md){
+                                    padding-right: 2px;
+                                }
                             }
                         }
                     }
