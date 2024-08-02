@@ -2350,6 +2350,9 @@ body {
                   font-size: 9px;
                   line-height: 10px;
                   margin-bottom: 0px; } }
+              @media only screen and (max-width: 479px) {
+                body main section.projects .projects-slider .slide-item .content .title {
+                  font-size: 8px; } }
             body main section.projects .projects-slider .slide-item .content .meta {
               margin-bottom: 15px; }
               @media only screen and (max-width: 991px) {
