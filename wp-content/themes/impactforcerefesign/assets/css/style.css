@@ -2328,6 +2328,9 @@ body {
                 padding: 32px 10px 2px 5px;
                 border-radius: 3.235px;
                 height: 67px; } }
+            @media only screen and (max-width: 479px) {
+              body main section.projects .projects-slider .slide-item .content {
+                padding: 32px 5px 2px 5px; } }
             body main section.projects .projects-slider .slide-item .content .title {
               font-family: "Akkurat LL Cyrillic Bold";
               font-size: 23.049px;

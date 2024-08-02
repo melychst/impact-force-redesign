@@ -2179,6 +2179,9 @@ body {
                                 border-radius: 3.235px;
                                 height: 67px;
                             }
+                            @include media($sm) {
+                                padding: 32px 5px 2px 5px;
+                            }
                             .title {
                                 font-family: "Akkurat LL Cyrillic Bold";
                                 font-size: 23.049px;
@@ -2197,6 +2200,9 @@ body {
                                     font-size: 9px;
                                     line-height: 10px;
                                     margin-bottom: 0px;
+                                }
+                                @include media($sm) {
+                                    font-size: 8px;
                                 }
                             }
                             .meta {
