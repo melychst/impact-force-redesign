@@ -1639,9 +1639,6 @@ body {
                             @include media($md) {
                                 margin-right: 12px;
                             }
-                            &:nth-child(6n) {
-                                //margin-right: 0px;
-                            }
                             a {
                                 height: 21px;
                                 display: inline-flex;
@@ -1810,6 +1807,9 @@ body {
                         border: 1px solid $blue-color;
                         margin-top: 12px;
                     }
+                    @include media($sm) {
+                        padding: 27px 10px 11px 7px;
+                    }
                     &::before {
                         @include before-content(136px, 136px);
                         border-radius: 50%;
@@ -1907,6 +1907,9 @@ body {
                                 line-height: 10px;
                                 padding-left: 17px;
                                 margin-bottom: 0px;
+                            }
+                            @include media($sm) {
+                                width: 79px;
                             }
                             &::before {
                                 @include before-content(35px, 35px);

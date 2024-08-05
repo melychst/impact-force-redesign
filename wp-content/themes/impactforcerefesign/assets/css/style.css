@@ -1909,6 +1909,9 @@ body {
             border-radius: 6.384px;
             border: 1px solid #00B0EB;
             margin-top: 12px; } }
+        @media only screen and (max-width: 479px) {
+          body main section.goals .our-goals {
+            padding: 27px 10px 11px 7px; } }
         body main section.goals .our-goals::before {
           content: '';
           width: 136px;
@@ -2033,6 +2036,9 @@ body {
                 line-height: 10px;
                 padding-left: 17px;
                 margin-bottom: 0px; } }
+            @media only screen and (max-width: 479px) {
+              body main section.goals .our-goals .list-wrap .list-item {
+                width: 79px; } }
             body main section.goals .our-goals .list-wrap .list-item::before {
               content: '';
               width: 35px;
