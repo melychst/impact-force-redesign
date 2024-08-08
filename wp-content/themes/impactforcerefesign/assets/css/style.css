@@ -2791,7 +2791,7 @@ body {
           body main section.partners .logos-wrap .display-flex:last-child {
             margin-bottom: 0px; }
         body main section.partners .logos-wrap .logo-item {
-          max-height: 70px;
+          height: 70px;
           width: auto;
           margin-right: 32px; }
           @media only screen and (max-width: 767px) {
