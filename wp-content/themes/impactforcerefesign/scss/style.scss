@@ -5400,17 +5400,39 @@ body {
                 }
                 .img-wrap {
                     position: absolute;
-                    display: none;
                     @include media($md){
                        display: block;
                     }                   
                     &.left-image {
                         bottom: 15px;
                         left: 15px;
+                        display: none;
+                        @include media($md){
+                            display: block;
+                        }
                     }
                     &.right-image {
-                        bottom: 20px;
-                        right: 15px;
+                        top: 52px;
+                        left: 0px;
+                        @include media($xxl){
+                            svg {
+                                width: 350px;
+                                height: 200px;
+                            }
+                        }
+                        @include media($xl){
+                            svg {
+                                width: 211px;
+                                height: 124px;
+                            }
+                        }
+                        @include media($md){
+                            top: inherit;
+                            left: inherit;
+                            bottom: 20px;
+                            right: 15px;  
+
+                        }
                     }
                 }
                 .additional-content {

@@ -5524,17 +5524,34 @@ body {
             margin-bottom: 30px;
             margin-bottom: 44px; } }
       body main section.OW-hero .img-wrap {
-        position: absolute;
-        display: none; }
+        position: absolute; }
         @media only screen and (max-width: 767px) {
           body main section.OW-hero .img-wrap {
             display: block; } }
         body main section.OW-hero .img-wrap.left-image {
           bottom: 15px;
-          left: 15px; }
+          left: 15px;
+          display: none; }
+          @media only screen and (max-width: 767px) {
+            body main section.OW-hero .img-wrap.left-image {
+              display: block; } }
         body main section.OW-hero .img-wrap.right-image {
-          bottom: 20px;
-          right: 15px; }
+          top: 52px;
+          left: 0px; }
+          @media only screen and (max-width: 1400px) {
+            body main section.OW-hero .img-wrap.right-image svg {
+              width: 350px;
+              height: 200px; } }
+          @media only screen and (max-width: 1199px) {
+            body main section.OW-hero .img-wrap.right-image svg {
+              width: 211px;
+              height: 124px; } }
+          @media only screen and (max-width: 767px) {
+            body main section.OW-hero .img-wrap.right-image {
+              top: inherit;
+              left: inherit;
+              bottom: 20px;
+              right: 15px; } }
       body main section.OW-hero .additional-content {
         margin-top: 35px;
         display: none; }
