@@ -3803,6 +3803,10 @@ body {
                         }
                         @include media($sm) {
                             width: 100%;
+                            padding-top: 4px;
+                            padding-left: 8px;
+                            letter-spacing: -0.3px;
+                            font-size: 6px;
                         }
                         &::after {
                             @include after-content(48px, 48px);
@@ -5242,9 +5246,10 @@ body {
                         padding-top: 30px;
                     }
                     @include media($md){
-                        padding-bottom: 180px;
+                        
                     }
-                    @include media($sm){
+                    @include media($md){
+                        padding-bottom: 180px;
                         display: flex;
                         flex-direction: column;
                         padding-top: 13px;
@@ -5264,7 +5269,7 @@ body {
                         line-height: 16px;
                         width: 414px;
                     }
-                    @include media($sm){
+                    @include media($md){
                         order: 2;
                         width: 100%;
                         font-size: 12px;
@@ -5382,7 +5387,7 @@ body {
                         font-size: 81.612px;
                         line-height: 95%;
                     }
-                    @include media($sm){
+                    @include media($md){
                         order: 1;
                         position: static;
                         -webkit-text-stroke: 2px;
@@ -5396,7 +5401,7 @@ body {
                 .img-wrap {
                     position: absolute;
                     display: none;
-                    @include media($sm){
+                    @include media($md){
                        display: block;
                     }                   
                     &.left-image {

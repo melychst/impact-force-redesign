@@ -3927,7 +3927,11 @@ body {
               height: 20px; } }
           @media only screen and (max-width: 479px) {
             body main section.WWA-focus-on .content-link a {
-              width: 100%; } }
+              width: 100%;
+              padding-top: 4px;
+              padding-left: 8px;
+              letter-spacing: -0.3px;
+              font-size: 6px; } }
           body main section.WWA-focus-on .content-link a::after {
             content: '';
             width: 48px;
@@ -5364,9 +5368,7 @@ body {
             padding-top: 30px; } }
         @media only screen and (max-width: 767px) {
           body main section.OW-hero .container {
-            padding-bottom: 180px; } }
-        @media only screen and (max-width: 479px) {
-          body main section.OW-hero .container {
+            padding-bottom: 180px;
             display: -webkit-box;
             display: -ms-flexbox;
             display: flex;
@@ -5389,7 +5391,7 @@ body {
             font-size: 14px;
             line-height: 16px;
             width: 414px; } }
-        @media only screen and (max-width: 479px) {
+        @media only screen and (max-width: 767px) {
           body main section.OW-hero .hero-content {
             -webkit-box-ordinal-group: 3;
                 -ms-flex-order: 2;
@@ -5509,7 +5511,7 @@ body {
           body main section.OW-hero .hero-title {
             font-size: 81.612px;
             line-height: 95%; } }
-        @media only screen and (max-width: 479px) {
+        @media only screen and (max-width: 767px) {
           body main section.OW-hero .hero-title {
             -webkit-box-ordinal-group: 2;
                 -ms-flex-order: 1;
@@ -5524,7 +5526,7 @@ body {
       body main section.OW-hero .img-wrap {
         position: absolute;
         display: none; }
-        @media only screen and (max-width: 479px) {
+        @media only screen and (max-width: 767px) {
           body main section.OW-hero .img-wrap {
             display: block; } }
         body main section.OW-hero .img-wrap.left-image {
