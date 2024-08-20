@@ -1,8 +1,8 @@
 <section class="projects">
     <div class="container">
-        <div id="projects-slider" class="projects-slider owl-carousel" data-slide-count="2" data-current-slide="1">
+        <?php $projects = get_field('projects'); ?>
+        <div id="projects-slider" class="projects-slider owl-carousel" data-slide-count="<?php echo count($projects); ?>" data-current-slide="1" data-active-slide-count="0">
             <?php
-                $projects = get_field('projects');
                 if( !empty($projects) ):
                     $i = 0;
                     foreach( $projects as $key => $project ):
