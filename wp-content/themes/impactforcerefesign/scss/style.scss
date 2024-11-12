@@ -4,7 +4,9 @@
 @include font-face('Akkurat LL Cyrillic Regular', '../fonts/Akkurat-Regular');
 @include font-face('Akkurat LL Cyrillic Light', '../fonts/Akkurat-Light');
 @include font-face('Akkurat LL Cyrillic Bold', '../fonts/Akkurat-Bold');
-@include font-face('Akkurat Mono LL', '../fonts/AkkuratMono-Regular');
+@include font-face('IBMPlexSans-Regular', '../fonts/AkkuratMono-Regular');
+
+@include font-face('IBMPlexSans-Regular', '../fonts/IBMPlexSans-Regular');
 
 body {
     color: #003548;
@@ -233,7 +235,7 @@ body {
             a {
                 display: inline-block;
                 color: $main-color;
-                font-family: "Akkurat Mono LL";
+                font-family: "IBMPlexSans-Regular";
                 font-size: 18px;
                 font-style: normal;
                 font-weight: 400;
@@ -477,7 +479,7 @@ body {
                             }
                         }
                         .sub-title {
-                            font-family: "Akkurat Mono LL";
+                            font-family: "IBMPlexSans-Regular";
                             font-size: 24px;
                             font-style: normal;
                             font-weight: 400;
@@ -554,7 +556,7 @@ body {
                     }
                     .sub-title {
                         width: 525px;
-                        font-family: "Akkurat Mono LL";
+                        font-family: "IBMPlexSans-Regular";
                         font-size: 32px;
                         font-style: normal;
                         font-weight: 400;
@@ -750,7 +752,7 @@ body {
                     .column {
                         position: relative;
                         .number {
-                            font-family: "Akkurat Mono LL";
+                            font-family: "IBMPlexSans-Regular";
                             font-size: 20px;
                             font-style: normal;
                             font-weight: 400;
@@ -1092,7 +1094,7 @@ body {
                         }
                     }
                     .title {
-                        font-family: "Akkurat Mono LL";
+                        font-family: "IBMPlexSans-Regular";
                         font-size: 43px;
                         font-style: normal;
                         font-weight: 400;
@@ -1449,7 +1451,7 @@ body {
                         }
                     }
                     .sub-title {
-                        font-family: "Akkurat Mono LL";
+                        font-family: "IBMPlexSans-Regular";
                         font-size: 35px;
                         font-style: normal;
                         font-weight: 400;
@@ -1532,7 +1534,7 @@ body {
                             }
                             .number {
                                 display: block;
-                                font-family: "Akkurat Mono LL";
+                                font-family: "IBMPlexSans-Regular";
                                 font-size: 16px;
                                 font-style: normal;
                                 font-weight: 400;
@@ -1718,7 +1720,7 @@ body {
                     }
                 }
                 .section-title {
-                    font-family: "Akkurat Mono LL";
+                    font-family: "IBMPlexSans-Regular";
                     font-size: 35px;
                     font-style: normal;
                     font-weight: 400;
@@ -2500,7 +2502,7 @@ body {
                         }
                     }
                     .pages {
-                        font-family: "Akkurat Mono LL";
+                        font-family: "IBMPlexSans-Regular";
                         font-size: 16px;
                         font-style: normal;
                         font-weight: 400;
@@ -2700,7 +2702,7 @@ body {
                         }
                     }
                     .sub-title {
-                        font-family: "Akkurat Mono LL";
+                        font-family: "IBMPlexSans-Regular";
                         font-size: 18px;
                         font-style: normal;
                         font-weight: 400;
@@ -2781,7 +2783,7 @@ body {
                         }
                         .sub-title {
                             display: none;
-                            font-family: "Akkurat Mono LL";
+                            font-family: "IBMPlexSans-Regular";
                             font-size: 18px;
                             font-style: normal;
                             font-weight: 400;
@@ -2899,7 +2901,7 @@ body {
                                 }
                                 .date {
                                     color: $blue-color;
-                                    font-family: "Akkurat Mono LL";
+                                    font-family: "IBMPlexSans-Regular";
                                     font-size: 18px;
                                     text-transform: uppercase;
                                     margin-bottom: 38px;
@@ -3137,7 +3139,7 @@ body {
                                 width: 105px;
                                 height: 19px;
                                 margin-bottom: 7px;
-                                font-family: "Akkurat Mono LL";
+                                font-family: "IBMPlexSans-Regular";
                                 font-size: 12px;
                                 font-style: normal;
                                 font-weight: 400;
@@ -3156,7 +3158,7 @@ body {
                                     line-height: 8px;
                                 }
                                 a {
-                                    font-family: "Akkurat Mono LL";
+                                    font-family: "IBMPlexSans-Regular";
                                     font-size: 13px;
                                     font-style: normal;
                                     font-weight: 400;
@@ -3224,7 +3226,7 @@ body {
                         }
                     }
                     .sub-title {
-                        font-family: "Akkurat Mono LL";
+                        font-family: "IBMPlexSans-Regular";
                         font-size: 32px;
                         line-height: 38px;
                         text-transform: uppercase;
@@ -3914,7 +3916,7 @@ body {
                         }                 
                     }
                     .title {
-                        font-family: "Akkurat Mono LL";
+                        font-family: "IBMPlexSans-Regular";
                         font-size: 32px;
                         font-style: normal;
                         font-weight: 400;
@@ -3995,7 +3997,7 @@ body {
                             }
                         }
                         .pages {
-                            font-family: "Akkurat Mono LL";
+                            font-family: "IBMPlexSans-Regular";
                             font-size: 16px;
                             font-style: normal;
                             font-weight: 400;
@@ -4188,7 +4190,7 @@ body {
                             }
                         }
                         .number {
-                            font-family: "Akkurat Mono LL";
+                            font-family: "IBMPlexSans-Regular";
                             font-size: 16.291px;
                             font-style: normal;
                             font-weight: 400;
@@ -5306,7 +5308,7 @@ body {
                             margin-top: 9px;
                         }
                         a {
-                            font-family: "Akkurat Mono LL";
+                            font-family: "IBMPlexSans-Regular";
                             font-size: 18px;
                             font-style: normal;
                             font-weight: 400;
@@ -5638,7 +5640,7 @@ body {
                             }
                         }
                         .number {
-                            font-family: "Akkurat Mono LL";
+                            font-family: "IBMPlexSans-Regular";
                             font-size: 16.291px;
                             font-style: normal;
                             font-weight: 400;
@@ -6217,7 +6219,7 @@ body {
                             }                                
                         }                            
                         .number {
-                            font-family: "Akkurat Mono LL";
+                            font-family: "IBMPlexSans-Regular";
                             font-size: 20px;
                             font-style: normal;
                             font-weight: 400;
@@ -6241,7 +6243,7 @@ body {
                         }
                         .name {
                             -webkit-text-stroke: 1px;
-                            font-family: "Akkurat Mono LL";
+                            font-family: "IBMPlexSans-Regular";
                             font-size: 35px;
                             font-style: normal;
                             font-weight: 400;
@@ -7310,7 +7312,7 @@ body {
                                     border-radius: 99px;
                                     background: $main-color;
                                     color: #FFF;
-                                    font-family: "Akkurat Mono LL";
+                                    font-family: "IBMPlexSans-Regular";
                                     font-size: 18px;
                                     font-style: normal;
                                     font-weight: 400;
@@ -7479,7 +7481,7 @@ body {
                             .head {
                                 width: 100%;
                                 .date {
-                                    font-family: "Akkurat Mono LL";
+                                    font-family: "IBMPlexSans-Regular";
                                     color: $blue-color;
                                     font-size: 14.144px;
                                     font-style: normal;
@@ -7574,7 +7576,7 @@ body {
                     justify-content: space-between;
                     bottom: 12px;
                     right: 15px;
-                    font-family: "Akkurat Mono LL";
+                    font-family: "IBMPlexSans-Regular";
                     font-size: 14.162px;
                     font-style: normal;
                     font-weight: 400;
@@ -7673,7 +7675,7 @@ body {
                             margin-bottom: 25px;
                             padding-left: 74px;
                             color: $main-color;
-                            font-family: "Akkurat Mono LL";
+                            font-family: "IBMPlexSans-Regular";
                             font-size: 18px;
                             font-style: normal;
                             font-weight: 400;
@@ -7698,7 +7700,7 @@ body {
                         input[type=submit]{
                             width: 100%;
                             color: $yellow-color;
-                            font-family: "Akkurat Mono LL";
+                            font-family: "IBMPlexSans-Regular";
                             font-size: 18px;
                             font-style: normal;
                             font-weight: 400;
@@ -7784,7 +7786,7 @@ body {
                         color: $main-color;
                         align-items: center;
                         justify-content: center;
-                        font-family: "Akkurat Mono LL";
+                        font-family: "IBMPlexSans-Regular";
                         font-size: 14.162px;
                         line-height: normal;
                         text-transform: uppercase;
@@ -7808,7 +7810,7 @@ body {
                     .date {
                         display: flex;
                         align-items: end;
-                        font-family: "Akkurat Mono LL";
+                        font-family: "IBMPlexSans-Regular";
                         font-size: 18px;
                         font-style: normal;
                         font-weight: 400;
@@ -8146,7 +8148,7 @@ body {
                                 padding-top: 25px;
                             }
                             h3 {
-                                font-family: "Akkurat Mono LL";
+                                font-family: "IBMPlexSans-Regular";
                                 font-size: 35px;
                                 font-style: normal;
                                 font-weight: 400;
@@ -8186,7 +8188,7 @@ body {
                             }
                         }
                         .column-title {
-                            font-family: "Akkurat Mono LL";
+                            font-family: "IBMPlexSans-Regular";
                             font-size: 35px;
                             font-style: normal;
                             font-weight: 400;
@@ -8427,7 +8429,7 @@ body {
                         }
                         a {
                             color: $main-color;
-                            font-family: "Akkurat Mono LL";
+                            font-family: "IBMPlexSans-Regular";
                             font-size: 18px;
                             font-style: normal;
                             font-weight: 400;

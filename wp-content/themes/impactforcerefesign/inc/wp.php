@@ -51,3 +51,9 @@ function add_file_types_to_uploads($mimes){
 	return $mimes;
 }
 add_filter('upload_mimes', 'add_file_types_to_uploads');
+
+add_action( 'after_setup_theme', 'load_theme' );
+
+function load_theme(){
+	load_theme_textdomain( 'theimpactforce', get_template_directory() . '/languages' );
+}

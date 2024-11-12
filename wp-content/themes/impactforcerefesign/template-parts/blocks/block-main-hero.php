@@ -9,13 +9,13 @@
                         </div>
                         <div class="column right-column">
                             <div class="content">
-                                <div class="sub-title"><?php echo get_field('right_sub_title'); ?></div>
+                                <div class="sub-title"><?php echo get_field('right_sub_title'); ?> УКРАЇНСЬКА НУО, ЗАСНОВАНА ТА ОЧОЛЮВАНА ЖІНКАМИ</div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="bottom-row">
-                    <div class="sub-title decorate-title"><?php echo get_field('bottom_sub_title'); ?></div>
+                    <div class="sub-title decorate-title"><?php echo get_field('bottom_sub_title'); ?> </div>
                 </div>
             </div>
         </div>

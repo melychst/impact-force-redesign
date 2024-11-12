@@ -117,8 +117,14 @@ body {
   font-style: normal;
   font-display: swap; }
 @font-face {
-  font-family: "Akkurat Mono LL";
+  font-family: "IBMPlexSans-Regular";
   src: local("☺"), url("../fonts/AkkuratMono-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap; }
+@font-face {
+  font-family: "IBMPlexSans-Regular";
+  src: local("☺"), url("../fonts/IBMPlexSans-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap; }
@@ -343,7 +349,7 @@ body {
     body header .main-navigation a {
       display: inline-block;
       color: #003548;
-      font-family: "Akkurat Mono LL";
+      font-family: "IBMPlexSans-Regular";
       font-size: 18px;
       font-style: normal;
       font-weight: 400;
@@ -568,7 +574,7 @@ body {
                 background-size: 100%;
                 top: 4px; } }
           body main section.hero .top-row .right-column .sub-title {
-            font-family: "Akkurat Mono LL";
+            font-family: "IBMPlexSans-Regular";
             font-size: 24px;
             font-style: normal;
             font-weight: 400;
@@ -652,7 +658,7 @@ body {
               top: 7px; } }
         body main section.hero .bottom-row .sub-title {
           width: 525px;
-          font-family: "Akkurat Mono LL";
+          font-family: "IBMPlexSans-Regular";
           font-size: 32px;
           font-style: normal;
           font-weight: 400;
@@ -864,7 +870,7 @@ body {
       body main section.reports .columns .column {
         position: relative; }
         body main section.reports .columns .column .number {
-          font-family: "Akkurat Mono LL";
+          font-family: "IBMPlexSans-Regular";
           font-size: 20px;
           font-style: normal;
           font-weight: 400;
@@ -1192,7 +1198,7 @@ body {
             body main section.reports .report-wrap .right-column {
               width: 120px; } }
         body main section.reports .report-wrap .title {
-          font-family: "Akkurat Mono LL";
+          font-family: "IBMPlexSans-Regular";
           font-size: 43px;
           font-style: normal;
           font-weight: 400;
@@ -1547,7 +1553,7 @@ body {
               line-height: 11px;
               letter-spacing: 0.07px; } }
         body main section.impact .columns .sub-title {
-          font-family: "Akkurat Mono LL";
+          font-family: "IBMPlexSans-Regular";
           font-size: 35px;
           font-style: normal;
           font-weight: 400;
@@ -1643,7 +1649,7 @@ body {
               margin-right: 0px; }
             body main section.impact .columns .areas-wrap .area-item .number {
               display: block;
-              font-family: "Akkurat Mono LL";
+              font-family: "IBMPlexSans-Regular";
               font-size: 16px;
               font-style: normal;
               font-weight: 400;
@@ -1813,7 +1819,7 @@ body {
           body main section.goals .right-column {
             width: 100%; } }
       body main section.goals .section-title {
-        font-family: "Akkurat Mono LL";
+        font-family: "IBMPlexSans-Regular";
         font-size: 35px;
         font-style: normal;
         font-weight: 400;
@@ -2675,7 +2681,7 @@ body {
           body main section.projects .slider-navigation .nav-slide svg {
             width: 100%; }
         body main section.projects .slider-navigation .pages {
-          font-family: "Akkurat Mono LL";
+          font-family: "IBMPlexSans-Regular";
           font-size: 16px;
           font-style: normal;
           font-weight: 400;
@@ -2867,7 +2873,7 @@ body {
               line-height: 26px;
               letter-spacing: 3px; } }
         body main section.news .top-row .sub-title {
-          font-family: "Akkurat Mono LL";
+          font-family: "IBMPlexSans-Regular";
           font-size: 18px;
           font-style: normal;
           font-weight: 400;
@@ -2936,7 +2942,7 @@ body {
               width: 100%; } }
           body main section.news .bottom-row .right-column .sub-title {
             display: none;
-            font-family: "Akkurat Mono LL";
+            font-family: "IBMPlexSans-Regular";
             font-size: 18px;
             font-style: normal;
             font-weight: 400;
@@ -3040,7 +3046,7 @@ body {
                     z-index: 5; } }
               body main section.news .bottom-row .news-slider .slider-item .content-wrap .date {
                 color: #00B0EB;
-                font-family: "Akkurat Mono LL";
+                font-family: "IBMPlexSans-Regular";
                 font-size: 18px;
                 text-transform: uppercase;
                 margin-bottom: 38px; }
@@ -3278,7 +3284,7 @@ body {
             width: 105px;
             height: 19px;
             margin-bottom: 7px;
-            font-family: "Akkurat Mono LL";
+            font-family: "IBMPlexSans-Regular";
             font-size: 12px;
             font-style: normal;
             font-weight: 400;
@@ -3295,7 +3301,7 @@ body {
             body main section.news .bottom-row .last-news .news-item .title {
               line-height: 8px; } }
           body main section.news .bottom-row .last-news .news-item .title a {
-            font-family: "Akkurat Mono LL";
+            font-family: "IBMPlexSans-Regular";
             font-size: 13px;
             font-style: normal;
             font-weight: 400;
@@ -3355,7 +3361,7 @@ body {
             margin-bottom: 17px;
             line-height: 59px; } }
       body main section.WWA-hero .hero-content-wrap .sub-title {
-        font-family: "Akkurat Mono LL";
+        font-family: "IBMPlexSans-Regular";
         font-size: 32px;
         line-height: 38px;
         text-transform: uppercase;
@@ -4049,7 +4055,7 @@ body {
               body main section.WWA-impact .columns .top-content::before {
                 content: none; } }
         body main section.WWA-impact .columns .title {
-          font-family: "Akkurat Mono LL";
+          font-family: "IBMPlexSans-Regular";
           font-size: 32px;
           font-style: normal;
           font-weight: 400;
@@ -4134,7 +4140,7 @@ body {
                 body main section.WWA-impact .columns .slider-navigation .nav-slide svg {
                   width: 100%; } }
           body main section.WWA-impact .columns .slider-navigation .pages {
-            font-family: "Akkurat Mono LL";
+            font-family: "IBMPlexSans-Regular";
             font-size: 16px;
             font-style: normal;
             font-weight: 400;
@@ -4340,7 +4346,7 @@ body {
                 left: -34px;
                 top: 15px; } }
           body main section.WWA-targets .targets-wrap .target-item .number {
-            font-family: "Akkurat Mono LL";
+            font-family: "IBMPlexSans-Regular";
             font-size: 16.291px;
             font-style: normal;
             font-weight: 400;
@@ -5432,7 +5438,7 @@ body {
             body main section.OW-hero .hero-content .read-more {
               margin-top: 9px; } }
           body main section.OW-hero .hero-content .read-more a {
-            font-family: "Akkurat Mono LL";
+            font-family: "IBMPlexSans-Regular";
             font-size: 18px;
             font-style: normal;
             font-weight: 400;
@@ -5762,7 +5768,7 @@ body {
               left: -34px;
               top: 15px; } }
         body main section.OW-pillars .pillars-wrap .pillar-item .number {
-          font-family: "Akkurat Mono LL";
+          font-family: "IBMPlexSans-Regular";
           font-size: 16.291px;
           font-style: normal;
           font-weight: 400;
@@ -6282,7 +6288,7 @@ body {
               width: 130px;
               padding-left: 0px; } }
         body main section.OW-pillar-advocacy .pillar-advocacy-wrap .title-columns .number {
-          font-family: "Akkurat Mono LL";
+          font-family: "IBMPlexSans-Regular";
           font-size: 20px;
           font-style: normal;
           font-weight: 400;
@@ -6305,7 +6311,7 @@ body {
               font-size: 8px; } }
         body main section.OW-pillar-advocacy .pillar-advocacy-wrap .title-columns .name {
           -webkit-text-stroke: 1px;
-          font-family: "Akkurat Mono LL";
+          font-family: "IBMPlexSans-Regular";
           font-size: 35px;
           font-style: normal;
           font-weight: 400;
@@ -7324,7 +7330,7 @@ body {
           border-radius: 99px;
           background: #003548;
           color: #FFF;
-          font-family: "Akkurat Mono LL";
+          font-family: "IBMPlexSans-Regular";
           font-size: 18px;
           font-style: normal;
           font-weight: 400;
@@ -7511,7 +7517,7 @@ body {
             body main section.blog .news-wrap .news-item .body-item .head {
               width: 100%; }
               body main section.blog .news-wrap .news-item .body-item .head .date {
-                font-family: "Akkurat Mono LL";
+                font-family: "IBMPlexSans-Regular";
                 color: #00B0EB;
                 font-size: 14.144px;
                 font-style: normal;
@@ -7598,7 +7604,7 @@ body {
                 justify-content: space-between;
         bottom: 12px;
         right: 15px;
-        font-family: "Akkurat Mono LL";
+        font-family: "IBMPlexSans-Regular";
         font-size: 14.162px;
         font-style: normal;
         font-weight: 400;
@@ -7697,7 +7703,7 @@ body {
           margin-bottom: 25px;
           padding-left: 74px;
           color: #003548;
-          font-family: "Akkurat Mono LL";
+          font-family: "IBMPlexSans-Regular";
           font-size: 18px;
           font-style: normal;
           font-weight: 400;
@@ -7726,7 +7732,7 @@ body {
         body main section.subscription form .field-wrap input[type=submit] {
           width: 100%;
           color: #CDDC39;
-          font-family: "Akkurat Mono LL";
+          font-family: "IBMPlexSans-Regular";
           font-size: 18px;
           font-style: normal;
           font-weight: 400;
@@ -7828,7 +7834,7 @@ body {
           -webkit-box-pack: center;
               -ms-flex-pack: center;
                   justify-content: center;
-          font-family: "Akkurat Mono LL";
+          font-family: "IBMPlexSans-Regular";
           font-size: 14.162px;
           line-height: normal;
           text-transform: uppercase; }
@@ -7852,7 +7858,7 @@ body {
         -webkit-box-align: end;
             -ms-flex-align: end;
                 align-items: end;
-        font-family: "Akkurat Mono LL";
+        font-family: "IBMPlexSans-Regular";
         font-size: 18px;
         font-style: normal;
         font-weight: 400;
@@ -8182,7 +8188,7 @@ body {
                 letter-spacing: 0.2px;
                 padding-top: 25px; } }
             body main section.article.article-template-2 .midle-section .content h3 {
-              font-family: "Akkurat Mono LL";
+              font-family: "IBMPlexSans-Regular";
               font-size: 35px;
               font-style: normal;
               font-weight: 400;
@@ -8216,7 +8222,7 @@ body {
               body main section.article.article-template-2 .midle-section .columns .column {
                 width: 40%; } }
           body main section.article.article-template-2 .midle-section .column-title {
-            font-family: "Akkurat Mono LL";
+            font-family: "IBMPlexSans-Regular";
             font-size: 35px;
             font-style: normal;
             font-weight: 400;
@@ -8436,7 +8442,7 @@ body {
         margin-bottom: 0px; }
       body main footer .footer-wrap .navigation li a {
         color: #003548;
-        font-family: "Akkurat Mono LL";
+        font-family: "IBMPlexSans-Regular";
         font-size: 18px;
         font-style: normal;
         font-weight: 400;
