@@ -42,8 +42,9 @@ $green-color: #43E0D5;
     @font-face {
       font-family: "#{$name}";
       src: local("☺"),
-    //   url('#{$file}.woff2') format('woff2'),
-      url('#{$file}.woff') format('woff');
+      url('#{$file}.woff2') format('woff2'),
+      url('#{$file}.woff') format('woff'),
+      url('#{$file}.otf') format('opentype');
       font-weight: $weight;
       font-style: $style;
       font-display: swap;

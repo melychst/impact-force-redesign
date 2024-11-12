@@ -21,7 +21,7 @@
                                 <div class="title"><?php echo get_the_title($post_id); ?></div>
                                 <div class="meta">
                                     <div class="read-more">
-                                        <a href="<?php echo get_field('link', $post_id); ?>" target=_blank>More about the project</a>
+                                        <a href="<?php echo get_field('link', $post_id); ?>" target=_blank><?php echo _e('More about the project', 'theimpactforce') ?></a>
                                     </div>
                                 </div>
                                 <div class="description"><?php echo get_the_excerpt($post_id);?></div>

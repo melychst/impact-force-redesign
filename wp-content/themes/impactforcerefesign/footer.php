@@ -14,8 +14,8 @@
                             </div>
                         </div>
                         <div class="column center-column">
-                            <div class="footer-title">CONTACT</div>
-                            <div class="footer-subtitle decorate-title">SOCIAL MEDIA:</div>
+                            <div class="footer-title"><?php echo _e('Contact', 'theimpactforce') ?></div>
+                            <div class="footer-subtitle decorate-title"><?php _e('Social media', 'theimpactforce'); ?>:</div>
                             <?php
                                 $social_group = get_field('social_settings', 'option');
                             ?>

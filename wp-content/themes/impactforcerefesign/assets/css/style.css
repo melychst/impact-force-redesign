@@ -100,31 +100,25 @@ body {
 
 @font-face {
   font-family: "Akkurat LL Cyrillic Regular";
-  src: local("☺"), url("../fonts/Akkurat-Regular.woff") format("woff");
+  src: local("☺"), url("../fonts/Akkurat-Regular.woff2") format("woff2"), url("../fonts/Akkurat-Regular.woff") format("woff"), url("../fonts/Akkurat-Regular.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
   font-display: swap; }
 @font-face {
   font-family: "Akkurat LL Cyrillic Light";
-  src: local("☺"), url("../fonts/Akkurat-Light.woff") format("woff");
+  src: local("☺"), url("../fonts/Akkurat-Light.woff2") format("woff2"), url("../fonts/Akkurat-Light.woff") format("woff"), url("../fonts/Akkurat-Light.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
   font-display: swap; }
 @font-face {
   font-family: "Akkurat LL Cyrillic Bold";
-  src: local("☺"), url("../fonts/Akkurat-Bold.woff") format("woff");
+  src: local("☺"), url("../fonts/Akkurat-Bold.woff2") format("woff2"), url("../fonts/Akkurat-Bold.woff") format("woff"), url("../fonts/Akkurat-Bold.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
   font-display: swap; }
 @font-face {
   font-family: "IBMPlexSans-Regular";
-  src: local("☺"), url("../fonts/AkkuratMono-Regular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap; }
-@font-face {
-  font-family: "IBMPlexSans-Regular";
-  src: local("☺"), url("../fonts/IBMPlexSans-Regular.woff") format("woff");
+  src: local("☺"), url("../fonts/IBMPlexSans-Regular.woff2") format("woff2"), url("../fonts/IBMPlexSans-Regular.woff") format("woff"), url("../fonts/IBMPlexSans-Regular.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
   font-display: swap; }
@@ -3295,8 +3289,9 @@ body {
                 font-size: 6.395px;
                 line-height: 10px;
                 margin-bottom: 5px;
-                height: 10px;
-                width: 56px; } }
+                height: 11px;
+                width: 56px;
+                padding-top: 2px; } }
           @media only screen and (max-width: 991px) {
             body main section.news .bottom-row .last-news .news-item .title {
               line-height: 8px; } }

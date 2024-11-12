@@ -353,7 +353,7 @@
 
             </div>
             <div class="pages">
-                <span class="current">page</span> /
+                <span class="current"><?php echo _e('page', 'theimpactforce') ?></span> /
                 <span class="all"><?php echo ($current_page < 10) ? '0'. $current_page  : $current_page; ?></span>
             </div>
            

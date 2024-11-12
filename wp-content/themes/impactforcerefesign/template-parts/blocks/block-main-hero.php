@@ -9,7 +9,7 @@
                         </div>
                         <div class="column right-column">
                             <div class="content">
-                                <div class="sub-title"><?php echo get_field('right_sub_title'); ?> УКРАЇНСЬКА НУО, ЗАСНОВАНА ТА ОЧОЛЮВАНА ЖІНКАМИ</div>
+                                <div class="sub-title"><?php echo get_field('right_sub_title'); ?></div>
                             </div>
                         </div>
                     </div>

@@ -4,7 +4,6 @@
 @include font-face('Akkurat LL Cyrillic Regular', '../fonts/Akkurat-Regular');
 @include font-face('Akkurat LL Cyrillic Light', '../fonts/Akkurat-Light');
 @include font-face('Akkurat LL Cyrillic Bold', '../fonts/Akkurat-Bold');
-@include font-face('IBMPlexSans-Regular', '../fonts/AkkuratMono-Regular');
 
 @include font-face('IBMPlexSans-Regular', '../fonts/IBMPlexSans-Regular');
 
@@ -3149,8 +3148,9 @@ body {
                                     font-size: 6.395px;
                                     line-height: 10px;
                                     margin-bottom: 5px;
-                                    height: 10px;
+                                    height: 11px;
                                     width: 56px;
+                                    padding-top: 2px;
                                 }
                             }
                             .title {
