@@ -30,9 +30,10 @@
                         $projects = get_field('projects');
                         if( !empty($projects) ):
                             foreach( $projects as $key => $project ):
+                                $progectID = $project['project_obj']->ID;
                     ?>
                             <div class="project-name <?php echo $project['color']; ?>-project">
-                                <a href="#"><?php echo $project['project']; ?></a>
+                                <a href="<?php echo get_post_permalink($progectID); ?>"><?php echo $project['project']; ?></a>
                             </div>                    
                     <?php
                             endforeach;
